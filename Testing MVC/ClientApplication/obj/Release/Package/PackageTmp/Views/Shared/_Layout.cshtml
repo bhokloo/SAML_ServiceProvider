@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<style>
+      body{
+          padding-top:0px;
+        color:black;
+    }
+    .container-head{
+        background-color:#FDD100;
+        width: 100%;
+        padding:30px;
+    }
+
+    .navbar-header{
+        margin-left:110px !important;
+    }
+    .navbar-brand{
+        padding:0px;
+    }
+    #navFontSize
+    {
+        font-family:'Open Sans Condensed';
+        font-size:16px;
+        font-weight:bold;
+    }
+    .jumbotron{
+        background-image: url(images/header.jpg);
+        color:white;
+    }
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container container-head">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#exampleNavComponents">
+                    <i class="glyphicon glyphicon-align-center"></i>
+                </button>
+                <a href="#" class="navbar-brand">
+                    <img src="~/Images/logo-mini.png" />
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="exampleNavComponents">
+
+                <ul class="nav navbar-nav navbar-right" id="navFontSize">
+                  
+                </ul>
+                @Html.Partial("_LoginPartial")
+
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Activants Pte Ltd | Service Provider</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+@using Microsoft.AspNet.Identity
+<style>
+    body {
+        color: black;
+    }
+
+    .container-head {
+        background-color: #FDD100;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .navbar-header {
+        margin-left: 110px !important;
+    }
+
+    .navbar-brand {
+        padding: 0px;
+    }
+
+    #navFontSize {
+        font-family: 'Open Sans Condensed';
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .jumbotron {
+        background-image: url(images/header.jpg);
+        color: white;
+    }
+
+    #ssoLinkButton {
+        background-color: white !important;
+        color: darkmagenta !important;
+        border-color: transparent;
+        padding: 15px;
+        font-size: 16px;
+        margin-top: 10%;
+    }
+</style>
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <center>
+                <div class="col-sm-6">
+                    <img src="Images/service.png" style="width:20%" /><h3>Activants Pte Ltd Demo App</h3>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="nav navbar-nav navbar-left" style="padding:15%;">
+                        <li style="background-color:#fff">@Html.ActionLink("Initiate SAML (SSO) Login Request", "About", "Home", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                    </ul>
+                </div>
+            </center>
+        </div>
+    </div>
+</div>

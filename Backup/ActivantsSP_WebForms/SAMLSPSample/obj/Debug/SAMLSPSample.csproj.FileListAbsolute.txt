@@ -1,0 +1,192 @@
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\ApplicationInsights.config
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\WebApplication3.dll.config
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\WebApplication3.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\WebApplication3.pdb
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Antlr3.Runtime.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\ComponentSpace.SAML2.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.Web.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Newtonsoft.Json.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\System.Web.Optimization.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\WebGrease.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\System.Web.Optimization.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Antlr3.Runtime.pdb
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Newtonsoft.Json.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\bin\Microsoft.AI.Web.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\obj\Debug\SAMLSPSample.csprojAssemblyReference.cache
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\obj\Debug\SAMLSPSample.csproj.CoreCompileInputs.cache
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\obj\Debug\SAMLSPSample.csproj.CopyComplete
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\obj\Debug\WebApplication3.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAML example\High API\WebApplication3\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\ApplicationInsights.config
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Antlr3.Runtime.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.Web.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Newtonsoft.Json.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\System.Web.Optimization.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\WebGrease.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\System.Web.Optimization.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Antlr3.Runtime.pdb
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Newtonsoft.Json.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.Web.xml
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CoreCompileInputs.cache
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CopyComplete
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\SAMLSPSample.dll.config
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\SAMLSPSample.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\SAMLSPSample.pdb
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.pdb
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\bin\ComponentSpace.SAML2.dll
+C:\Users\pn2968\Projects\AuthGatway\SP github\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.csprojAssemblyReference.cache
+C:\SAMLSPSample\SAMLSPSample\bin\ApplicationInsights.config
+C:\SAMLSPSample\SAMLSPSample\bin\SAMLSPSample.dll.config
+C:\SAMLSPSample\SAMLSPSample\bin\SAMLSPSample.dll
+C:\SAMLSPSample\SAMLSPSample\bin\SAMLSPSample.pdb
+C:\SAMLSPSample\SAMLSPSample\bin\Antlr3.Runtime.dll
+C:\SAMLSPSample\SAMLSPSample\bin\AspNet.ScriptManager.bootstrap.dll
+C:\SAMLSPSample\SAMLSPSample\bin\AspNet.ScriptManager.jQuery.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.Agent.Intercept.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.Web.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.WindowsServer.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.ApplicationInsights.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.ScriptManager.WebForms.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.Web.Infrastructure.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Newtonsoft.Json.dll
+C:\SAMLSPSample\SAMLSPSample\bin\System.Web.Optimization.dll
+C:\SAMLSPSample\SAMLSPSample\bin\WebGrease.dll
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\SAMLSPSample\SAMLSPSample\bin\System.Web.Optimization.xml
+C:\SAMLSPSample\SAMLSPSample\bin\Antlr3.Runtime.pdb
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\SAMLSPSample\SAMLSPSample\bin\Newtonsoft.Json.xml
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.ApplicationInsights.xml
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.xml
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.WindowsServer.xml
+C:\SAMLSPSample\SAMLSPSample\bin\Microsoft.AI.Web.xml
+C:\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.csprojAssemblyReference.cache
+C:\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CoreCompileInputs.cache
+C:\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CopyComplete
+C:\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.dll
+C:\SAMLSPSample\SAMLSPSample\obj\Debug\SAMLSPSample.pdb
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\ApplicationInsights.config
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\SAMLSPSample.dll.config
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\SAMLSPSample.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\SAMLSPSample.pdb
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Antlr3.Runtime.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\AspNet.ScriptManager.bootstrap.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\AspNet.ScriptManager.jQuery.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.Agent.Intercept.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.Web.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.WindowsServer.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ApplicationInsights.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ScriptManager.WebForms.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.Web.Infrastructure.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Newtonsoft.Json.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\System.Web.Optimization.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\WebGrease.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\System.Web.Optimization.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Antlr3.Runtime.pdb
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Newtonsoft.Json.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ApplicationInsights.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.WindowsServer.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.Web.xml
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.csprojAssemblyReference.cache
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CoreCompileInputs.cache
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CopyComplete
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.dll
+D:\SAML\SAMLSPSample-master(1)\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.pdb
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\ApplicationInsights.config
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\SAMLSPSample.dll.config
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\SAMLSPSample.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\SAMLSPSample.pdb
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Antlr3.Runtime.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\AspNet.ScriptManager.bootstrap.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\AspNet.ScriptManager.jQuery.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.Agent.Intercept.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.Web.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.WindowsServer.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ApplicationInsights.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ScriptManager.WebForms.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.Web.Infrastructure.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Newtonsoft.Json.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\System.Web.Optimization.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\WebGrease.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\System.Web.Optimization.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Antlr3.Runtime.pdb
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Newtonsoft.Json.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.ApplicationInsights.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.DependencyCollector.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.WindowsServer.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\bin\Microsoft.AI.Web.xml
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.csprojAssemblyReference.cache
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CoreCompileInputs.cache
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.csproj.CopyComplete
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.dll
+D:\SAML\Demo SAMLWebApp\SAMLSPSample-master\SAMLSPSample\obj\Debug\SAMLSPSample.pdb
