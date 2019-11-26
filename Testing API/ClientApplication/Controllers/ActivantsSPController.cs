@@ -33,6 +33,7 @@ namespace ClientApplication.Controllers
                 return RedirectToAction("AuthenticateUserWithAccessToken");
             }
             return RedirectToAction("Index");
+
         }
 
         [BearerAuthentication]

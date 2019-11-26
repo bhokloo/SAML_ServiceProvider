@@ -393,11 +393,14 @@ namespace ClientApplication.Controllers
         //
         // POST: /Account/LogOff
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public void LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            Response.Redirect("https://localhost:44309/saml/InitiateSingleLogout");
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("https://localhost:44309/saml/InitiateSingleLogout?returnClass=ActivantsSP&returnFunction=index&returnError=errorPage");
+
         }
 
         //

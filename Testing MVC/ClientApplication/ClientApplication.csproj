@@ -261,6 +261,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BearerAuthenticationAttribute.cs" />
     <Compile Include="Controllers\Cryptography.cs" />
     <Compile Include="Controllers\ActivantsSPController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -334,7 +335,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\ActivantsSP\ResponseFromSp.cshtml" />
+    <Content Include="Views\ActivantsSP\AuthenticateUserWithAccessToken.cshtml" />
     <Content Include="Views\ActivantsSP\errorPage.cshtml" />
   </ItemGroup>
   <ItemGroup>

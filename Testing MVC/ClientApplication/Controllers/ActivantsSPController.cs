@@ -11,23 +11,42 @@ namespace ClientApplication.Controllers
 {
     public class ActivantsSPController : Controller
     {
-        public ActionResult Index()
+        public ActionResult index()
         {
             return View();
         }
 
         public void ActivantsSP()
         {
-            string responseFromSp = HttpUtility.UrlEncode(Cryptography.Encrypt("https://localhost:44313/ActivantsSP&/responseFromSp&/errorPage&/index"));
-            Response.Redirect(string.Format("https://localhost:44309/Saml/InitiateSingleSignOn?responseFromSp={0}", responseFromSp));
+            Response.Redirect("https://localhost:44309/Saml/InitiateSingleSignOn?returnClass=ActivantsSP&returnFunction=getAccessTokenFromSp&returnError=errorPage");
+        }
+
+        public ActionResult getAccessTokenFromSp()
+        {
+            if (Request.QueryString["access_token"] != null)
+            {
+                Session["access_token"] = Request.QueryString["access_token"];
+                Session["username"] = Request.QueryString["username"];
+                return RedirectToAction("AuthenticateUserWithAccessToken");
+            }
+            return RedirectToAction("Index");
+        }
+
+        [BearerAuthentication]
+        [Authorize]
+        public ActionResult AuthenticateUserWithAccessToken()
+        {
+            return View();
         }
 
         [Authorize]
-        public ActionResult ResponseFromSp()
+        public ActionResult sd()
         {
-            IDictionary<string, string> attributes = (IDictionary<string, string>)Session["attributes"];
-            var userClaims = HttpContext.GetOwinContext().Authentication.User.Claims;
-            return View();
+            if(User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("AuthenticateUserWithAccessToken");
+            }
+            return null;
         }
 
         public ActionResult errorPage()
