@@ -25,8 +25,8 @@ namespace ClientApplication.Controllers
         {
             if (Request.QueryString["access_token"] != null)
             {
-                Session["access_token"] = Request.QueryString["access_token"];
-                Session["username"] = Request.QueryString["username"];
+                 var access_token = Request.QueryString["access_token"];
+                Session["access_token"] = access_token;
                 return RedirectToAction("AuthenticateUserWithAccessToken");
             }
             return RedirectToAction("Index");

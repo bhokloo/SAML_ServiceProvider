@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -12,8 +14,42 @@ namespace ActivantsSP.Controllers
     {
         public JsonResult getTokens()
         {
-            string[] jsonObjects = new string[] { };
-            var context = new IdentityDbContext();
+            var client_access_token = Request.Headers["access_token"];
+            using (var context = new IdentityDbContext())
+            {
+                try
+                {
+                    var trustedAccessToken = context.Database.SqlQuery<IdentityUserLogin>("SELECT * FROM [AspNetUserLogins] WHERE ProviderKey = @client_access_token", new SqlParameter("@client_access_token", client_access_token)).FirstOrDefault();
+                    if (trustedAccessToken != null)
+                    {
+                        var clientAttributes = context.Database.SqlQuery<IdentityUserClaim>("SELECT * FROM [AspNetUserClaims] WHERE UserId = @userId", new SqlParameter("@userId", trustedAccessToken.UserId)).ToList();
+                        if(clientAttributes != null)
+                        {
+                            Dictionary<string, string> values = new Dictionary<string, string>();
+                            foreach (var claimsOfClient in clientAttributes)
+                            {
+                                values.Add(claimsOfClient.ClaimType, claimsOfClient.ClaimValue);
+                            }
+                            Response.ContentType = "application/json";
+                            Response.ContentEncoding = System.Text.Encoding.UTF8;
+                            var jsonData = Json(values, JsonRequestBehavior.AllowGet);
+                            return jsonData;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception e)
+                {
+                    return null;
+                }
+            }
             return null;
         }
 

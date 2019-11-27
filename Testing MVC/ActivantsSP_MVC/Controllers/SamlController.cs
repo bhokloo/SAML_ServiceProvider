@@ -33,8 +33,6 @@ namespace ActivantsSP.Controllers
                 var partnerName = WebConfigurationManager.AppSettings["PartnerName"];
                 if (Request.QueryString.ToString().Length > 0)
                 {
-                    //check if it is authorized url...
-
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
                     dictionary["returnURLs"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                     dictionary["returnClass"] = Request.QueryString["returnClass"];
@@ -115,7 +113,7 @@ namespace ActivantsSP.Controllers
                     {
                         accessToken = Request.Cookies["SAML_SessionId"].Value;
                     }
-                    var clientAccessToken = accessToken + "&" +Guid.NewGuid().ToString();
+                    var clientAccessToken = accessToken + Guid.NewGuid().ToString();
 
                     if (!string.IsNullOrEmpty(relayState))
                     {
@@ -125,16 +123,12 @@ namespace ActivantsSP.Controllers
                         var returnClass = clientQueryParameters[1].Split(',');
                         var returnFunction = clientQueryParameters[2].Split(',');
                         var returnError = clientQueryParameters[3].Split(',');
-
-                        //var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                        //userManager.Logins.Add(new IdentityUserLogin() { LoginProvider = returnURL[1], ProviderKey = accessToken, UserId = applicationUser.Id });
-                        //userManager.AddLoginAsync(applicationUser.Id, new Microsoft.AspNet.Identity.UserLoginInfo(returnURL[1], accessToken));
                         applicationUser.Logins.Add(new IdentityUserLogin() { LoginProvider = returnURL[1], ProviderKey = clientAccessToken, UserId = applicationUser.Id });
                         applicationUserManager.Update(applicationUser);
 
                         if (IsAutorizedUrl(returnURL[1]))
                         {
-                            return Redirect(returnURL[1] + "/" +returnClass[1] + "/" +returnFunction[1] + "?access_token=" + clientAccessToken + "&username=" + applicationUser.UserName);
+                            return Redirect(returnURL[1] + "/" +returnClass[1] + "/" +returnFunction[1] + "?access_token=" + clientAccessToken);
                         }
                         else
                         {
@@ -166,37 +160,7 @@ namespace ActivantsSP.Controllers
             {
                 return RedirectToAction("About", "Home");
             }
-
         }
-
-
-        //under implementation
-        //public JsonResult getTokens()
-        //{
-        //    string[] jsonObjects= new string[] { };
-        //    var accessToken = "";
-        //    if (Request.Cookies["SAML_SessionId"] != null)
-        //    {
-        //        accessToken = Request.Cookies["SAML_SessionId"].Value;
-        //    }
-        //    //var SAML_SessionIds = Request.Cookies["SAML_SessionId"].Value;
-        //    if (User.Identity.IsAuthenticated)
-        //    {
-        //        if(Request.QueryString["username"] != null)
-        //        {
-        //            if (User.Identity.Name.Equals(Request.QueryString["username"]))
-        //            {
-        //                var SAML_SessionId = Request.Cookies["SAML_SessionId"].Value;
-        //                jsonObjects = new string[] { Request.QueryString["username"], SAML_SessionId };
-        //            }
-        //        }
-               
-        //    }
-        //    var jsonData = Json(jsonObjects, JsonRequestBehavior.AllowGet);
-        //    //var SAML_SessionId = Request.Cookies["SAML_SessionId"].Value;
-        //    return jsonData;
-        //}
-
 
         public ActionResult InitiateSingleLogout(string relayState = null)
         {
@@ -232,8 +196,6 @@ namespace ActivantsSP.Controllers
             {
                 if (Request.QueryString.ToString().Length > 0)
                 {
-                    //check for authorized url
-
                     var ReturnUrl = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                     var returnClass = Request.QueryString["returnClass"];
                     var returnErrorFunction = Request.QueryString["returnError"];
@@ -316,34 +278,5 @@ namespace ActivantsSP.Controllers
             else
                 return false;
         }
-
-
-
-        //private string Decrypt(string cipherText)
-        //{
-        //    string EncryptionKey = "hyddhrii%2moi43Hd5%%";
-        //    if(!(cipherText == null))
-        //    {
-        //        cipherText = cipherText.Replace(" ", "+");
-        //        byte[] cipherBytes = Convert.FromBase64String(cipherText);
-        //        using (Aes encryptor = Aes.Create())
-        //        {
-        //            Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
-        //            encryptor.Key = pdb.GetBytes(32);
-        //            encryptor.IV = pdb.GetBytes(16);
-        //            using (MemoryStream ms = new MemoryStream())
-        //            {
-        //                using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
-        //                {
-        //                    cs.Write(cipherBytes, 0, cipherBytes.Length);
-        //                    cs.Close();
-        //                }
-        //                cipherText = Encoding.Unicode.GetString(ms.ToArray());
-        //            }
-        //        }
-        //    }
-        //    return cipherText;
-        //}
-
     }
 }

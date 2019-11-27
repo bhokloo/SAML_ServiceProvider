@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Security.Claims;
@@ -20,36 +24,39 @@ namespace ClientApplication.Controllers
                 if (!string.IsNullOrEmpty(Convert.ToString(filterContext.HttpContext.Session["access_token"])))
                 {
                     var access_token = HttpContext.Current.Session["access_token"];
-                    var username = HttpContext.Current.Session["username"];
 
-                    var url = "https://localhost:44309/ValidateToken/getTokens?username=" + username;
+                    var url = "https://localhost:44309/SamlManage/getTokens";
                     WebRequest request = HttpWebRequest.Create(url);
-                    //WebResponse response = request.GetResponse();
-                   // StreamReader reader = new StreamReader(response.GetResponseStream());
-                    //string responseText = reader.ReadToEnd();
+                    request.ContentType = "application/json";
+                    request.Headers.Add("access_token", access_token.ToString());
+                    WebResponse response = request.GetResponse();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    var responseText = reader.ReadToEnd();
 
-                    //if (responseText != null)
-                    //{
-                        
-                    //}
+                    if (responseText != null)
+                    {
+                        ClaimsIdentity oAuthIdentity = new ClaimsIdentity(new[]
+                               {
+                                new Claim(ClaimTypes.NameIdentifier, responseText.ToString()),
+                                new Claim(ClaimTypes.Name, responseText.ToString()),
+                                new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", access_token.ToString()),
+                                new Claim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier", access_token.ToString())
 
-                     ClaimsIdentity oAuthIdentity = new ClaimsIdentity(
-                            new[]
-                            {
-                            new Claim(ClaimTypes.NameIdentifier, access_token.ToString()),
-                            new Claim(ClaimTypes.Name, username.ToString()),
-                            new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", access_token.ToString()),
-                            new Claim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier", access_token.ToString())
+                               },
+                               DefaultAuthenticationTypes.ApplicationCookie
+                            );
 
-                            },
-                            DefaultAuthenticationTypes.ApplicationCookie
-                         );
-
-                    HttpContext.Current.GetOwinContext().Authentication.SignIn(new AuthenticationProperties { IsPersistent = false }, oAuthIdentity);
-                    var identity = new GenericIdentity(username.ToString());
-                    var principal = new GenericPrincipal(identity, new string[0]);
-                    HttpContext.Current.User = principal;
-                    Thread.CurrentPrincipal = principal;
+                        HttpContext.Current.GetOwinContext().Authentication.SignIn(new AuthenticationProperties { IsPersistent = false }, oAuthIdentity);
+                        var identity = new GenericIdentity(responseText.ToString());
+                        var principal = new GenericPrincipal(identity, new string[0]);
+                        HttpContext.Current.User = principal;
+                        Thread.CurrentPrincipal = principal;
+                    }
+                    else
+                    {
+                        filterContext.Result = new HttpUnauthorizedResult();
+                    }
+               
                 }
                 else
                 {
