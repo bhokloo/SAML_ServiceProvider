@@ -110,11 +110,13 @@ namespace ActivantsSP.Controllers
                     applicationSignInManager.SignIn(applicationUser, false, false);
 
                     var accessToken = "";
+                    
                     if(Request.Cookies["SAML_SessionId"] != null)
                     {
                         accessToken = Request.Cookies["SAML_SessionId"].Value;
                     }
-                    
+                    var clientAccessToken = accessToken + "&" +Guid.NewGuid().ToString();
+
                     if (!string.IsNullOrEmpty(relayState))
                     {
                         
@@ -126,13 +128,13 @@ namespace ActivantsSP.Controllers
 
                         //var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
                         //userManager.Logins.Add(new IdentityUserLogin() { LoginProvider = returnURL[1], ProviderKey = accessToken, UserId = applicationUser.Id });
-                       //userManager.AddLoginAsync(applicationUser.Id, new Microsoft.AspNet.Identity.UserLoginInfo(returnURL[1], accessToken));
-                        //applicationUser.Logins.Add(new IdentityUserLogin() { LoginProvider = returnURL[1], ProviderKey = accessToken, UserId = applicationUser.Id });
-                        applicationUserManager.Create(applicationUser);
+                        //userManager.AddLoginAsync(applicationUser.Id, new Microsoft.AspNet.Identity.UserLoginInfo(returnURL[1], accessToken));
+                        applicationUser.Logins.Add(new IdentityUserLogin() { LoginProvider = returnURL[1], ProviderKey = clientAccessToken, UserId = applicationUser.Id });
+                        applicationUserManager.Update(applicationUser);
 
                         if (IsAutorizedUrl(returnURL[1]))
                         {
-                            return Redirect(returnURL[1] + "/" +returnClass[1] + "/" +returnFunction[1] + "?access_token=" + accessToken + "&username=" + applicationUser.UserName);
+                            return Redirect(returnURL[1] + "/" +returnClass[1] + "/" +returnFunction[1] + "?access_token=" + clientAccessToken + "&username=" + applicationUser.UserName);
                         }
                         else
                         {
@@ -169,38 +171,39 @@ namespace ActivantsSP.Controllers
 
 
         //under implementation
-        public JsonResult getTokens()
-        {
-            string[] jsonObjects= new string[] { };
-            var accessToken = "";
-            if (Request.Cookies["SAML_SessionId"] != null)
-            {
-                accessToken = Request.Cookies["SAML_SessionId"].Value;
-            }
-            //var SAML_SessionIds = Request.Cookies["SAML_SessionId"].Value;
-            if (User.Identity.IsAuthenticated)
-            {
-                if(Request.QueryString["username"] != null)
-                {
-                    if (User.Identity.Name.Equals(Request.QueryString["username"]))
-                    {
-                        var SAML_SessionId = Request.Cookies["SAML_SessionId"].Value;
-                        jsonObjects = new string[] { Request.QueryString["username"], SAML_SessionId };
-                    }
-                }
+        //public JsonResult getTokens()
+        //{
+        //    string[] jsonObjects= new string[] { };
+        //    var accessToken = "";
+        //    if (Request.Cookies["SAML_SessionId"] != null)
+        //    {
+        //        accessToken = Request.Cookies["SAML_SessionId"].Value;
+        //    }
+        //    //var SAML_SessionIds = Request.Cookies["SAML_SessionId"].Value;
+        //    if (User.Identity.IsAuthenticated)
+        //    {
+        //        if(Request.QueryString["username"] != null)
+        //        {
+        //            if (User.Identity.Name.Equals(Request.QueryString["username"]))
+        //            {
+        //                var SAML_SessionId = Request.Cookies["SAML_SessionId"].Value;
+        //                jsonObjects = new string[] { Request.QueryString["username"], SAML_SessionId };
+        //            }
+        //        }
                
-            }
-            var jsonData = Json(jsonObjects, JsonRequestBehavior.AllowGet);
-            //var SAML_SessionId = Request.Cookies["SAML_SessionId"].Value;
-            return jsonData;
-        }
+        //    }
+        //    var jsonData = Json(jsonObjects, JsonRequestBehavior.AllowGet);
+        //    //var SAML_SessionId = Request.Cookies["SAML_SessionId"].Value;
+        //    return jsonData;
+        //}
 
 
         public ActionResult InitiateSingleLogout(string relayState = null)
         {
             try
             {
-                var partnerName = WebConfigurationManager.AppSettings["PartnerName"];
+                var partnerName = WebConfigurationManager.AppSettings["PartnerIdP"];
+               
                 if (Request.QueryString.ToString().Length > 0)
                 {
                     if (IsAutorizedUrl(HttpContext.Request.UrlReferrer.ToString()))
@@ -212,8 +215,15 @@ namespace ActivantsSP.Controllers
                         dict["returnError"] = Request.QueryString["returnError"];
 
                         relayState = string.Join(";", dict);
+
+                        if (Request.Cookies["SAML_SessionId"] != null)
+                        {
+                            var browserSamlSessionId = Request.Cookies["SAML_SessionId"].Value;
+                            SamlManageController.deleteClientTokens(browserSamlSessionId, Request.UrlReferrer.GetLeftPart(UriPartial.Authority));
+                        }
                     }
                 }
+
                 HttpContext.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
                 SAMLServiceProvider.InitiateSLO(Response, null, relayState, partnerName);
                 return new EmptyResult();
@@ -306,6 +316,8 @@ namespace ActivantsSP.Controllers
             else
                 return false;
         }
+
+
 
         //private string Decrypt(string cipherText)
         //{

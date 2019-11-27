@@ -22,16 +22,16 @@ namespace ClientApplication.Controllers
                     var access_token = HttpContext.Current.Session["access_token"];
                     var username = HttpContext.Current.Session["username"];
 
-                    var url = "https://localhost:44309/saml/getTokens?username=" + username;
+                    var url = "https://localhost:44309/ValidateToken/getTokens?username=" + username;
                     WebRequest request = HttpWebRequest.Create(url);
-                    WebResponse response = request.GetResponse();
-                    StreamReader reader = new StreamReader(response.GetResponseStream());
-                    string responseText = reader.ReadToEnd();
+                    //WebResponse response = request.GetResponse();
+                   // StreamReader reader = new StreamReader(response.GetResponseStream());
+                    //string responseText = reader.ReadToEnd();
 
-                    if (responseText != null)
-                    {
+                    //if (responseText != null)
+                    //{
                         
-                    }
+                    //}
 
                      ClaimsIdentity oAuthIdentity = new ClaimsIdentity(
                             new[]
