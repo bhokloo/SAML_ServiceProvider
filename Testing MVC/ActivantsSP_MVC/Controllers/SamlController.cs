@@ -19,6 +19,7 @@ using System.Web.Script.Serialization;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Identity;
 using System.Data.Entity;
+using System.Configuration;
 
 namespace ActivantsSP.Controllers
 {
@@ -41,6 +42,11 @@ namespace ActivantsSP.Controllers
 
                     relayState = string.Join(";", dictionary);
                 }
+
+               // string samlConfigPath = Path.Combine(System.Environment.CurrentDirectory, "saml.config");
+               // Configuration config = ConfigurationManager.OpenExeConfiguration(samlConfigPath);
+                //DisplayConfigSetting(config);
+
                 SAMLServiceProvider.InitiateSSO(Response, relayState, partnerName, new SSOOptions() { ForceAuthn = true });
                 return new EmptyResult();
             }
