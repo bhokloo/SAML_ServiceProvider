@@ -6,6 +6,8 @@ using System.Web.Security;
 using System.Text;
 using System.Security.Cryptography;
 using System.IO;
+using System.Net;
+using System.Configuration;
 
 namespace ClientApplication.Controllers
 {
@@ -18,7 +20,8 @@ namespace ClientApplication.Controllers
 
         public void ActivantsSP()
         {
-            Response.Redirect("https://localhost:44309/Saml/InitiateSingleSignOn?returnClass=ActivantsSP&returnFunction=getAccessTokenFromSp&returnError=errorPage");
+            var serviceId = ConfigurationManager.AppSettings["serviceId"];
+            Response.Redirect("https://localhost:44309/Saml/InitiateSingleSignOn?returnClass=ActivantsSP&returnFunction=getAccessTokenFromSp&returnError=errorPage&serviceId=" + serviceId);
         }
 
         public ActionResult getAccessTokenFromSp()

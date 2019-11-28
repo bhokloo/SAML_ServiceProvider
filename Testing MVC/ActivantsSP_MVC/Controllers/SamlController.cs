@@ -20,6 +20,7 @@ using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Identity;
 using System.Data.Entity;
 using System.Configuration;
+using ComponentSpace.SAML2.Configuration;
 
 namespace ActivantsSP.Controllers
 {
@@ -32,6 +33,7 @@ namespace ActivantsSP.Controllers
                 var path = Server.MapPath("~/Certificates/sp.pfx");
                 new X509Certificate(path, "activants", X509KeyStorageFlags.MachineKeySet);
                 var partnerName = WebConfigurationManager.AppSettings["PartnerName"];
+                var serviceId = "";
                 if (Request.QueryString.ToString().Length > 0)
                 {
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -39,14 +41,14 @@ namespace ActivantsSP.Controllers
                     dictionary["returnClass"] = Request.QueryString["returnClass"];
                     dictionary["returnFunction"] = Request.QueryString["returnFunction"];
                     dictionary["returnError"] = Request.QueryString["returnError"];
-
                     relayState = string.Join(";", dictionary);
+                    serviceId = Request.QueryString["serviceId"];
                 }
 
-               // string samlConfigPath = Path.Combine(System.Environment.CurrentDirectory, "saml.config");
-               // Configuration config = ConfigurationManager.OpenExeConfiguration(samlConfigPath);
-                //DisplayConfigSetting(config);
+                var samlPath = Server.MapPath($"~/{serviceId}.config");
+                SAMLConfigurationFile.Validate(samlPath);
 
+                new SamlSpConfigurationController().ServiceProviderconfiguration(serviceId);
                 SAMLServiceProvider.InitiateSSO(Response, relayState, partnerName, new SSOOptions() { ForceAuthn = true });
                 return new EmptyResult();
             }

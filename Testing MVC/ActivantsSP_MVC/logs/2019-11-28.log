@@ -355,3 +355,1528 @@ upgrade-insecure-requests: 1
 18316/17: 11/28/2019 10:17:00 AM: Service provider session (c14a6835-1ebc-44c4-90b9-184cc0fd02c2) state:
 18316/17: 11/28/2019 10:17:00 AM: An SLO message from the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8 has been successfully received.
 Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+17164/10: 11/28/2019 11:14:24 AM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+17164/10: 11/28/2019 11:14:24 AM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+17164/10: 11/28/2019 11:14:24 AM: Initializing the SAML environment.
+17164/10: 11/28/2019 11:14:24 AM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+17164/10: 11/28/2019 11:14:24 AM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration xmlns="urn:componentspace:SAML:2.0:configuration">
+
+  <ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>
+</SAMLConfiguration>
+17164/10: 11/28/2019 11:14:24 AM: The SAML configuration file has been successfully loaded.
+17164/10: 11/28/2019 11:14:24 AM: SAML configuration changes in the directory D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC are being monitored.
+17164/10: 11/28/2019 11:14:24 AM: The SAML environment has been successfuly initialized.
+17164/10: 11/28/2019 11:14:24 AM: The SAML_SessionId cookie with value 40cc304f-5aee-451c-8464-2df1f6d85bb8 has been set.
+17164/10: 11/28/2019 11:14:24 AM: Initiating SSO to the partner identity provider.
+17164/10: 11/28/2019 11:14:24 AM: Service provider session (40cc304f-5aee-451c-8464-2df1f6d85bb8) state:
+17164/10: 11/28/2019 11:14:24 AM: Retrieving the local service provider signature certificates for the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8.
+17164/10: 11/28/2019 11:14:24 AM: Loading the X.509 certificate from the file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Certificates\sp.pfx.
+17164/10: 11/28/2019 11:14:25 AM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been loaded.
+17164/10: 11/28/2019 11:14:25 AM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been cached.
+17164/10: 11/28/2019 11:14:25 AM: Sending request over HTTP Redirect, baseURL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8, samlMessage=<samlp:AuthnRequest ID="_5b293a2f-e029-4132-937c-26c1ef9fde38" Version="2.0" IssueInstant="2019-11-28T03:14:24.942Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relayState=
+17164/10: 11/28/2019 11:14:25 AM: Creating HTTP redirect query string.
+17164/10: 11/28/2019 11:14:25 AM: Encoding SAML message: <samlp:AuthnRequest ID="_5b293a2f-e029-4132-937c-26c1ef9fde38" Version="2.0" IssueInstant="2019-11-28T03:14:24.942Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>
+17164/10: 11/28/2019 11:14:25 AM: Encoded SAML message: fVJBbtswEPyKwDtFiVRskbAMuDGKGkhbI3ZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2h7tpebYZ4dvfwZwCMyW5bkd83Jy6F5g2FjEta5IJTKZaG8oXJoZFNDaIkyQMEtN5VhKcZSXaIA+wcRu3iCGW5pHlOeXnMhMoLxYtUFvyRJNtxi3U6zsxzjD0qxlr/ZF36AmYItnlNje9Y5zUyW/dsMonoWalPSy1LQzNjYNQGTfUyEzTjRoocxKKuR1NffTAwJ6pIDANMxvYa0T5DRRrd4ojsg4/e+PaLdbV1TxUZglPjOovK6Q5QRaMOm+93agymTpchVN+Oxz3d/zwcSbJBhDAluPUOhw7CAcKzNfDr/u46k9Ht2WNURSEyySZF9hGTJC9d61DNF/ncUP/mnqxX07Saiw9X/M/p+t0BWedcFDeLZSlX7ErpIturHyN1t9371prXqdZOx4+V8zSfEVvTZh5Vg8MejG0s1GNhbev/3gbQEd7PwtaXrf//3/of
+17164/10: 11/28/2019 11:14:25 AM: Query string: SAMLRequest=fVJBbtswEPyKwDtFiVRskbAMuDGKGkhbI3ZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2h7tpebYZ4dvfwZwCMyW5bkd83Jy6F5g2FjEta5IJTKZaG8oXJoZFNDaIkyQMEtN5VhKcZSXaIA%2BwcRu3iCGW5pHlOeXnMhMoLxYtUFvyRJNtxi3U6zsxzjD0qxlr%2FZF36AmYItnlNje9Y5zUyW%2FdsMonoWalPSy1LQzNjYNQGTfUyEzTjRoocxKKuR1NffTAwJ6pIDANMxvYa0T5DRRrd4ojsg4%2Fe%2BPaLdbV1TxUZglPjOovK6Q5QRaMOm%2B93agymTpchVN%2BOxz3d%2FzwcSbJBhDAluPUOhw7CAcKzNfDr%2Fu46k9Ht2WNURSEyySZF9hGTJC9d61DNF%2FncUP%2FmnqxX07Saiw9X%2FM%2Fp%2Bt0BWedcFDeLZSlX7ErpIturHyN1t9371prXqdZOx4%2BV8zSfEVvTZh5Vg8MejG0s1GNhbev%2F3gbQEd7PwtaXrf%2F%2F3%2Fof&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256
+17164/10: 11/28/2019 11:14:25 AM: Generating signature.
+17164/10: 11/28/2019 11:14:25 AM: Data to sign: 53 41 4d 4c 52 65 71 75 65 73 74 3d 66 56 4a 42 62 74 73 77 45 50 79 4b 77 44 74 46 69 56 52 73 6b 62 41 4d 75 44 47 4b 47 6b 68 62 49 33 5a 7a 79 4b 57 67 71 56 56 4d 51 43 4a 56 4c 70 55 6d 76 36 38 6b 4a 34 42 37 53 4b 36 44 6e 64 6d 5a 32 56 32 68 37 74 70 65 62 59 5a 34 64 76 66 77 5a 77 43 4d 79 57 35 62 6b 64 38 33 4a 79 36 46 35 67 32 46 6a 45 74 61 35 49 4a 54 4b 5a 61 47 38 6f 58 4a 6f 5a 46 4e 44 61 49 6b 79 51 4d 45 74 4e 35 56 68 4b 63 5a 53 58 61 49 41 25 32 42 77 63 52 75 33 69 43 47 57 35 70 48 6c 4f 65 58 6e 4d 68 4d 6f 4c 78 59 74 55 46 76 79 52 4a 4e 74 78 69 33 55 36 7a 73 78 7a 6a 44 30 71 78 6c 72 25 32 46 5a 46 33 36 41 6d 59 49 74 6e 6c 4e 6a 65 39 59 35 7a 55 79 57 25 32 46 64 73 4d 6f 6e 6f 57 61 6c 50 53 79 31 4c 51 7a 4e 6a 59 4e 51 47 54 66 55 79 45 7a 54 6a 52 6f 6f 63 78 4b 4b 75 52 31 4e 66 66 54 41 77 4a 36 70 49 44 41 4e 4d 78 76 59 61 30 54 35 44 52 52 72 64 34 6f 6a 73 67 34 25 32 46 65 25 32 42 50 61 4c 64 62 56 31 54 78 55 5a 67 6c 50 6a 4f 6f 76 4b 36 51 35 51 52 61 4d 4f 6d 25 32 42 39 33 61 67 79 6d 54 70 63 68 56 4e 25 32 42 4f 78 7a 33 64 25 32 46 7a 77 63 53 62 4a 42 68 44 41 6c 75 50 55 4f 68 77 37 43 41 63 4b 7a 4e 66 44 72 25 32 46 75 34 36 6b 39 48 74 32 57 4e 55 52 53 45 79 79 53 5a 46 39 68 47 54 4a 43 39 64 36 31 44 4e 46 25 32 46 6e 63 55 50 25 32 46 6d 6e 71 78 58 30 37 53 61 69 77 39 58 25 32 46 4d 25 32 46 70 25 32 42 74 30 42 57 65 64 63 46 44 65 4c 5a 53 6c 58 37 45 72 70 49 74 75 72 48 79 4e 31 74 39 33 37 31 70 72 58 71 64 5a 4f 78 34 25 32 42 56 38 7a 53 66 45 56 76 54 5a 68 35 56 67 38 4d 65 6a 47 30 73 31 47 4e 68 62 65 76 25 32 46 33 67 62 51 45 64 37 50 77 74 61 58 72 66 25 32 46 25 32 46 33 25 32 46 6f 66 26 53 69 67 41 6c 67 3d 68 74 74 70 25 33 41 25 32 46 25 32 46 77 77 77 2e 77 33 2e 6f 72 67 25 32 46 32 30 30 31 25 32 46 30 34 25 32 46 78 6d 6c 64 73 69 67 2d 6d 6f 72 65 25 32 33 72 73 61 2d 73 68 61 32 35 36
+17164/10: 11/28/2019 11:14:25 AM: Signature algorithm: http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+17164/10: 11/28/2019 11:14:25 AM: Signature: 43 94 95 de 82 33 f9 ef d5 e5 15 83 41 50 a5 b9 60 1f 15 46 04 2e 1e d9 42 37 2b 10 a0 41 92 bd e2 9a 0b fc 35 02 91 44 a1 0f 8a 1c e8 b0 42 ed 4f f0 c7 da dc b3 e8 9c 6b e3 4b 94 15 a0 11 3f 2e 82 95 79 15 41 f9 2c 55 57 03 aa 35 57 e6 4b f5 0e a0 2c e4 31 51 a9 82 ed 24 f5 69 84 c4 b2 4a 6a 94 85 d8 da b5 64 13 94 5f aa 53 4a 00 85 1f 62 bd ae 9a 4e 28 ad a7 73 f5 b4 1a 16 05 c6 20 8f 86 40 c7 93 70 a4 87 40 2f c2 91 ac da 7f 6d a6 86 51 f0 96 9b 1f 27 7e b1 c6 7b f6 24 66 a0 90 cd 17 b9 2d fb 00 8a e1 bb bb 38 69 48 b0 86 8d c1 81 bd 4e 49 ec 2e dc 04 98 86 ef 16 d3 48 25 a9 98 24 b2 8e b0 52 a9 b8 3b 8b aa 24 2b 1b a4 48 4d a0 c6 ee fb 6a 44 e0 08 e8 fc 5c a9 30 de dd 49 b4 d9 8b 61 90 5e b1 54 4a 7c d5 2d 90 4f 57 f4 cc 61 1e a4 8b ce 5d 57 d6 11 da 4c
+17164/10: 11/28/2019 11:14:25 AM: Query string: SAMLRequest=fVJBbtswEPyKwDtFiVRskbAMuDGKGkhbI3ZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2h7tpebYZ4dvfwZwCMyW5bkd83Jy6F5g2FjEta5IJTKZaG8oXJoZFNDaIkyQMEtN5VhKcZSXaIA%2BwcRu3iCGW5pHlOeXnMhMoLxYtUFvyRJNtxi3U6zsxzjD0qxlr%2FZF36AmYItnlNje9Y5zUyW%2FdsMonoWalPSy1LQzNjYNQGTfUyEzTjRoocxKKuR1NffTAwJ6pIDANMxvYa0T5DRRrd4ojsg4%2Fe%2BPaLdbV1TxUZglPjOovK6Q5QRaMOm%2B93agymTpchVN%2BOxz3d%2FzwcSbJBhDAluPUOhw7CAcKzNfDr%2Fu46k9Ht2WNURSEyySZF9hGTJC9d61DNF%2FncUP%2FmnqxX07Saiw9X%2FM%2Fp%2Bt0BWedcFDeLZSlX7ErpIturHyN1t9371prXqdZOx4%2BV8zSfEVvTZh5Vg8MejG0s1GNhbev%2F3gbQEd7PwtaXrf%2F%2F3%2Fof&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=Q5SV3oIz%2Be%2FV5RWDQVCluWAfFUYELh7ZQjcrEKBBkr3imgv8NQKRRKEPihzosELtT%2FDH2tyz6Jxr40uUFaARPy6ClXkVQfksVVcDqjVX5kv1DqAs5DFRqYLtJPVphMSySmqUhdjatWQTlF%2BqU0oAhR9iva6aTiitp3P1tBoWBcYgj4ZAx5NwpIdAL8KRrNp%2FbaaGUfCWmx8nfrHGe%2FYkZqCQzRe5LfsAiuG7uzhpSLCGjcGBvU5J7C7cBJiG7xbTSCWpmCSyjrBSqbg7i6okKxukSE2gxu77akTgCOj8XKkw3t1JtNmLYZBesVRKfNUtkE9X9MxhHqSLzl1X1hHaTA%3D%3D
+17164/10: 11/28/2019 11:14:25 AM: Redirect URL: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJBbtswEPyKwDtFiVRskbAMuDGKGkhbI3ZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2h7tpebYZ4dvfwZwCMyW5bkd83Jy6F5g2FjEta5IJTKZaG8oXJoZFNDaIkyQMEtN5VhKcZSXaIA%2BwcRu3iCGW5pHlOeXnMhMoLxYtUFvyRJNtxi3U6zsxzjD0qxlr%2FZF36AmYItnlNje9Y5zUyW%2FdsMonoWalPSy1LQzNjYNQGTfUyEzTjRoocxKKuR1NffTAwJ6pIDANMxvYa0T5DRRrd4ojsg4%2Fe%2BPaLdbV1TxUZglPjOovK6Q5QRaMOm%2B93agymTpchVN%2BOxz3d%2FzwcSbJBhDAluPUOhw7CAcKzNfDr%2Fu46k9Ht2WNURSEyySZF9hGTJC9d61DNF%2FncUP%2FmnqxX07Saiw9X%2FM%2Fp%2Bt0BWedcFDeLZSlX7ErpIturHyN1t9371prXqdZOx4%2BV8zSfEVvTZh5Vg8MejG0s1GNhbev%2F3gbQEd7PwtaXrf%2F%2F3%2Fof&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=Q5SV3oIz%2Be%2FV5RWDQVCluWAfFUYELh7ZQjcrEKBBkr3imgv8NQKRRKEPihzosELtT%2FDH2tyz6Jxr40uUFaARPy6ClXkVQfksVVcDqjVX5kv1DqAs5DFRqYLtJPVphMSySmqUhdjatWQTlF%2BqU0oAhR9iva6aTiitp3P1tBoWBcYgj4ZAx5NwpIdAL8KRrNp%2FbaaGUfCWmx8nfrHGe%2FYkZqCQzRe5LfsAiuG7uzhpSLCGjcGBvU5J7C7cBJiG7xbTSCWpmCSyjrBSqbg7i6okKxukSE2gxu77akTgCOj8XKkw3t1JtNmLYZBesVRKfNUtkE9X9MxhHqSLzl1X1hHaTA%3D%3D
+17164/10: 11/28/2019 11:14:25 AM: Redirecting to: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJBbtswEPyKwDtFiVRskbAMuDGKGkhbI3ZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2h7tpebYZ4dvfwZwCMyW5bkd83Jy6F5g2FjEta5IJTKZaG8oXJoZFNDaIkyQMEtN5VhKcZSXaIA%2BwcRu3iCGW5pHlOeXnMhMoLxYtUFvyRJNtxi3U6zsxzjD0qxlr%2FZF36AmYItnlNje9Y5zUyW%2FdsMonoWalPSy1LQzNjYNQGTfUyEzTjRoocxKKuR1NffTAwJ6pIDANMxvYa0T5DRRrd4ojsg4%2Fe%2BPaLdbV1TxUZglPjOovK6Q5QRaMOm%2B93agymTpchVN%2BOxz3d%2FzwcSbJBhDAluPUOhw7CAcKzNfDr%2Fu46k9Ht2WNURSEyySZF9hGTJC9d61DNF%2FncUP%2FmnqxX07Saiw9X%2FM%2Fp%2Bt0BWedcFDeLZSlX7ErpIturHyN1t9371prXqdZOx4%2BV8zSfEVvTZh5Vg8MejG0s1GNhbev%2F3gbQEd7PwtaXrf%2F%2F3%2Fof&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=Q5SV3oIz%2Be%2FV5RWDQVCluWAfFUYELh7ZQjcrEKBBkr3imgv8NQKRRKEPihzosELtT%2FDH2tyz6Jxr40uUFaARPy6ClXkVQfksVVcDqjVX5kv1DqAs5DFRqYLtJPVphMSySmqUhdjatWQTlF%2BqU0oAhR9iva6aTiitp3P1tBoWBcYgj4ZAx5NwpIdAL8KRrNp%2FbaaGUfCWmx8nfrHGe%2FYkZqCQzRe5LfsAiuG7uzhpSLCGjcGBvU5J7C7cBJiG7xbTSCWpmCSyjrBSqbg7i6okKxukSE2gxu77akTgCOj8XKkw3t1JtNmLYZBesVRKfNUtkE9X9MxhHqSLzl1X1hHaTA%3D%3D
+17164/10: 11/28/2019 11:14:25 AM: Request sent over HTTP Redirect.
+17164/10: 11/28/2019 11:14:25 AM: SAML message sent: partner=https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8, message=<samlp:AuthnRequest ID="_5b293a2f-e029-4132-937c-26c1ef9fde38" Version="2.0" IssueInstant="2019-11-28T03:14:24.942Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relay state=, destination URL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+17164/10: 11/28/2019 11:14:25 AM: Service provider session (40cc304f-5aee-451c-8464-2df1f6d85bb8) state:
+Pending response state:
+Action: ReceiveSamlResponse
+Partner name: https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+Relay state: 
+In response to: _5b293a2f-e029-4132-937c-26c1ef9fde38
+
+17164/10: 11/28/2019 11:14:25 AM: Initiation of SSO to the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8 has completed successfully.
+17164/10: 11/28/2019 11:15:09 AM: The SAML_SessionId cookie with value 3ca04c53-f1cf-440f-a183-ff29999bb7c7 has been set.
+17164/10: 11/28/2019 11:15:09 AM: Initiating SSO to the partner identity provider.
+17164/10: 11/28/2019 11:15:09 AM: Service provider session (3ca04c53-f1cf-440f-a183-ff29999bb7c7) state:
+17164/10: 11/28/2019 11:15:09 AM: Retrieving the local service provider signature certificates for the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8.
+17164/10: 11/28/2019 11:15:09 AM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been retrieved from the cache.
+17164/10: 11/28/2019 11:15:09 AM: Sending request over HTTP Redirect, baseURL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8, samlMessage=<samlp:AuthnRequest ID="_15edd0ac-848c-421f-86c5-4968e90dc2ef" Version="2.0" IssueInstant="2019-11-28T03:15:09.162Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relayState=
+17164/10: 11/28/2019 11:15:09 AM: Creating HTTP redirect query string.
+17164/10: 11/28/2019 11:15:09 AM: Encoding SAML message: <samlp:AuthnRequest ID="_15edd0ac-848c-421f-86c5-4968e90dc2ef" Version="2.0" IssueInstant="2019-11-28T03:15:09.162Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>
+17164/10: 11/28/2019 11:15:09 AM: Encoded SAML message: fVJBbtswEPyKwDtFUpJlibAMuDGKGkhbIXZzyKVgqFVMQCJVLpUmv68kJ4B7SK6DndmZ2d2g6rtB7sZwtnfwZwQM0WFfkd9iBU3DlaZFVmiaJaKlRa5XNCvzAkre6ARaEt2DR+NsRZKYk+iAOMLBYlA2TBAXJRWCJsWJp1KsJC9jkScPJNpPW4xVYWGeQxhQMta5J2PjF9CjN+1rrF3PeqeQmWZgs0lExwr1uFbl5IdrDZM2KKrWPKU80WUqIM2bpiDRV+c1LIkqEvwIs7FaIZpnqEirOpyQ2rvgtOu+GNsY+1SR0Vs5rTMoreoBZdDyuPt+K6dg8vEyhPLb6VTT+ufxRKIdIvg5wY2zOPbgj+CfjYZfd7fXmbTqzg6DzLKUl2xWZB8xSfTSdxblcpHPDQ1v7sl2M0/LpXh/xf+crt4dkK1I0myVr4tyw66ULrKD/DFRD/vadUa/zrX2KnysLGKxIKah7TIqR4sDaNMaaKbCus79vfGgAryfhW0vW///v+0/
+17164/10: 11/28/2019 11:15:09 AM: Query string: SAMLRequest=fVJBbtswEPyKwDtFUpJlibAMuDGKGkhbIXZzyKVgqFVMQCJVLpUmv68kJ4B7SK6DndmZ2d2g6rtB7sZwtnfwZwQM0WFfkd9iBU3DlaZFVmiaJaKlRa5XNCvzAkre6ARaEt2DR%2BNsRZKYk%2BiAOMLBYlA2TBAXJRWCJsWJp1KsJC9jkScPJNpPW4xVYWGeQxhQMta5J2PjF9CjN%2B1rrF3PeqeQmWZgs0lExwr1uFbl5IdrDZM2KKrWPKU80WUqIM2bpiDRV%2Bc1LIkqEvwIs7FaIZpnqEirOpyQ2rvgtOu%2BGNsY%2B1SR0Vs5rTMoreoBZdDyuPt%2BK6dg8vEyhPLb6VTT%2BufxRKIdIvg5wY2zOPbgj%2BCfjYZfd7fXmbTqzg6DzLKUl2xWZB8xSfTSdxblcpHPDQ1v7sl2M0%2FLpXh%2Fxf%2Bcrt4dkK1I0myVr4tyw66ULrKD%2FDFRD%2FvadUa%2FzrX2KnysLGKxIKah7TIqR4sDaNMaaKbCus79vfGgAryfhW0vW%2F%2F%2Fv%2B0%2F&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256
+17164/10: 11/28/2019 11:15:09 AM: Generating signature.
+17164/10: 11/28/2019 11:15:09 AM: Data to sign: 53 41 4d 4c 52 65 71 75 65 73 74 3d 66 56 4a 42 62 74 73 77 45 50 79 4b 77 44 74 46 55 70 4a 6c 69 62 41 4d 75 44 47 4b 47 6b 68 62 49 58 5a 7a 79 4b 56 67 71 46 56 4d 51 43 4a 56 4c 70 55 6d 76 36 38 6b 4a 34 42 37 53 4b 36 44 6e 64 6d 5a 32 64 32 67 36 72 74 42 37 73 5a 77 74 6e 66 77 5a 77 51 4d 30 57 46 66 6b 64 39 69 42 55 33 44 6c 61 5a 46 56 6d 69 61 4a 61 4b 6c 52 61 35 58 4e 43 76 7a 41 6b 72 65 36 41 52 61 45 74 32 44 52 25 32 42 4e 73 52 5a 4b 59 6b 25 32 42 69 41 4f 4d 4c 42 59 6c 41 32 54 42 41 58 4a 52 57 43 4a 73 57 4a 70 31 4b 73 4a 43 39 6a 6b 53 63 50 4a 4e 70 50 57 34 78 56 59 57 47 65 51 78 68 51 4d 74 61 35 4a 32 50 6a 46 39 43 6a 4e 25 32 42 31 72 72 46 33 50 65 71 65 51 6d 57 5a 67 73 30 6c 45 78 77 72 31 75 46 62 6c 35 49 64 72 44 5a 4d 32 4b 4b 72 57 50 4b 55 38 30 57 55 71 49 4d 32 62 70 69 44 52 56 25 32 42 63 31 4c 49 6b 71 45 76 77 49 73 37 46 61 49 5a 70 6e 71 45 69 72 4f 70 79 51 32 72 76 67 74 4f 75 25 32 42 47 4e 73 59 25 32 42 31 53 52 30 56 73 35 72 54 4d 6f 72 65 6f 42 5a 64 44 79 75 50 74 25 32 42 4b 36 64 67 38 76 45 79 68 50 4c 62 36 56 54 54 25 32 42 75 66 78 52 4b 49 64 49 76 67 35 77 59 32 7a 4f 50 62 67 6a 25 32 42 43 66 6a 59 5a 66 64 37 66 58 6d 62 54 71 7a 67 36 44 7a 4c 4b 55 6c 32 78 57 5a 42 38 78 53 66 54 53 64 78 62 6c 63 70 48 50 44 51 31 76 37 73 6c 32 4d 30 25 32 46 4c 70 58 68 25 32 46 78 66 25 32 42 63 72 74 34 64 6b 4b 31 49 30 6d 79 56 72 34 74 79 77 36 36 55 4c 72 4b 44 25 32 46 44 46 52 44 25 32 46 76 61 64 55 61 25 32 46 7a 72 58 32 4b 6e 79 73 4c 47 4b 78 49 4b 61 68 37 54 49 71 52 34 73 44 61 4e 4d 61 61 4b 62 43 75 73 37 39 76 66 47 67 41 72 79 66 68 57 30 76 57 25 32 46 25 32 46 25 32 46 76 25 32 42 30 25 32 46 26 53 69 67 41 6c 67 3d 68 74 74 70 25 33 41 25 32 46 25 32 46 77 77 77 2e 77 33 2e 6f 72 67 25 32 46 32 30 30 31 25 32 46 30 34 25 32 46 78 6d 6c 64 73 69 67 2d 6d 6f 72 65 25 32 33 72 73 61 2d 73 68 61 32 35 36
+17164/10: 11/28/2019 11:15:09 AM: Signature algorithm: http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+17164/10: 11/28/2019 11:15:09 AM: Signature: 6c 36 34 a8 a3 cf 8a dd c6 0c 7d 5a 6c 5f a6 05 ea 80 d6 aa 78 f9 59 6d 5a 84 3c 69 36 e7 c6 34 83 d4 1b 4e c1 69 5d e0 0a dd 11 24 dd 5f 7c 94 a7 ed 5c b5 d7 33 85 99 41 4c 38 bb 46 2e a0 02 0a fb 18 4e 07 57 59 a8 b1 df d0 61 89 17 ab 95 5e a7 d0 16 1d bf 1e e7 4c cf e4 12 41 1a 72 fd f5 60 c0 12 4a cd 22 ca 8a 98 46 4e 13 f2 08 54 b7 2d f6 db 15 5c 7f 8c 71 31 06 29 e7 89 c4 cb eb ac 2a 5d 76 8c cf 8a 2a 48 ca 87 91 d1 1a 9c e3 6c cf de 76 30 67 b8 5d a1 8e 3a f2 a6 4f 64 ba d3 91 d1 ef 76 e0 52 c4 c9 47 4a e8 96 85 be 1b 2e 31 09 e5 56 78 56 18 e9 13 3d dc e5 50 7e 46 c0 41 17 34 a3 56 77 cf fe d7 12 52 ac b4 0b 52 fb ea ac a8 6e 79 59 90 ea 27 77 a5 5d b1 d8 63 11 6c 00 a1 18 d0 e7 0a 3e 9c ce b5 6d fd 11 61 77 27 28 d9 49 16 09 a5 a0 5a 8a fe 73 6a 9e
+17164/10: 11/28/2019 11:15:09 AM: Query string: SAMLRequest=fVJBbtswEPyKwDtFUpJlibAMuDGKGkhbIXZzyKVgqFVMQCJVLpUmv68kJ4B7SK6DndmZ2d2g6rtB7sZwtnfwZwQM0WFfkd9iBU3DlaZFVmiaJaKlRa5XNCvzAkre6ARaEt2DR%2BNsRZKYk%2BiAOMLBYlA2TBAXJRWCJsWJp1KsJC9jkScPJNpPW4xVYWGeQxhQMta5J2PjF9CjN%2B1rrF3PeqeQmWZgs0lExwr1uFbl5IdrDZM2KKrWPKU80WUqIM2bpiDRV%2Bc1LIkqEvwIs7FaIZpnqEirOpyQ2rvgtOu%2BGNsY%2B1SR0Vs5rTMoreoBZdDyuPt%2BK6dg8vEyhPLb6VTT%2BufxRKIdIvg5wY2zOPbgj%2BCfjYZfd7fXmbTqzg6DzLKUl2xWZB8xSfTSdxblcpHPDQ1v7sl2M0%2FLpXh%2Fxf%2Bcrt4dkK1I0myVr4tyw66ULrKD%2FDFRD%2FvadUa%2FzrX2KnysLGKxIKah7TIqR4sDaNMaaKbCus79vfGgAryfhW0vW%2F%2F%2Fv%2B0%2F&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=bDY0qKPPit3GDH1abF%2BmBeqA1qp4%2BVltWoQ8aTbnxjSD1BtOwWld4ArdESTdX3yUp%2B1ctdczhZlBTDi7Ri6gAgr7GE4HV1mosd%2FQYYkXq5Vep9AWHb8e50zP5BJBGnL99WDAEkrNIsqKmEZOE%2FIIVLct9tsVXH%2BMcTEGKeeJxMvrrCpddozPiipIyoeR0Rqc42zP3nYwZ7hdoY468qZPZLrTkdHvduBSxMlHSuiWhb4bLjEJ5VZ4VhjpEz3c5VB%2BRsBBFzSjVnfP%2FtcSUqy0C1L76qyobnlZkOond6VdsdhjEWwAoRjQ5wo%2BnM61bf0RYXcnKNlJFgmloFqK%2FnNqng%3D%3D
+17164/10: 11/28/2019 11:15:09 AM: Redirect URL: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJBbtswEPyKwDtFUpJlibAMuDGKGkhbIXZzyKVgqFVMQCJVLpUmv68kJ4B7SK6DndmZ2d2g6rtB7sZwtnfwZwQM0WFfkd9iBU3DlaZFVmiaJaKlRa5XNCvzAkre6ARaEt2DR%2BNsRZKYk%2BiAOMLBYlA2TBAXJRWCJsWJp1KsJC9jkScPJNpPW4xVYWGeQxhQMta5J2PjF9CjN%2B1rrF3PeqeQmWZgs0lExwr1uFbl5IdrDZM2KKrWPKU80WUqIM2bpiDRV%2Bc1LIkqEvwIs7FaIZpnqEirOpyQ2rvgtOu%2BGNsY%2B1SR0Vs5rTMoreoBZdDyuPt%2BK6dg8vEyhPLb6VTT%2BufxRKIdIvg5wY2zOPbgj%2BCfjYZfd7fXmbTqzg6DzLKUl2xWZB8xSfTSdxblcpHPDQ1v7sl2M0%2FLpXh%2Fxf%2Bcrt4dkK1I0myVr4tyw66ULrKD%2FDFRD%2FvadUa%2FzrX2KnysLGKxIKah7TIqR4sDaNMaaKbCus79vfGgAryfhW0vW%2F%2F%2Fv%2B0%2F&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=bDY0qKPPit3GDH1abF%2BmBeqA1qp4%2BVltWoQ8aTbnxjSD1BtOwWld4ArdESTdX3yUp%2B1ctdczhZlBTDi7Ri6gAgr7GE4HV1mosd%2FQYYkXq5Vep9AWHb8e50zP5BJBGnL99WDAEkrNIsqKmEZOE%2FIIVLct9tsVXH%2BMcTEGKeeJxMvrrCpddozPiipIyoeR0Rqc42zP3nYwZ7hdoY468qZPZLrTkdHvduBSxMlHSuiWhb4bLjEJ5VZ4VhjpEz3c5VB%2BRsBBFzSjVnfP%2FtcSUqy0C1L76qyobnlZkOond6VdsdhjEWwAoRjQ5wo%2BnM61bf0RYXcnKNlJFgmloFqK%2FnNqng%3D%3D
+17164/10: 11/28/2019 11:15:09 AM: Redirecting to: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJBbtswEPyKwDtFUpJlibAMuDGKGkhbIXZzyKVgqFVMQCJVLpUmv68kJ4B7SK6DndmZ2d2g6rtB7sZwtnfwZwQM0WFfkd9iBU3DlaZFVmiaJaKlRa5XNCvzAkre6ARaEt2DR%2BNsRZKYk%2BiAOMLBYlA2TBAXJRWCJsWJp1KsJC9jkScPJNpPW4xVYWGeQxhQMta5J2PjF9CjN%2B1rrF3PeqeQmWZgs0lExwr1uFbl5IdrDZM2KKrWPKU80WUqIM2bpiDRV%2Bc1LIkqEvwIs7FaIZpnqEirOpyQ2rvgtOu%2BGNsY%2B1SR0Vs5rTMoreoBZdDyuPt%2BK6dg8vEyhPLb6VTT%2BufxRKIdIvg5wY2zOPbgj%2BCfjYZfd7fXmbTqzg6DzLKUl2xWZB8xSfTSdxblcpHPDQ1v7sl2M0%2FLpXh%2Fxf%2Bcrt4dkK1I0myVr4tyw66ULrKD%2FDFRD%2FvadUa%2FzrX2KnysLGKxIKah7TIqR4sDaNMaaKbCus79vfGgAryfhW0vW%2F%2F%2Fv%2B0%2F&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=bDY0qKPPit3GDH1abF%2BmBeqA1qp4%2BVltWoQ8aTbnxjSD1BtOwWld4ArdESTdX3yUp%2B1ctdczhZlBTDi7Ri6gAgr7GE4HV1mosd%2FQYYkXq5Vep9AWHb8e50zP5BJBGnL99WDAEkrNIsqKmEZOE%2FIIVLct9tsVXH%2BMcTEGKeeJxMvrrCpddozPiipIyoeR0Rqc42zP3nYwZ7hdoY468qZPZLrTkdHvduBSxMlHSuiWhb4bLjEJ5VZ4VhjpEz3c5VB%2BRsBBFzSjVnfP%2FtcSUqy0C1L76qyobnlZkOond6VdsdhjEWwAoRjQ5wo%2BnM61bf0RYXcnKNlJFgmloFqK%2FnNqng%3D%3D
+17164/10: 11/28/2019 11:15:09 AM: Request sent over HTTP Redirect.
+17164/10: 11/28/2019 11:15:09 AM: SAML message sent: partner=https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8, message=<samlp:AuthnRequest ID="_15edd0ac-848c-421f-86c5-4968e90dc2ef" Version="2.0" IssueInstant="2019-11-28T03:15:09.162Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relay state=, destination URL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+17164/10: 11/28/2019 11:15:09 AM: Service provider session (3ca04c53-f1cf-440f-a183-ff29999bb7c7) state:
+Pending response state:
+Action: ReceiveSamlResponse
+Partner name: https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+Relay state: 
+In response to: _15edd0ac-848c-421f-86c5-4968e90dc2ef
+
+17164/10: 11/28/2019 11:15:09 AM: Initiation of SSO to the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8 has completed successfully.
+Evaluation (Expires 11/30/2019): *************************
+26604/12: 11/28/2019 11:19:01 AM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+26604/12: 11/28/2019 11:19:01 AM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+26604/12: 11/28/2019 11:19:01 AM: Initializing the SAML environment.
+26604/12: 11/28/2019 11:19:01 AM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+26604/12: 11/28/2019 11:19:01 AM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration xmlns="urn:componentspace:SAML:2.0:configuration">
+
+  <ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>
+</SAMLConfiguration>
+26604/12: 11/28/2019 11:19:02 AM: The SAML configuration file has been successfully loaded.
+26604/12: 11/28/2019 11:19:02 AM: SAML configuration changes in the directory D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC are being monitored.
+26604/12: 11/28/2019 11:19:02 AM: The SAML environment has been successfuly initialized.
+26604/12: 11/28/2019 11:19:02 AM: The SAML_SessionId cookie with value c7191249-7bf2-4e5e-aea3-8c8b8e9f46b9 has been set.
+26604/12: 11/28/2019 11:19:02 AM: Initiating SSO to the partner identity provider.
+26604/12: 11/28/2019 11:19:02 AM: Service provider session (c7191249-7bf2-4e5e-aea3-8c8b8e9f46b9) state:
+26604/12: 11/28/2019 11:19:02 AM: Retrieving the local service provider signature certificates for the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8.
+26604/12: 11/28/2019 11:19:02 AM: Loading the X.509 certificate from the file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Certificates\sp.pfx.
+26604/12: 11/28/2019 11:19:02 AM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been loaded.
+26604/12: 11/28/2019 11:19:02 AM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been cached.
+26604/12: 11/28/2019 11:19:02 AM: Sending request over HTTP Redirect, baseURL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8, samlMessage=<samlp:AuthnRequest ID="_4aa4095c-6bad-4cc8-abfc-a8412a55b6a8" Version="2.0" IssueInstant="2019-11-28T03:19:02.375Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relayState=
+26604/12: 11/28/2019 11:19:02 AM: Creating HTTP redirect query string.
+26604/12: 11/28/2019 11:19:02 AM: Encoding SAML message: <samlp:AuthnRequest ID="_4aa4095c-6bad-4cc8-abfc-a8412a55b6a8" Version="2.0" IssueInstant="2019-11-28T03:19:02.375Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>
+26604/12: 11/28/2019 11:19:02 AM: Encoded SAML message: fVLLbtswEPwVgXeKetoSYRlwYxQ1kLZG7PbQS7GiVjEBiVS5VJr8fSU5AdxDch3szM7M7oag7wa5G/3FPOCfEckHh33FfmcAWVTmiq9qaHimVMGhbhWHIosTyPN6BQULfqIjbU3FkjBiwYFoxIMhD8ZPUBSXPI55UpyjVMaljJIwXee/WLCftmgDfmFevB9ICtHZR23CZ1Sj0+1LqGwvegskdDOI2SSRFQXUaygLxSOlcNJG4LCOUh4lqkxjTFdNM5n6bJ3CJVHFvBtxNnYEIv2EFWuhowk5Ouutst0nbRptHis2OiOndZqkgR5JeiVPu6/3cgom6+sQyS/n85Efv5/OLNgRoZsT3FlDY4/uhO5JK/zxcH+bSUF3seRllqVRKWZF8R6TBc99Z0guF/nY0PDqnm0387Rcinc3/I/p8OaAbeMkzfLVuig34kbpKjvIbxP1sD/aTquXudYe/PvKcRgviG54u4zK0dCASrcam6mwrrN/7xyCx7eziO116///t/0H
+26604/12: 11/28/2019 11:19:02 AM: Query string: SAMLRequest=fVLLbtswEPwVgXeKetoSYRlwYxQ1kLZG7PbQS7GiVjEBiVS5VJr8fSU5AdxDch3szM7M7oag7wa5G%2F3FPOCfEckHh33FfmcAWVTmiq9qaHimVMGhbhWHIosTyPN6BQULfqIjbU3FkjBiwYFoxIMhD8ZPUBSXPI55UpyjVMaljJIwXee%2FWLCftmgDfmFevB9ICtHZR23CZ1Sj0%2B1LqGwvegskdDOI2SSRFQXUaygLxSOlcNJG4LCOUh4lqkxjTFdNM5n6bJ3CJVHFvBtxNnYEIv2EFWuhowk5Ouutst0nbRptHis2OiOndZqkgR5JeiVPu6%2F3cgom6%2BsQyS%2Fn85Efv5%2FOLNgRoZsT3FlDY4%2FuhO5JK%2FzxcH%2BbSUF3seRllqVRKWZF8R6TBc99Z0guF%2FnY0PDqnm0387Rcinc3%2FI%2Fp8OaAbeMkzfLVuig34kbpKjvIbxP1sD%2FaTquXudYe%2FPvKcRgviG54u4zK0dCASrcam6mwrrN%2F7xyCx7eziO116%2F%2F%2Ft%2F0H&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256
+26604/12: 11/28/2019 11:19:02 AM: Generating signature.
+26604/12: 11/28/2019 11:19:02 AM: Data to sign: 53 41 4d 4c 52 65 71 75 65 73 74 3d 66 56 4c 4c 62 74 73 77 45 50 77 56 67 58 65 4b 65 74 6f 53 59 52 6c 77 59 78 51 31 6b 4c 5a 47 37 50 62 51 53 37 47 69 56 6a 45 42 69 56 53 35 56 4a 72 38 66 53 55 35 41 64 78 44 63 68 33 73 7a 4d 37 4d 37 6f 61 67 37 77 61 35 47 25 32 46 33 46 50 4f 43 66 45 63 6b 48 68 33 33 46 66 6d 63 41 57 56 54 6d 69 71 39 71 61 48 69 6d 56 4d 47 68 62 68 57 48 49 6f 73 54 79 50 4e 36 42 51 55 4c 66 71 49 6a 62 55 33 46 6b 6a 42 69 77 59 46 6f 78 49 4d 68 44 38 5a 50 55 42 53 58 50 49 35 35 55 70 79 6a 56 4d 61 6c 6a 4a 49 77 58 65 65 25 32 46 57 4c 43 66 74 6d 67 44 66 6d 46 65 76 42 39 49 43 74 48 5a 52 32 33 43 5a 31 53 6a 30 25 32 42 31 4c 71 47 77 76 65 67 73 6b 64 44 4f 49 32 53 53 52 46 51 58 55 61 79 67 4c 78 53 4f 6c 63 4e 4a 47 34 4c 43 4f 55 68 34 6c 71 6b 78 6a 54 46 64 4e 4d 35 6e 36 62 4a 33 43 4a 56 48 46 76 42 74 78 4e 6e 59 45 49 76 32 45 46 57 75 68 6f 77 6b 35 4f 75 75 74 73 74 30 6e 62 52 70 74 48 69 73 32 4f 69 4f 6e 64 5a 71 6b 67 52 35 4a 65 69 56 50 75 36 25 32 46 33 63 67 6f 6d 36 25 32 42 73 51 79 53 25 32 46 6e 38 35 45 66 76 35 25 32 46 4f 4c 4e 67 52 6f 5a 73 54 33 46 6c 44 59 34 25 32 46 75 68 4f 35 4a 4b 25 32 46 7a 78 63 48 25 32 42 62 53 55 46 33 73 65 52 6c 6c 71 56 52 4b 57 5a 46 38 52 36 54 42 63 39 39 5a 30 67 75 46 25 32 46 6e 59 30 50 44 71 6e 6d 30 33 38 37 52 63 69 6e 63 33 25 32 46 49 25 32 46 70 38 4f 61 41 62 65 4d 6b 7a 66 4c 56 75 69 67 33 34 6b 62 70 4b 6a 76 49 62 78 50 31 73 44 25 32 46 61 54 71 75 58 75 64 59 65 25 32 46 50 76 4b 63 52 67 76 69 47 35 34 75 34 7a 4b 30 64 43 41 53 72 63 61 6d 36 6d 77 72 72 4e 25 32 46 37 78 79 43 78 37 65 7a 69 4f 31 31 36 25 32 46 25 32 46 25 32 46 74 25 32 46 30 48 26 53 69 67 41 6c 67 3d 68 74 74 70 25 33 41 25 32 46 25 32 46 77 77 77 2e 77 33 2e 6f 72 67 25 32 46 32 30 30 31 25 32 46 30 34 25 32 46 78 6d 6c 64 73 69 67 2d 6d 6f 72 65 25 32 33 72 73 61 2d 73 68 61 32 35 36
+26604/12: 11/28/2019 11:19:02 AM: Signature algorithm: http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+26604/12: 11/28/2019 11:19:02 AM: Signature: 5d a6 3b 3f 81 b9 47 16 89 df c0 24 c2 92 f3 27 cc 29 2e dc e5 95 ed ee 70 25 f0 91 de 25 6f 4b 82 b7 cf df 5f e6 44 5f 14 c9 23 bf 82 28 cb 63 47 d2 fc 8b 58 86 92 79 59 1c c8 fd ff 5c 7a 2c 8f ea 79 3c 7f c0 61 02 ec b6 ef 22 0f c7 ed 8c f9 2f 62 2e 24 e8 15 e0 8c e7 08 15 6e 72 41 c7 95 6a de ee 95 29 2b e8 45 6a 54 ff 74 24 53 13 a7 34 c4 f2 07 99 5f 0d 82 4c a7 c5 3e 70 18 f7 62 d3 c1 af 25 d5 c3 4c 77 7a f1 63 77 5e 17 4e 60 36 f4 aa de c3 51 14 63 a3 43 6b e3 55 13 33 ff 3d 5b 5d 70 9f 40 87 84 61 f0 4f d6 aa c3 f1 3f b4 82 35 1d 55 fe bc b2 3b c6 d4 f7 dc 8e ed 48 1e 5d 73 56 9d 07 52 a1 e0 8e 6b 1d d6 b5 1b 5a 46 1b e4 32 6d 34 cc 7d 98 c5 40 4f d6 c9 44 8c ba 8c 94 d9 9e 64 0e dc 56 91 d2 f8 e2 d1 01 4b b4 fa 5b 8d c4 db bd d1 a4 48 23 c4 bf d0 68
+26604/12: 11/28/2019 11:19:02 AM: Query string: SAMLRequest=fVLLbtswEPwVgXeKetoSYRlwYxQ1kLZG7PbQS7GiVjEBiVS5VJr8fSU5AdxDch3szM7M7oag7wa5G%2F3FPOCfEckHh33FfmcAWVTmiq9qaHimVMGhbhWHIosTyPN6BQULfqIjbU3FkjBiwYFoxIMhD8ZPUBSXPI55UpyjVMaljJIwXee%2FWLCftmgDfmFevB9ICtHZR23CZ1Sj0%2B1LqGwvegskdDOI2SSRFQXUaygLxSOlcNJG4LCOUh4lqkxjTFdNM5n6bJ3CJVHFvBtxNnYEIv2EFWuhowk5Ouutst0nbRptHis2OiOndZqkgR5JeiVPu6%2F3cgom6%2BsQyS%2Fn85Efv5%2FOLNgRoZsT3FlDY4%2FuhO5JK%2FzxcH%2BbSUF3seRllqVRKWZF8R6TBc99Z0guF%2FnY0PDqnm0387Rcinc3%2FI%2Fp8OaAbeMkzfLVuig34kbpKjvIbxP1sD%2FaTquXudYe%2FPvKcRgviG54u4zK0dCASrcam6mwrrN%2F7xyCx7eziO116%2F%2F%2Ft%2F0H&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=XaY7P4G5RxaJ38AkwpLzJ8wpLtzlle3ucCXwkd4lb0uCt8%2FfX%2BZEXxTJI7%2BCKMtjR9L8i1iGknlZHMj9%2F1x6LI%2FqeTx%2FwGEC7LbvIg%2FH7Yz5L2IuJOgV4IznCBVuckHHlWre7pUpK%2BhFalT%2FdCRTE6c0xPIHmV8NgkynxT5wGPdi08GvJdXDTHd68WN3XhdOYDb0qt7DURRjo0Nr41UTM%2F89W11wn0CHhGHwT9aqw%2FE%2FtII1HVX%2BvLI7xtT33I7tSB5dc1adB1Kh4I5rHda1G1pGG%2BQybTTMfZjFQE%2FWyUSMuoyU2Z5kDtxWkdL44tEBS7T6W43E273RpEgjxL%2FQaA%3D%3D
+26604/12: 11/28/2019 11:19:02 AM: Redirect URL: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVLLbtswEPwVgXeKetoSYRlwYxQ1kLZG7PbQS7GiVjEBiVS5VJr8fSU5AdxDch3szM7M7oag7wa5G%2F3FPOCfEckHh33FfmcAWVTmiq9qaHimVMGhbhWHIosTyPN6BQULfqIjbU3FkjBiwYFoxIMhD8ZPUBSXPI55UpyjVMaljJIwXee%2FWLCftmgDfmFevB9ICtHZR23CZ1Sj0%2B1LqGwvegskdDOI2SSRFQXUaygLxSOlcNJG4LCOUh4lqkxjTFdNM5n6bJ3CJVHFvBtxNnYEIv2EFWuhowk5Ouutst0nbRptHis2OiOndZqkgR5JeiVPu6%2F3cgom6%2BsQyS%2Fn85Efv5%2FOLNgRoZsT3FlDY4%2FuhO5JK%2FzxcH%2BbSUF3seRllqVRKWZF8R6TBc99Z0guF%2FnY0PDqnm0387Rcinc3%2FI%2Fp8OaAbeMkzfLVuig34kbpKjvIbxP1sD%2FaTquXudYe%2FPvKcRgviG54u4zK0dCASrcam6mwrrN%2F7xyCx7eziO116%2F%2F%2Ft%2F0H&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=XaY7P4G5RxaJ38AkwpLzJ8wpLtzlle3ucCXwkd4lb0uCt8%2FfX%2BZEXxTJI7%2BCKMtjR9L8i1iGknlZHMj9%2F1x6LI%2FqeTx%2FwGEC7LbvIg%2FH7Yz5L2IuJOgV4IznCBVuckHHlWre7pUpK%2BhFalT%2FdCRTE6c0xPIHmV8NgkynxT5wGPdi08GvJdXDTHd68WN3XhdOYDb0qt7DURRjo0Nr41UTM%2F89W11wn0CHhGHwT9aqw%2FE%2FtII1HVX%2BvLI7xtT33I7tSB5dc1adB1Kh4I5rHda1G1pGG%2BQybTTMfZjFQE%2FWyUSMuoyU2Z5kDtxWkdL44tEBS7T6W43E273RpEgjxL%2FQaA%3D%3D
+26604/12: 11/28/2019 11:19:02 AM: Redirecting to: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVLLbtswEPwVgXeKetoSYRlwYxQ1kLZG7PbQS7GiVjEBiVS5VJr8fSU5AdxDch3szM7M7oag7wa5G%2F3FPOCfEckHh33FfmcAWVTmiq9qaHimVMGhbhWHIosTyPN6BQULfqIjbU3FkjBiwYFoxIMhD8ZPUBSXPI55UpyjVMaljJIwXee%2FWLCftmgDfmFevB9ICtHZR23CZ1Sj0%2B1LqGwvegskdDOI2SSRFQXUaygLxSOlcNJG4LCOUh4lqkxjTFdNM5n6bJ3CJVHFvBtxNnYEIv2EFWuhowk5Ouutst0nbRptHis2OiOndZqkgR5JeiVPu6%2F3cgom6%2BsQyS%2Fn85Efv5%2FOLNgRoZsT3FlDY4%2FuhO5JK%2FzxcH%2BbSUF3seRllqVRKWZF8R6TBc99Z0guF%2FnY0PDqnm0387Rcinc3%2FI%2Fp8OaAbeMkzfLVuig34kbpKjvIbxP1sD%2FaTquXudYe%2FPvKcRgviG54u4zK0dCASrcam6mwrrN%2F7xyCx7eziO116%2F%2F%2Ft%2F0H&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=XaY7P4G5RxaJ38AkwpLzJ8wpLtzlle3ucCXwkd4lb0uCt8%2FfX%2BZEXxTJI7%2BCKMtjR9L8i1iGknlZHMj9%2F1x6LI%2FqeTx%2FwGEC7LbvIg%2FH7Yz5L2IuJOgV4IznCBVuckHHlWre7pUpK%2BhFalT%2FdCRTE6c0xPIHmV8NgkynxT5wGPdi08GvJdXDTHd68WN3XhdOYDb0qt7DURRjo0Nr41UTM%2F89W11wn0CHhGHwT9aqw%2FE%2FtII1HVX%2BvLI7xtT33I7tSB5dc1adB1Kh4I5rHda1G1pGG%2BQybTTMfZjFQE%2FWyUSMuoyU2Z5kDtxWkdL44tEBS7T6W43E273RpEgjxL%2FQaA%3D%3D
+26604/12: 11/28/2019 11:19:02 AM: Request sent over HTTP Redirect.
+26604/12: 11/28/2019 11:19:02 AM: SAML message sent: partner=https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8, message=<samlp:AuthnRequest ID="_4aa4095c-6bad-4cc8-abfc-a8412a55b6a8" Version="2.0" IssueInstant="2019-11-28T03:19:02.375Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relay state=, destination URL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+26604/12: 11/28/2019 11:19:02 AM: Service provider session (c7191249-7bf2-4e5e-aea3-8c8b8e9f46b9) state:
+Pending response state:
+Action: ReceiveSamlResponse
+Partner name: https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+Relay state: 
+In response to: _4aa4095c-6bad-4cc8-abfc-a8412a55b6a8
+
+26604/12: 11/28/2019 11:19:02 AM: Initiation of SSO to the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8 has completed successfully.
+Evaluation (Expires 11/30/2019): *************************
+21104/5: 11/28/2019 12:01:42 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+21104/5: 11/28/2019 12:01:42 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+21104/5: 11/28/2019 12:01:42 PM: Initializing the SAML environment.
+21104/5: 11/28/2019 12:01:42 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+21104/5: 11/28/2019 12:01:42 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration xmlns="urn:componentspace:SAML:2.0:configuration">
+
+  <ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>
+</SAMLConfiguration>
+21104/5: 11/28/2019 12:01:43 PM: The SAML configuration file has been successfully loaded.
+21104/5: 11/28/2019 12:01:43 PM: SAML configuration changes in the directory D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC are being monitored.
+21104/5: 11/28/2019 12:01:43 PM: The SAML environment has been successfuly initialized.
+21104/5: 11/28/2019 12:01:43 PM: The SAML_SessionId cookie with value 551e33a4-c40a-445d-8836-5c2906e4e048 has been set.
+21104/5: 11/28/2019 12:01:43 PM: Initiating SSO to the partner identity provider.
+21104/5: 11/28/2019 12:01:43 PM: Service provider session (551e33a4-c40a-445d-8836-5c2906e4e048) state:
+21104/5: 11/28/2019 12:01:43 PM: Retrieving the local service provider signature certificates for the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8.
+21104/5: 11/28/2019 12:01:43 PM: Loading the X.509 certificate from the file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Certificates\sp.pfx.
+21104/5: 11/28/2019 12:01:43 PM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been loaded.
+21104/5: 11/28/2019 12:01:43 PM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been cached.
+21104/5: 11/28/2019 12:01:43 PM: Sending request over HTTP Redirect, baseURL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8, samlMessage=<samlp:AuthnRequest ID="_daefeba7-4512-4016-90ea-763290cac923" Version="2.0" IssueInstant="2019-11-28T04:01:43.181Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relayState=[returnURLs, https://localhost:44313];[returnClass, ActivantsSP];[returnFunction, getAccessTokenFromSp];[returnError, errorPage]
+21104/5: 11/28/2019 12:01:43 PM: Creating HTTP redirect query string.
+21104/5: 11/28/2019 12:01:43 PM: Encoding SAML message: <samlp:AuthnRequest ID="_daefeba7-4512-4016-90ea-763290cac923" Version="2.0" IssueInstant="2019-11-28T04:01:43.181Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>
+21104/5: 11/28/2019 12:01:43 PM: Encoded SAML message: fVJBbtswEPyKwDtFUlIsibAMuDGKGkhbIXZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2j6rtBbsdwtvfwZwQM0X5Xkd+NghZOKqfZjUhoxsWKlhwUzVdpUnKtdJmkJHoAj8bZiiQxJ9EecYS9xaBsmCAuSioETYojzyQXMktjUYhHEu2mLcaqsDDPIQwoGevck7HxC+jRm/Y11q5nvVPITDOw2SSiY4U65aosNOVaw6Q9+VE5TylPdJkKSFdNU5Doq/MalkQVCX6E2VitEM0zVKRVHU5I7V1w2nVfjG2MfarI6K2c1hmUVvWAMmh52H6/k1MweboMofx2PNa0/nk4kmiLCH5OcOssjj34A/hno+HX/d11Jq26s8MgsyzlJZsV2UdMEr30nUW5XORzQ8Obe7JZz9NyKd5f8T+nq3cHZCOSNLtZ5UW5ZldKF9lB/pio+13tOqNf51p7FT5WFrFYENPQdhmVo8UBtGkNNFNhXef+3npQAd7PwjaXrf//3+Yf
+21104/5: 11/28/2019 12:01:43 PM: Query string: SAMLRequest=fVJBbtswEPyKwDtFUlIsibAMuDGKGkhbIXZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2j6rtBbsdwtvfwZwQM0X5Xkd%2BNghZOKqfZjUhoxsWKlhwUzVdpUnKtdJmkJHoAj8bZiiQxJ9EecYS9xaBsmCAuSioETYojzyQXMktjUYhHEu2mLcaqsDDPIQwoGevck7HxC%2BjRm%2FY11q5nvVPITDOw2SSiY4U65aosNOVaw6Q9%2BVE5TylPdJkKSFdNU5Doq%2FMalkQVCX6E2VitEM0zVKRVHU5I7V1w2nVfjG2MfarI6K2c1hmUVvWAMmh52H6%2Fk1MweboMofx2PNa0%2Fnk4kmiLCH5OcOssjj34A%2Fhno%2BHX%2Fd11Jq26s8MgsyzlJZsV2UdMEr30nUW5XORzQ8Obe7JZz9NyKd5f8T%2Bnq3cHZCOSNLtZ5UW5ZldKF9lB%2Fpio%2B13tOqNf51p7FT5WFrFYENPQdhmVo8UBtGkNNFNhXef%2B3npQAd7PwjaXrf%2F%2F3%2BYf&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256
+21104/5: 11/28/2019 12:01:43 PM: Generating signature.
+21104/5: 11/28/2019 12:01:43 PM: Data to sign: 53 41 4d 4c 52 65 71 75 65 73 74 3d 66 56 4a 42 62 74 73 77 45 50 79 4b 77 44 74 46 55 6c 49 73 69 62 41 4d 75 44 47 4b 47 6b 68 62 49 58 5a 7a 79 4b 57 67 71 56 56 4d 51 43 4a 56 4c 70 55 6d 76 36 38 6b 4a 34 42 37 53 4b 36 44 6e 64 6d 5a 32 56 32 6a 36 72 74 42 62 73 64 77 74 76 66 77 5a 77 51 4d 30 58 35 58 6b 64 25 32 42 4e 67 68 5a 4f 4b 71 66 5a 6a 55 68 6f 78 73 57 4b 6c 68 77 55 7a 56 64 70 55 6e 4b 74 64 4a 6d 6b 4a 48 6f 41 6a 38 62 5a 69 69 51 78 4a 39 45 65 63 59 53 39 78 61 42 73 6d 43 41 75 53 69 6f 45 54 59 6f 6a 7a 79 51 58 4d 6b 74 6a 55 59 68 48 45 75 32 6d 4c 63 61 71 73 44 44 50 49 51 77 6f 47 65 76 63 6b 37 48 78 43 25 32 42 6a 52 6d 25 32 46 59 31 31 71 35 6e 76 56 50 49 54 44 4f 77 32 53 53 69 59 34 55 36 35 61 6f 73 4e 4f 56 61 77 36 51 39 25 32 42 56 45 35 54 79 6c 50 64 4a 6b 4b 53 46 64 4e 55 35 44 6f 71 25 32 46 4d 61 6c 6b 51 56 43 58 36 45 32 56 69 74 45 4d 30 7a 56 4b 52 56 48 55 35 49 37 56 31 77 32 6e 56 66 6a 47 32 4d 66 61 72 49 36 4b 32 63 31 68 6d 55 56 76 57 41 4d 6d 68 35 32 48 36 25 32 46 6b 31 4d 77 65 62 6f 4d 6f 66 78 32 50 4e 61 30 25 32 46 6e 6b 34 6b 6d 69 4c 43 48 35 4f 63 4f 73 73 6a 6a 33 34 41 25 32 46 68 6e 6f 25 32 42 48 58 25 32 46 64 31 31 4a 71 32 36 73 38 4d 67 73 79 7a 6c 4a 5a 73 56 32 55 64 4d 45 72 33 30 6e 55 57 35 58 4f 52 7a 51 38 4f 62 65 37 4a 5a 7a 39 4e 79 4b 64 35 66 38 54 25 32 42 6e 71 33 63 48 5a 43 4f 53 4e 4c 74 5a 35 55 57 35 5a 6c 64 4b 46 39 6c 42 25 32 46 70 69 6f 25 32 42 31 33 74 4f 71 4e 66 35 31 70 37 46 54 35 57 46 72 46 59 45 4e 50 51 64 68 6d 56 6f 38 55 42 74 47 6b 4e 4e 46 4e 68 58 65 66 25 32 42 33 6e 70 51 41 64 37 50 77 6a 61 58 72 66 25 32 46 25 32 46 33 25 32 42 59 66 26 52 65 6c 61 79 53 74 61 74 65 3d 25 35 42 72 65 74 75 72 6e 55 52 4c 73 25 32 43 2b 68 74 74 70 73 25 33 41 25 32 46 25 32 46 6c 6f 63 61 6c 68 6f 73 74 25 33 41 34 34 33 31 33 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 43 6c 61 73 73 25 32 43 2b 41 63 74 69 76 61 6e 74 73 53 50 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 46 75 6e 63 74 69 6f 6e 25 32 43 2b 67 65 74 41 63 63 65 73 73 54 6f 6b 65 6e 46 72 6f 6d 53 70 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 45 72 72 6f 72 25 32 43 2b 65 72 72 6f 72 50 61 67 65 25 35 44 26 53 69 67 41 6c 67 3d 68 74 74 70 25 33 41 25 32 46 25 32 46 77 77 77 2e 77 33 2e 6f 72 67 25 32 46 32 30 30 31 25 32 46 30 34 25 32 46 78 6d 6c 64 73 69 67 2d 6d 6f 72 65 25 32 33 72 73 61 2d 73 68 61 32 35 36
+21104/5: 11/28/2019 12:01:43 PM: Signature algorithm: http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+21104/5: 11/28/2019 12:01:43 PM: Signature: 25 72 da cb 0e 89 ef c6 d2 f2 4c ff 55 f0 16 09 bf 5c 8d 0a c8 54 22 43 65 e8 4e ce 00 9f a8 17 b6 85 77 e0 e1 9b b9 8c b8 f8 b2 8f fb 3e e7 e4 b9 7a f3 51 cb 8d d1 01 6d 36 17 b4 b6 c4 82 59 5a 20 8b c9 24 59 0a 69 a8 85 f4 a7 79 f0 8e ec 97 b7 23 61 8d 82 f8 8a f9 90 92 1e 20 55 c1 09 bb 15 2a ab 2f dd 21 17 ec ad b2 cc 76 21 59 0b 14 0b ba 9d 18 41 32 6a d7 5c 3e ac 18 cf cf db ab 67 d8 87 33 6d 4b 89 0e 76 bf 64 81 6c b7 4c 86 ab a3 35 bf a6 69 09 a3 a2 99 d4 9d 6d 2f b3 d3 57 17 ac 25 a7 49 f8 0a 23 d1 63 2c 75 5a e9 0c 0c 9c 39 78 ba 01 9e 80 0c 57 91 3c 6c 82 6d 80 04 81 c8 73 09 e2 1e 91 3a 24 10 6a 0c 8b 37 46 57 66 98 3d e7 8a 93 91 4d 54 5d 66 38 37 f4 4a 33 e9 25 3e 37 82 f5 08 d3 09 09 33 e7 b1 87 39 ae 6d f8 31 20 4a d1 d5 3a c8 05 fc 8a 9c a0
+21104/5: 11/28/2019 12:01:43 PM: Query string: SAMLRequest=fVJBbtswEPyKwDtFUlIsibAMuDGKGkhbIXZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2j6rtBbsdwtvfwZwQM0X5Xkd%2BNghZOKqfZjUhoxsWKlhwUzVdpUnKtdJmkJHoAj8bZiiQxJ9EecYS9xaBsmCAuSioETYojzyQXMktjUYhHEu2mLcaqsDDPIQwoGevck7HxC%2BjRm%2FY11q5nvVPITDOw2SSiY4U65aosNOVaw6Q9%2BVE5TylPdJkKSFdNU5Doq%2FMalkQVCX6E2VitEM0zVKRVHU5I7V1w2nVfjG2MfarI6K2c1hmUVvWAMmh52H6%2Fk1MweboMofx2PNa0%2Fnk4kmiLCH5OcOssjj34A%2Fhno%2BHX%2Fd11Jq26s8MgsyzlJZsV2UdMEr30nUW5XORzQ8Obe7JZz9NyKd5f8T%2Bnq3cHZCOSNLtZ5UW5ZldKF9lB%2Fpio%2B13tOqNf51p7FT5WFrFYENPQdhmVo8UBtGkNNFNhXef%2B3npQAd7PwjaXrf%2F%2F3%2BYf&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=JXLayw6J78bS8kz%2FVfAWCb9cjQrIVCJDZehOzgCfqBe2hXfg4Zu5jLj4so%2F7PufkuXrzUcuN0QFtNhe0tsSCWVogi8kkWQppqIX0p3nwjuyXtyNhjYL4ivmQkh4gVcEJuxUqqy%2FdIRfsrbLMdiFZCxQLup0YQTJq11w%2BrBjPz9urZ9iHM21LiQ52v2SBbLdMhqujNb%2BmaQmjopnUnW0vs9NXF6wlp0n4CiPRYyx1WukMDJw5eLoBnoAMV5E8bIJtgASByHMJ4h6ROiQQagyLN0ZXZpg954qTkU1UXWY4N%2FRKM%2BklPjeC9QjTCQkz57GHOa5t%2BDEgStHVOsgF%2FIqcoA%3D%3D
+21104/5: 11/28/2019 12:01:43 PM: Redirect URL: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJBbtswEPyKwDtFUlIsibAMuDGKGkhbIXZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2j6rtBbsdwtvfwZwQM0X5Xkd%2BNghZOKqfZjUhoxsWKlhwUzVdpUnKtdJmkJHoAj8bZiiQxJ9EecYS9xaBsmCAuSioETYojzyQXMktjUYhHEu2mLcaqsDDPIQwoGevck7HxC%2BjRm%2FY11q5nvVPITDOw2SSiY4U65aosNOVaw6Q9%2BVE5TylPdJkKSFdNU5Doq%2FMalkQVCX6E2VitEM0zVKRVHU5I7V1w2nVfjG2MfarI6K2c1hmUVvWAMmh52H6%2Fk1MweboMofx2PNa0%2Fnk4kmiLCH5OcOssjj34A%2Fhno%2BHX%2Fd11Jq26s8MgsyzlJZsV2UdMEr30nUW5XORzQ8Obe7JZz9NyKd5f8T%2Bnq3cHZCOSNLtZ5UW5ZldKF9lB%2Fpio%2B13tOqNf51p7FT5WFrFYENPQdhmVo8UBtGkNNFNhXef%2B3npQAd7PwjaXrf%2F%2F3%2BYf&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=JXLayw6J78bS8kz%2FVfAWCb9cjQrIVCJDZehOzgCfqBe2hXfg4Zu5jLj4so%2F7PufkuXrzUcuN0QFtNhe0tsSCWVogi8kkWQppqIX0p3nwjuyXtyNhjYL4ivmQkh4gVcEJuxUqqy%2FdIRfsrbLMdiFZCxQLup0YQTJq11w%2BrBjPz9urZ9iHM21LiQ52v2SBbLdMhqujNb%2BmaQmjopnUnW0vs9NXF6wlp0n4CiPRYyx1WukMDJw5eLoBnoAMV5E8bIJtgASByHMJ4h6ROiQQagyLN0ZXZpg954qTkU1UXWY4N%2FRKM%2BklPjeC9QjTCQkz57GHOa5t%2BDEgStHVOsgF%2FIqcoA%3D%3D
+21104/5: 11/28/2019 12:01:43 PM: Redirecting to: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJBbtswEPyKwDtFUlIsibAMuDGKGkhbIXZzyKWgqVVMQCJVLpUmv68kJ4B7SK6DndmZ2V2j6rtBbsdwtvfwZwQM0X5Xkd%2BNghZOKqfZjUhoxsWKlhwUzVdpUnKtdJmkJHoAj8bZiiQxJ9EecYS9xaBsmCAuSioETYojzyQXMktjUYhHEu2mLcaqsDDPIQwoGevck7HxC%2BjRm%2FY11q5nvVPITDOw2SSiY4U65aosNOVaw6Q9%2BVE5TylPdJkKSFdNU5Doq%2FMalkQVCX6E2VitEM0zVKRVHU5I7V1w2nVfjG2MfarI6K2c1hmUVvWAMmh52H6%2Fk1MweboMofx2PNa0%2Fnk4kmiLCH5OcOssjj34A%2Fhno%2BHX%2Fd11Jq26s8MgsyzlJZsV2UdMEr30nUW5XORzQ8Obe7JZz9NyKd5f8T%2Bnq3cHZCOSNLtZ5UW5ZldKF9lB%2Fpio%2B13tOqNf51p7FT5WFrFYENPQdhmVo8UBtGkNNFNhXef%2B3npQAd7PwjaXrf%2F%2F3%2BYf&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=JXLayw6J78bS8kz%2FVfAWCb9cjQrIVCJDZehOzgCfqBe2hXfg4Zu5jLj4so%2F7PufkuXrzUcuN0QFtNhe0tsSCWVogi8kkWQppqIX0p3nwjuyXtyNhjYL4ivmQkh4gVcEJuxUqqy%2FdIRfsrbLMdiFZCxQLup0YQTJq11w%2BrBjPz9urZ9iHM21LiQ52v2SBbLdMhqujNb%2BmaQmjopnUnW0vs9NXF6wlp0n4CiPRYyx1WukMDJw5eLoBnoAMV5E8bIJtgASByHMJ4h6ROiQQagyLN0ZXZpg954qTkU1UXWY4N%2FRKM%2BklPjeC9QjTCQkz57GHOa5t%2BDEgStHVOsgF%2FIqcoA%3D%3D
+21104/5: 11/28/2019 12:01:43 PM: Request sent over HTTP Redirect.
+21104/5: 11/28/2019 12:01:43 PM: SAML message sent: partner=https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8, message=<samlp:AuthnRequest ID="_daefeba7-4512-4016-90ea-763290cac923" Version="2.0" IssueInstant="2019-11-28T04:01:43.181Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relay state=[returnURLs, https://localhost:44313];[returnClass, ActivantsSP];[returnFunction, getAccessTokenFromSp];[returnError, errorPage], destination URL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+21104/5: 11/28/2019 12:01:43 PM: Service provider session (551e33a4-c40a-445d-8836-5c2906e4e048) state:
+Pending response state:
+Action: ReceiveSamlResponse
+Partner name: https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+Relay state: 
+In response to: _daefeba7-4512-4016-90ea-763290cac923
+
+21104/5: 11/28/2019 12:01:43 PM: Initiation of SSO to the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8 has completed successfully.
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+16876/6: 11/28/2019 1:27:08 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+16876/6: 11/28/2019 1:27:09 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+16876/6: 11/28/2019 1:27:09 PM: Initializing the SAML environment.
+16876/6: 11/28/2019 1:27:09 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+16876/6: 11/28/2019 1:27:09 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration xmlns="urn:componentspace:SAML:2.0:configuration">
+
+  <ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>
+</SAMLConfiguration>
+16876/6: 11/28/2019 1:27:09 PM: The SAML configuration file has been successfully loaded.
+16876/6: 11/28/2019 1:27:09 PM: SAML configuration changes in the directory D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC are being monitored.
+16876/6: 11/28/2019 1:27:09 PM: The SAML environment has been successfuly initialized.
+16876/6: 11/28/2019 1:27:09 PM: The SAML_SessionId cookie with value 45724f58-f2a3-4dcc-9511-7090e6ca70d2 has been set.
+16876/6: 11/28/2019 1:27:09 PM: Initiating SSO to the partner identity provider.
+16876/6: 11/28/2019 1:27:09 PM: Service provider session (45724f58-f2a3-4dcc-9511-7090e6ca70d2) state:
+16876/6: 11/28/2019 1:27:09 PM: Retrieving the local service provider signature certificates for the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8.
+16876/6: 11/28/2019 1:27:09 PM: Loading the X.509 certificate from the file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Certificates\sp.pfx.
+16876/6: 11/28/2019 1:27:09 PM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been loaded.
+16876/6: 11/28/2019 1:27:09 PM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been cached.
+16876/6: 11/28/2019 1:27:09 PM: Sending request over HTTP Redirect, baseURL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8, samlMessage=<samlp:AuthnRequest ID="_2cbb2696-44a2-429d-bde2-c583e133d59c" Version="2.0" IssueInstant="2019-11-28T05:27:09.691Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relayState=[returnURLs, https://localhost:44313];[returnClass, ActivantsSP];[returnFunction, getAccessTokenFromSp];[returnError, errorPage]
+16876/6: 11/28/2019 1:27:09 PM: Creating HTTP redirect query string.
+16876/6: 11/28/2019 1:27:09 PM: Encoding SAML message: <samlp:AuthnRequest ID="_2cbb2696-44a2-429d-bde2-c583e133d59c" Version="2.0" IssueInstant="2019-11-28T05:27:09.691Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>
+16876/6: 11/28/2019 1:27:10 PM: Encoded SAML message: fVLRjpswEPwV5HdjMIRgK0RKL6oa6dqiS9qHvlTGbC6WwKZec737+wK5k9KHu9fRzuzM7G5Q9d0gd2O42Af4MwKG6LCvyG+um4YXoqB5rjjNuWhp0wKnelVmkGZZuxKaRD/Bo3G2IjxOSHRAHOFgMSgbJihJBU1TystTspJ8LRMRFyL9RaL9tMVYFRbmJYQBJWOdezQ2fgY9enN+ibXrWe8UMtMObDaJ6FipmrUSpaaJ1jBpg6JqnWQ04VpkKWRF25Yk+uy8hiVRRYIfYTZWK0TzBBU5qw4npPYuOO26T8a2xj5WZPRWTusMSqt6QBm0PO6+3sspmGyuQyi/nE41rb8fTyTaIYKfE9w5i2MP/gj+yWj48XB/m0mr7uIwyDzPEsFmRfYek0TPfWdRLhf52NDw6p5sN/O0XIr3N/yP6erNAdmmPMtXxboUG3ajdJUd5LeJetjXrjP6Za61V+F95TROF8S09LyMytHiANqcDbRTYV3n/t55UAHezsK2163//9/2Hw==
+16876/6: 11/28/2019 1:27:10 PM: Query string: SAMLRequest=fVLRjpswEPwV5HdjMIRgK0RKL6oa6dqiS9qHvlTGbC6WwKZec737%2BwK5k9KHu9fRzuzM7G5Q9d0gd2O42Af4MwKG6LCvyG%2Bum4YXoqB5rjjNuWhp0wKnelVmkGZZuxKaRD%2FBo3G2IjxOSHRAHOFgMSgbJihJBU1TystTspJ8LRMRFyL9RaL9tMVYFRbmJYQBJWOdezQ2fgY9enN%2BibXrWe8UMtMObDaJ6FipmrUSpaaJ1jBpg6JqnWQ04VpkKWRF25Yk%2Buy8hiVRRYIfYTZWK0TzBBU5qw4npPYuOO26T8a2xj5WZPRWTusMSqt6QBm0PO6%2B3sspmGyuQyi%2FnE41rb8fTyTaIYKfE9w5i2MP%2Fgj%2ByWj48XB%2Fm0mr7uIwyDzPEsFmRfYek0TPfWdRLhf52NDw6p5sN%2FO0XIr3N%2FyP6erNAdmmPMtXxboUG3ajdJUd5LeJetjXrjP6Za61V%2BF95TROF8S09LyMytHiANqcDbRTYV3n%2Ft55UAHezsK2163%2F%2F9%2F2Hw%3D%3D&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256
+16876/6: 11/28/2019 1:27:10 PM: Generating signature.
+16876/6: 11/28/2019 1:27:10 PM: Data to sign: 53 41 4d 4c 52 65 71 75 65 73 74 3d 66 56 4c 52 6a 70 73 77 45 50 77 56 35 48 64 6a 4d 49 52 67 4b 30 52 4b 4c 36 6f 61 36 64 71 69 53 39 71 48 76 6c 54 47 62 43 36 57 77 4b 5a 65 63 37 33 37 25 32 42 77 4b 35 6b 39 4b 48 75 39 66 52 7a 75 7a 4d 37 47 35 51 39 64 30 67 64 32 4f 34 32 41 66 34 4d 77 4b 47 36 4c 43 76 79 47 25 32 42 75 6d 34 59 58 6f 71 42 35 72 6a 6a 4e 75 57 68 70 30 77 4b 6e 65 6c 56 6d 6b 47 5a 5a 75 78 4b 61 52 44 25 32 46 42 6f 33 47 32 49 6a 78 4f 53 48 52 41 48 4f 46 67 4d 53 67 62 4a 69 68 4a 42 55 31 54 79 73 74 54 73 70 4a 38 4c 52 4d 52 46 79 4c 39 52 61 4c 39 74 4d 56 59 46 52 62 6d 4a 59 51 42 4a 57 4f 64 65 7a 51 32 66 67 59 39 65 6e 4e 25 32 42 69 62 58 72 57 65 38 55 4d 74 4d 4f 62 44 61 4a 36 46 69 70 6d 72 55 53 70 61 61 4a 31 6a 42 70 67 36 4a 71 6e 57 51 30 34 56 70 6b 4b 57 52 46 32 35 59 6b 25 32 42 75 79 38 68 69 56 52 52 59 49 66 59 54 5a 57 4b 30 54 7a 42 42 55 35 71 77 34 6e 70 50 59 75 4f 4f 32 36 54 38 61 32 78 6a 35 57 5a 50 52 57 54 75 73 4d 53 71 74 36 51 42 6d 30 50 4f 36 25 32 42 33 73 73 70 6d 47 79 75 51 79 69 25 32 46 6e 45 34 31 72 62 38 66 54 79 54 61 49 59 4b 66 45 39 77 35 69 32 4d 50 25 32 46 67 6a 25 32 42 79 57 6a 34 38 58 42 25 32 46 6d 30 6d 72 37 75 49 77 79 44 7a 50 45 73 46 6d 52 66 59 65 6b 30 54 50 66 57 64 52 4c 68 66 35 32 4e 44 77 36 70 35 73 4e 25 32 46 4f 30 58 49 72 33 4e 25 32 46 79 50 36 65 72 4e 41 64 6d 6d 50 4d 74 58 78 62 6f 55 47 33 61 6a 64 4a 55 64 35 4c 65 4a 65 74 6a 58 72 6a 50 36 5a 61 36 31 56 25 32 42 46 39 35 54 52 4f 46 38 53 30 39 4c 79 4d 79 74 48 69 41 4e 71 63 44 62 52 54 59 56 33 6e 25 32 46 74 35 35 55 41 48 65 7a 73 4b 32 31 36 33 25 32 46 25 32 46 39 25 32 46 32 48 77 25 33 44 25 33 44 26 52 65 6c 61 79 53 74 61 74 65 3d 25 35 42 72 65 74 75 72 6e 55 52 4c 73 25 32 43 2b 68 74 74 70 73 25 33 41 25 32 46 25 32 46 6c 6f 63 61 6c 68 6f 73 74 25 33 41 34 34 33 31 33 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 43 6c 61 73 73 25 32 43 2b 41 63 74 69 76 61 6e 74 73 53 50 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 46 75 6e 63 74 69 6f 6e 25 32 43 2b 67 65 74 41 63 63 65 73 73 54 6f 6b 65 6e 46 72 6f 6d 53 70 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 45 72 72 6f 72 25 32 43 2b 65 72 72 6f 72 50 61 67 65 25 35 44 26 53 69 67 41 6c 67 3d 68 74 74 70 25 33 41 25 32 46 25 32 46 77 77 77 2e 77 33 2e 6f 72 67 25 32 46 32 30 30 31 25 32 46 30 34 25 32 46 78 6d 6c 64 73 69 67 2d 6d 6f 72 65 25 32 33 72 73 61 2d 73 68 61 32 35 36
+16876/6: 11/28/2019 1:27:10 PM: Signature algorithm: http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+16876/6: 11/28/2019 1:27:10 PM: Signature: 79 5a 77 64 76 32 f5 4b d5 02 d6 a7 8e d2 24 2b 09 31 d5 98 ab 4a 77 68 38 25 0d 77 26 bc 35 be 7f 27 9c e1 87 2f 5d d7 c2 37 99 e5 e7 dd 82 e7 00 19 11 43 15 18 5a 80 1c ae be d8 38 2b 95 de 9a dc be a3 ae 3d 3f 6d f1 bf 5d f7 91 52 09 da 84 0b 27 70 9b 5f a1 eb 3b fa 3a dc 78 82 50 55 ff 45 4d 30 cc cd b9 7f ba 58 f9 3c 58 3e f3 ce 9e 26 b7 1e 4b ce e4 c3 da e0 85 7b 54 ff bf a1 66 61 3e c7 41 30 e0 1d 1d 08 57 cf 5e 5f f3 87 56 e8 eb 28 fa f5 81 63 57 7a 2f 44 7c ba ec 63 bc 65 a3 8a d3 5b 87 92 a5 64 23 4c e5 a1 6e ec 39 c2 4a cf d4 dc 76 18 42 aa c5 6c 57 bc f0 94 cc 46 dd ef 42 31 2c ef 87 38 a7 cd 19 2b 0a b6 f9 3f ee 73 f4 7f 72 43 ff e2 c7 82 80 8b 13 2e 1d 10 a5 72 81 db 2e 5b bc 9b 0c 23 0d 16 6f 31 e1 15 92 cd f1 65 ab 19 9e 80 2b b7 1c c9 23 93
+16876/6: 11/28/2019 1:27:10 PM: Query string: SAMLRequest=fVLRjpswEPwV5HdjMIRgK0RKL6oa6dqiS9qHvlTGbC6WwKZec737%2BwK5k9KHu9fRzuzM7G5Q9d0gd2O42Af4MwKG6LCvyG%2Bum4YXoqB5rjjNuWhp0wKnelVmkGZZuxKaRD%2FBo3G2IjxOSHRAHOFgMSgbJihJBU1TystTspJ8LRMRFyL9RaL9tMVYFRbmJYQBJWOdezQ2fgY9enN%2BibXrWe8UMtMObDaJ6FipmrUSpaaJ1jBpg6JqnWQ04VpkKWRF25Yk%2Buy8hiVRRYIfYTZWK0TzBBU5qw4npPYuOO26T8a2xj5WZPRWTusMSqt6QBm0PO6%2B3sspmGyuQyi%2FnE41rb8fTyTaIYKfE9w5i2MP%2Fgj%2ByWj48XB%2Fm0mr7uIwyDzPEsFmRfYek0TPfWdRLhf52NDw6p5sN%2FO0XIr3N%2FyP6erNAdmmPMtXxboUG3ajdJUd5LeJetjXrjP6Za61V%2BF95TROF8S09LyMytHiANqcDbRTYV3n%2Ft55UAHezsK2163%2F%2F9%2F2Hw%3D%3D&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=eVp3ZHYy9UvVAtanjtIkKwkx1ZirSndoOCUNdya8Nb5%2FJ5zhhy9d18I3meXn3YLnABkRQxUYWoAcrr7YOCuV3prcvqOuPT9t8b9d95FSCdqECydwm1%2Bh6zv6Otx4glBV%2F0VNMMzNuX%2B6WPk8WD7zzp4mtx5LzuTD2uCFe1T%2Fv6FmYT7HQTDgHR0IV89eX%2FOHVujrKPr1gWNXei9EfLrsY7xlo4rTW4eSpWQjTOWhbuw5wkrP1Nx2GEKqxWxXvPCUzEbd70IxLO%2BHOKfNGSsKtvk%2F7nP0f3JD%2F%2BLHgoCLEy4dEKVygdsuW7ybDCMNFm8x4RWSzfFlqxmegCu3HMkjkw%3D%3D
+16876/6: 11/28/2019 1:27:10 PM: Redirect URL: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVLRjpswEPwV5HdjMIRgK0RKL6oa6dqiS9qHvlTGbC6WwKZec737%2BwK5k9KHu9fRzuzM7G5Q9d0gd2O42Af4MwKG6LCvyG%2Bum4YXoqB5rjjNuWhp0wKnelVmkGZZuxKaRD%2FBo3G2IjxOSHRAHOFgMSgbJihJBU1TystTspJ8LRMRFyL9RaL9tMVYFRbmJYQBJWOdezQ2fgY9enN%2BibXrWe8UMtMObDaJ6FipmrUSpaaJ1jBpg6JqnWQ04VpkKWRF25Yk%2Buy8hiVRRYIfYTZWK0TzBBU5qw4npPYuOO26T8a2xj5WZPRWTusMSqt6QBm0PO6%2B3sspmGyuQyi%2FnE41rb8fTyTaIYKfE9w5i2MP%2Fgj%2ByWj48XB%2Fm0mr7uIwyDzPEsFmRfYek0TPfWdRLhf52NDw6p5sN%2FO0XIr3N%2FyP6erNAdmmPMtXxboUG3ajdJUd5LeJetjXrjP6Za61V%2BF95TROF8S09LyMytHiANqcDbRTYV3n%2Ft55UAHezsK2163%2F%2F9%2F2Hw%3D%3D&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=eVp3ZHYy9UvVAtanjtIkKwkx1ZirSndoOCUNdya8Nb5%2FJ5zhhy9d18I3meXn3YLnABkRQxUYWoAcrr7YOCuV3prcvqOuPT9t8b9d95FSCdqECydwm1%2Bh6zv6Otx4glBV%2F0VNMMzNuX%2B6WPk8WD7zzp4mtx5LzuTD2uCFe1T%2Fv6FmYT7HQTDgHR0IV89eX%2FOHVujrKPr1gWNXei9EfLrsY7xlo4rTW4eSpWQjTOWhbuw5wkrP1Nx2GEKqxWxXvPCUzEbd70IxLO%2BHOKfNGSsKtvk%2F7nP0f3JD%2F%2BLHgoCLEy4dEKVygdsuW7ybDCMNFm8x4RWSzfFlqxmegCu3HMkjkw%3D%3D
+16876/6: 11/28/2019 1:27:10 PM: Redirecting to: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVLRjpswEPwV5HdjMIRgK0RKL6oa6dqiS9qHvlTGbC6WwKZec737%2BwK5k9KHu9fRzuzM7G5Q9d0gd2O42Af4MwKG6LCvyG%2Bum4YXoqB5rjjNuWhp0wKnelVmkGZZuxKaRD%2FBo3G2IjxOSHRAHOFgMSgbJihJBU1TystTspJ8LRMRFyL9RaL9tMVYFRbmJYQBJWOdezQ2fgY9enN%2BibXrWe8UMtMObDaJ6FipmrUSpaaJ1jBpg6JqnWQ04VpkKWRF25Yk%2Buy8hiVRRYIfYTZWK0TzBBU5qw4npPYuOO26T8a2xj5WZPRWTusMSqt6QBm0PO6%2B3sspmGyuQyi%2FnE41rb8fTyTaIYKfE9w5i2MP%2Fgj%2ByWj48XB%2Fm0mr7uIwyDzPEsFmRfYek0TPfWdRLhf52NDw6p5sN%2FO0XIr3N%2FyP6erNAdmmPMtXxboUG3ajdJUd5LeJetjXrjP6Za61V%2BF95TROF8S09LyMytHiANqcDbRTYV3n%2Ft55UAHezsK2163%2F%2F9%2F2Hw%3D%3D&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=eVp3ZHYy9UvVAtanjtIkKwkx1ZirSndoOCUNdya8Nb5%2FJ5zhhy9d18I3meXn3YLnABkRQxUYWoAcrr7YOCuV3prcvqOuPT9t8b9d95FSCdqECydwm1%2Bh6zv6Otx4glBV%2F0VNMMzNuX%2B6WPk8WD7zzp4mtx5LzuTD2uCFe1T%2Fv6FmYT7HQTDgHR0IV89eX%2FOHVujrKPr1gWNXei9EfLrsY7xlo4rTW4eSpWQjTOWhbuw5wkrP1Nx2GEKqxWxXvPCUzEbd70IxLO%2BHOKfNGSsKtvk%2F7nP0f3JD%2F%2BLHgoCLEy4dEKVygdsuW7ybDCMNFm8x4RWSzfFlqxmegCu3HMkjkw%3D%3D
+16876/6: 11/28/2019 1:27:10 PM: Request sent over HTTP Redirect.
+16876/6: 11/28/2019 1:27:10 PM: SAML message sent: partner=https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8, message=<samlp:AuthnRequest ID="_2cbb2696-44a2-429d-bde2-c583e133d59c" Version="2.0" IssueInstant="2019-11-28T05:27:09.691Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relay state=[returnURLs, https://localhost:44313];[returnClass, ActivantsSP];[returnFunction, getAccessTokenFromSp];[returnError, errorPage], destination URL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+16876/6: 11/28/2019 1:27:10 PM: Service provider session (45724f58-f2a3-4dcc-9511-7090e6ca70d2) state:
+Pending response state:
+Action: ReceiveSamlResponse
+Partner name: https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+Relay state: 
+In response to: _2cbb2696-44a2-429d-bde2-c583e133d59c
+
+16876/6: 11/28/2019 1:27:10 PM: Initiation of SSO to the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8 has completed successfully.
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+18212/17: 11/28/2019 1:42:52 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+18212/17: 11/28/2019 1:42:52 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+18212/17: 11/28/2019 1:42:52 PM: Initializing the SAML environment.
+18212/17: 11/28/2019 1:42:52 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+18212/17: 11/28/2019 1:42:52 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="123456789" value="123456789"/>
+  
+  <ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>
+</SAMLConfiguration>
+18212/17: 11/28/2019 1:42:53 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+18212/17: 11/28/2019 1:42:53 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+18212/10: 11/28/2019 1:44:03 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+18212/10: 11/28/2019 1:44:03 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+18212/10: 11/28/2019 1:44:03 PM: Initializing the SAML environment.
+18212/10: 11/28/2019 1:44:03 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+18212/10: 11/28/2019 1:44:03 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="123456789" value="123456789"/>
+  
+  <!--<ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>-->
+  
+</SAMLConfiguration>
+18212/10: 11/28/2019 1:44:03 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+18212/10: 11/28/2019 1:44:03 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+18212/10: 11/28/2019 1:44:45 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+18212/10: 11/28/2019 1:44:45 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+18212/10: 11/28/2019 1:44:45 PM: Initializing the SAML environment.
+18212/10: 11/28/2019 1:44:45 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+18212/10: 11/28/2019 1:44:45 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="123456789" value="123456789"/>
+  
+  <!--<ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>-->
+  
+</SAMLConfiguration>
+18212/10: 11/28/2019 1:44:45 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+18212/10: 11/28/2019 1:44:45 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState)
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+18212/10: 11/28/2019 1:45:04 PM: Initializing the SAML environment.
+18212/10: 11/28/2019 1:45:04 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+18212/10: 11/28/2019 1:45:04 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="123456789" value="123456789"/>
+  
+  <!--<ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>-->
+  
+</SAMLConfiguration>
+18212/10: 11/28/2019 1:45:04 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+18212/10: 11/28/2019 1:45:04 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState)
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+24224/10: 11/28/2019 1:46:27 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+24224/10: 11/28/2019 1:46:27 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+24224/10: 11/28/2019 1:46:27 PM: Initializing the SAML environment.
+24224/10: 11/28/2019 1:46:27 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+24224/10: 11/28/2019 1:46:27 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="123456789" value="1234567891111111111"/>
+  
+  <!--<ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>-->
+  
+</SAMLConfiguration>
+24224/10: 11/28/2019 1:46:28 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+24224/10: 11/28/2019 1:46:28 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+4420/19: 11/28/2019 2:00:52 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+4420/19: 11/28/2019 2:00:52 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+4420/19: 11/28/2019 2:00:52 PM: Initializing the SAML environment.
+4420/19: 11/28/2019 2:00:52 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+4420/19: 11/28/2019 2:00:52 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  
+  <!--<ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>-->
+  
+</SAMLConfiguration>
+4420/19: 11/28/2019 2:00:52 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+4420/19: 11/28/2019 2:00:52 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+4420/5: 11/28/2019 2:02:07 PM: Initializing the SAML environment.
+4420/5: 11/28/2019 2:02:07 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+4420/5: 11/28/2019 2:02:07 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  
+  <!--<ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>-->
+  
+</SAMLConfiguration>
+4420/5: 11/28/2019 2:02:07 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+4420/5: 11/28/2019 2:02:07 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+27336/10: 11/28/2019 2:41:29 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+27336/10: 11/28/2019 2:41:29 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+27336/10: 11/28/2019 2:41:29 PM: Initializing the SAML environment.
+27336/10: 11/28/2019 2:41:29 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+27336/10: 11/28/2019 2:41:29 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+27336/10: 11/28/2019 2:41:29 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+27336/10: 11/28/2019 2:41:29 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+27336/9: 11/28/2019 2:41:35 PM: Initializing the SAML environment.
+27336/9: 11/28/2019 2:41:35 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+27336/9: 11/28/2019 2:41:35 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+27336/9: 11/28/2019 2:41:35 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+27336/9: 11/28/2019 2:41:35 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+27336/10: 11/28/2019 2:42:02 PM: Initializing the SAML environment.
+27336/10: 11/28/2019 2:42:02 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+27336/10: 11/28/2019 2:42:02 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+27336/10: 11/28/2019 2:42:02 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+27336/10: 11/28/2019 2:42:02 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+24056/16: 11/28/2019 2:49:17 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+24056/16: 11/28/2019 2:49:17 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+24056/16: 11/28/2019 2:49:17 PM: Initializing the SAML environment.
+24056/16: 11/28/2019 2:49:17 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+24056/16: 11/28/2019 2:49:17 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+24056/16: 11/28/2019 2:49:18 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+24056/16: 11/28/2019 2:49:18 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState)
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+24056/10: 11/28/2019 2:52:01 PM: Initializing the SAML environment.
+24056/10: 11/28/2019 2:52:01 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+24056/10: 11/28/2019 2:52:01 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+24056/10: 11/28/2019 2:52:01 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+24056/10: 11/28/2019 2:52:01 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState)
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+24056/10: 11/28/2019 2:53:09 PM: Initializing the SAML environment.
+24056/10: 11/28/2019 2:53:09 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+24056/10: 11/28/2019 2:53:09 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+24056/10: 11/28/2019 2:53:09 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+24056/10: 11/28/2019 2:53:09 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState)
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+28152/12: 11/28/2019 2:58:43 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+28152/12: 11/28/2019 2:58:43 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+28152/12: 11/28/2019 2:58:43 PM: Initializing the SAML environment.
+28152/12: 11/28/2019 2:58:43 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+28152/12: 11/28/2019 2:58:43 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+28152/12: 11/28/2019 2:58:43 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+28152/12: 11/28/2019 2:58:43 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+3352/12: 11/28/2019 3:03:23 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+3352/12: 11/28/2019 3:03:23 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+3352/12: 11/28/2019 3:03:23 PM: Initializing the SAML environment.
+3352/12: 11/28/2019 3:03:23 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+3352/12: 11/28/2019 3:03:23 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration>
+
+  <add key="serviceIdName" value="123456789"/>
+  <add key="Description" value="Activants Service Provider"/>
+  <add key="AssertionConsumerServiceUrl" value="https://localhost:44309/SAML/AssertionConsumerService"/>
+  <add key="SingleLogoutServiceUrl" value="https://localhost:44309/SAML/SingleLogoutService"/>
+  <add key="LocalCertificateFile" value="Certificates\sp.pfx"/>
+  <add key="LocalCertificatePassword" value="activants"/>
+
+
+  <add key="PartnerIdP" value="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="Description=" value="Activants IDP"/>
+  <add key="SignAuthnRequest" value="true"/>
+  <add key="WantSAMLResponseSigned" value="true"/>
+  <add key="WantAssertionSigned" value="true"/>
+  <add key="SignLogoutRequest" value="true"/>
+  <add key="WantLogoutResponseSigned" value="false"/>
+  <add key="SingleSignOnServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SingleLogoutServiceBinding" value="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+  <add key="SignatureMethod" value="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+  <add key="SingleSignOnServiceUrl" value="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"/>
+  <add key="SingleLogoutServiceUrl" value="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"/>
+  <add key="PartnerCertificateFile" value="Certificates\idp.cer"/>
+  
+</SAMLConfiguration>
+3352/12: 11/28/2019 3:03:24 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+3352/12: 11/28/2019 3:03:24 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Load(String fileName)
+   at ComponentSpace.SAML2.SAMLController.Initialize()
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ComponentSpace.SAML2.SAMLServiceProvider.InitiateSSO(HttpResponseBase httpResponse, String relayState, String partnerIdP, SSOOptions ssoOptions)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 48
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+7304/5: 11/28/2019 3:06:01 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+7304/5: 11/28/2019 3:06:01 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+7304/5: 11/28/2019 3:06:01 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+7304/7: 11/28/2019 3:06:01 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLSerializationException: The XML element SAMLConfiguration with namespace  is invalid.
+7304/5: 11/28/2019 3:06:01 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Validate(String fileName)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 49
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+7304/7: 11/28/2019 3:06:01 PM:    at ComponentSpace.SAML2.Utility.Xml.CheckElementName(XmlElement xmlElement, String localName, String namespaceURI)
+   at ComponentSpace.SAML2.Configuration.SAMLConfiguration..ctor(XmlElement xmlElement)
+   at ComponentSpace.SAML2.Configuration.SAMLConfigurationFile.Validate(String fileName)
+   at ActivantsSP.Controllers.SamlController.InitiateSingleSignOn(String relayState) in D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Controllers\SamlController.cs:line 49
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.<>c__DisplayClass285_0.<ExecuteStepImpl>b__0()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+Evaluation (Expires 11/30/2019): *************************
+1632/6: 11/28/2019 3:19:25 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+1632/6: 11/28/2019 3:19:25 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: DESKTOP-5K3KHRE\Activants50, Culture: English (United States)
+1632/6: 11/28/2019 3:19:25 PM: Initializing the SAML environment.
+1632/6: 11/28/2019 3:19:25 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\saml.config.
+1632/6: 11/28/2019 3:19:25 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfiguration xmlns="urn:componentspace:SAML:2.0:configuration">
+ 
+  <ServiceProvider Name="123456789"
+                   Description="Activants Service Provider"
+                   AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                   LocalCertificateFile="Certificates\sp.pfx"
+                   LocalCertificatePassword="********"/>
+
+  <PartnerIdentityProviders>
+    <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             Description="Activants IDP"
+                             SignAuthnRequest="true"
+                             SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                             WantSAMLResponseSigned="true"
+                             WantAssertionSigned ="true"
+                             SignLogoutRequest="true"
+                             WantLogoutResponseSigned="false"
+                             SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                             SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                             SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                             PartnerCertificateFile="Certificates\idp.cer"/>
+  </PartnerIdentityProviders>
+  
+</SAMLConfiguration>
+1632/6: 11/28/2019 3:19:25 PM: The SAML configuration file has been successfully loaded.
+1632/6: 11/28/2019 3:19:25 PM: SAML configuration changes in the directory D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC are being monitored.
+1632/6: 11/28/2019 3:19:25 PM: The SAML environment has been successfuly initialized.
+1632/6: 11/28/2019 3:19:25 PM: The SAML_SessionId cookie with value 14f1f2a6-a50c-426a-a9c8-54bb2ed53e06 has been set.
+1632/6: 11/28/2019 3:19:25 PM: Initiating SSO to the partner identity provider.
+1632/6: 11/28/2019 3:19:25 PM: Service provider session (14f1f2a6-a50c-426a-a9c8-54bb2ed53e06) state:
+1632/6: 11/28/2019 3:19:25 PM: Retrieving the local service provider signature certificates for the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8.
+1632/6: 11/28/2019 3:19:26 PM: Loading the X.509 certificate from the file D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\Certificates\sp.pfx.
+1632/6: 11/28/2019 3:19:26 PM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been loaded.
+1632/6: 11/28/2019 3:19:26 PM: The X.509 certificate with subject name E=indrajitmaurya0509@gmail.com, CN=activants.com, OU=Software Engineering, O=activants.com, L=SG, S=SG, C=SG and serial number 00B20C59E75E38A7EB has been cached.
+1632/6: 11/28/2019 3:19:26 PM: Sending request over HTTP Redirect, baseURL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8, samlMessage=<samlp:AuthnRequest ID="_e307080d-4011-42ed-949e-a4e9d3571216" Version="2.0" IssueInstant="2019-11-28T07:19:25.878Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relayState=[returnURLs, https://localhost:44313];[returnClass, ActivantsSP];[returnFunction, getAccessTokenFromSp];[returnError, errorPage]
+1632/6: 11/28/2019 3:19:26 PM: Creating HTTP redirect query string.
+1632/6: 11/28/2019 3:19:26 PM: Encoding SAML message: <samlp:AuthnRequest ID="_e307080d-4011-42ed-949e-a4e9d3571216" Version="2.0" IssueInstant="2019-11-28T07:19:25.878Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>
+1632/6: 11/28/2019 3:19:26 PM: Encoded SAML message: fVJdb6MwEPwryO/GNpAAVoiUa3S6SL0eatI+9OXkmk1jCWzOa/rx7w9IK6UP7etoZ3ZmdleouraXmyGc7C38GwBDtNtW5C+kPOcFb2jGhaBZAg0tsxKoyqBs0kUuErEk0T14NM5WJIk5iXaIA+wsBmXDCHFR0pGbFAeeS1HKZBEXefFAou24xVgVZuYphB4lY617MjZ+BT14c3yLtetY5xQy0/RsMonoWKEec1UWmnKtYdQGRVXOU8oTXaYC0mXTFCT66byGOVFFgh9gMlYrRPMMFTmqFkek9i447dofxjbGPlVk8FaO6wxKqzpAGbTcb35fyzGYfDwPofx1ONS0/rM/kGiDCH5KcOUsDh34Pfhno+Hu9voyk1btyWGQWZbykk2K7CsmiV671qKcL/K9of7dPVmvpmk5F+8v+N/T1YcDshZJmi2WeVGu2IXSWbaXNyN1t61da/TbVGunwtfKIhYzYhp6nEflYLEHbY4GmrGwtnUvVx5UgI+zsPV56+f/W/8H
+1632/6: 11/28/2019 3:19:26 PM: Query string: SAMLRequest=fVJdb6MwEPwryO%2FGNpAAVoiUa3S6SL0eatI%2B9OXkmk1jCWzOa%2Frx7w9IK6UP7etoZ3ZmdleouraXmyGc7C38GwBDtNtW5C%2BkPOcFb2jGhaBZAg0tsxKoyqBs0kUuErEk0T14NM5WJIk5iXaIA%2BwsBmXDCHFR0pGbFAeeS1HKZBEXefFAou24xVgVZuYphB4lY617MjZ%2BBT14c3yLtetY5xQy0%2FRsMonoWKEec1UWmnKtYdQGRVXOU8oTXaYC0mXTFCT66byGOVFFgh9gMlYrRPMMFTmqFkek9i447dofxjbGPlVk8FaO6wxKqzpAGbTcb35fyzGYfDwPofx1ONS0%2FrM%2FkGiDCH5KcOUsDh34Pfhno%2BHu9voyk1btyWGQWZbykk2K7CsmiV671qKcL%2FK9of7dPVmvpmk5F%2B8v%2BN%2FT1YcDshZJmi2WeVGu2IXSWbaXNyN1t61da%2FTbVGunwtfKIhYzYhp6nEflYLEHbY4GmrGwtnUvVx5UgI%2BzsPV56%2Bf%2FW%2F8H&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256
+1632/6: 11/28/2019 3:19:26 PM: Generating signature.
+1632/6: 11/28/2019 3:19:26 PM: Data to sign: 53 41 4d 4c 52 65 71 75 65 73 74 3d 66 56 4a 64 62 36 4d 77 45 50 77 72 79 4f 25 32 46 47 4e 70 41 41 56 6f 69 55 61 33 53 36 53 4c 30 65 61 74 49 25 32 42 39 4f 58 6b 6d 6b 31 6a 43 57 7a 4f 61 25 32 46 72 78 37 77 39 49 4b 36 55 50 37 65 74 6f 5a 33 5a 6d 64 6c 65 6f 75 72 61 58 6d 79 47 63 37 43 33 38 47 77 42 44 74 4e 74 57 35 43 25 32 42 6b 50 4f 63 46 62 32 6a 47 68 61 42 5a 41 67 30 74 73 78 4b 6f 79 71 42 73 30 6b 55 75 45 72 45 6b 30 54 31 34 4e 4d 35 57 4a 49 6b 35 69 58 61 49 41 25 32 42 77 73 42 6d 58 44 43 48 46 52 30 70 47 62 46 41 65 65 53 31 48 4b 5a 42 45 58 65 66 46 41 6f 75 32 34 78 56 67 56 5a 75 59 70 68 42 34 6c 59 36 31 37 4d 6a 5a 25 32 42 42 54 31 34 63 33 79 4c 74 65 74 59 35 78 51 79 30 25 32 46 52 73 4d 6f 6e 6f 57 4b 45 65 63 31 55 57 6d 6e 4b 74 59 64 51 47 52 56 58 4f 55 38 6f 54 58 61 59 43 30 6d 58 54 46 43 54 36 36 62 79 47 4f 56 46 46 67 68 39 67 4d 6c 59 72 52 50 4d 4d 46 54 6d 71 46 6b 65 6b 39 69 34 34 37 64 6f 66 78 6a 62 47 50 6c 56 6b 38 46 61 4f 36 77 78 4b 71 7a 70 41 47 62 54 63 62 33 35 66 79 7a 47 59 66 44 77 50 6f 66 78 31 4f 4e 53 30 25 32 46 72 4d 25 32 46 6b 47 69 44 43 48 35 4b 63 4f 55 73 44 68 33 34 50 66 68 6e 6f 25 32 42 48 75 39 76 6f 79 6b 31 62 74 79 57 47 51 57 5a 62 79 6b 6b 32 4b 37 43 73 6d 69 56 36 37 31 71 4b 63 4c 25 32 46 4b 39 6f 66 37 64 50 56 6d 76 70 6d 6b 35 46 25 32 42 38 76 25 32 42 4e 25 32 46 54 31 59 63 44 73 68 5a 4a 6d 69 32 57 65 56 47 75 32 49 58 53 57 62 61 58 4e 79 4e 31 74 36 31 64 61 25 32 46 54 62 56 47 75 6e 77 74 66 4b 49 68 59 7a 59 68 70 36 6e 45 66 6c 59 4c 45 48 62 59 34 47 6d 72 47 77 74 6e 55 76 56 78 35 55 67 49 25 32 42 7a 73 50 56 35 36 25 32 42 66 25 32 46 57 25 32 46 38 48 26 52 65 6c 61 79 53 74 61 74 65 3d 25 35 42 72 65 74 75 72 6e 55 52 4c 73 25 32 43 2b 68 74 74 70 73 25 33 41 25 32 46 25 32 46 6c 6f 63 61 6c 68 6f 73 74 25 33 41 34 34 33 31 33 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 43 6c 61 73 73 25 32 43 2b 41 63 74 69 76 61 6e 74 73 53 50 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 46 75 6e 63 74 69 6f 6e 25 32 43 2b 67 65 74 41 63 63 65 73 73 54 6f 6b 65 6e 46 72 6f 6d 53 70 25 35 44 25 33 42 25 35 42 72 65 74 75 72 6e 45 72 72 6f 72 25 32 43 2b 65 72 72 6f 72 50 61 67 65 25 35 44 26 53 69 67 41 6c 67 3d 68 74 74 70 25 33 41 25 32 46 25 32 46 77 77 77 2e 77 33 2e 6f 72 67 25 32 46 32 30 30 31 25 32 46 30 34 25 32 46 78 6d 6c 64 73 69 67 2d 6d 6f 72 65 25 32 33 72 73 61 2d 73 68 61 32 35 36
+1632/6: 11/28/2019 3:19:26 PM: Signature algorithm: http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+1632/6: 11/28/2019 3:19:26 PM: Signature: 37 3d 4a ad 2c e8 ba 1e 7d 63 21 d1 c4 15 d1 08 95 64 6e db 1a c0 38 7a f9 e3 55 62 13 22 df 18 cb cf fe 3d 04 34 96 ef 28 95 3f f2 ec c2 71 2a f4 b5 95 5f 9a e2 a2 84 78 f4 14 0e 7b 87 bf 9e 75 74 76 1e fe 19 19 49 05 98 0e a1 1e d1 6d 94 53 7f f2 5d 9f 3e aa 58 fc 34 66 ea 46 4a 4e 25 82 3e 07 d4 51 43 de 00 d1 7e 2d d2 ea 02 ce c6 0b d0 59 5c d3 2c 3b 4e 85 49 60 04 b9 00 29 ec 6a 6e 08 32 9f 24 78 de 5b 23 35 b0 f3 f8 c8 0c bc e9 20 75 17 dd 52 83 df 5e c9 e2 ee 57 ac e2 9d d3 6f c6 34 f1 e7 c1 83 47 8f 58 3c 0d 88 c5 40 ff 6c 19 b5 e4 f9 f2 90 36 cd be 5b 1e ce 60 d7 f6 e6 5e 42 08 d6 76 2f a3 2e 27 60 ee 75 18 85 48 41 42 86 25 ae 48 0b 5c 97 48 00 d4 79 ed 79 fb 55 a3 4c 81 c1 fd 39 cc 52 e6 0f 80 e7 87 47 e9 03 4c e9 5d d1 f6 d3 46 de 72 89 f6 c7 f5
+1632/6: 11/28/2019 3:19:26 PM: Query string: SAMLRequest=fVJdb6MwEPwryO%2FGNpAAVoiUa3S6SL0eatI%2B9OXkmk1jCWzOa%2Frx7w9IK6UP7etoZ3ZmdleouraXmyGc7C38GwBDtNtW5C%2BkPOcFb2jGhaBZAg0tsxKoyqBs0kUuErEk0T14NM5WJIk5iXaIA%2BwsBmXDCHFR0pGbFAeeS1HKZBEXefFAou24xVgVZuYphB4lY617MjZ%2BBT14c3yLtetY5xQy0%2FRsMonoWKEec1UWmnKtYdQGRVXOU8oTXaYC0mXTFCT66byGOVFFgh9gMlYrRPMMFTmqFkek9i447dofxjbGPlVk8FaO6wxKqzpAGbTcb35fyzGYfDwPofx1ONS0%2FrM%2FkGiDCH5KcOUsDh34Pfhno%2BHu9voyk1btyWGQWZbykk2K7CsmiV671qKcL%2FK9of7dPVmvpmk5F%2B8v%2BN%2FT1YcDshZJmi2WeVGu2IXSWbaXNyN1t61da%2FTbVGunwtfKIhYzYhp6nEflYLEHbY4GmrGwtnUvVx5UgI%2BzsPV56%2Bf%2FW%2F8H&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=Nz1KrSzouh59YyHRxBXRCJVkbtsawDh6%2BeNVYhMi3xjLz%2F49BDSW7yiVP%2FLswnEq9LWVX5riooR49BQOe4e%2FnnV0dh7%2BGRlJBZgOoR7RbZRTf%2FJdnz6qWPw0ZupGSk4lgj4H1FFD3gDRfi3S6gLOxgvQWVzTLDtOhUlgBLkAKexqbggynyR43lsjNbDz%2BMgMvOkgdRfdUoPfXsni7les4p3Tb8Y08efBg0ePWDwNiMVA%2F2wZteT58pA2zb5bHs5g1%2FbmXkII1nYvoy4nYO51GIVIQUKGJa5IC1yXSADUee15%2B1WjTIHB%2FTnMUuYPgOeHR%2BkDTOld0fbTRt5yifbH9Q%3D%3D
+1632/6: 11/28/2019 3:19:26 PM: Redirect URL: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJdb6MwEPwryO%2FGNpAAVoiUa3S6SL0eatI%2B9OXkmk1jCWzOa%2Frx7w9IK6UP7etoZ3ZmdleouraXmyGc7C38GwBDtNtW5C%2BkPOcFb2jGhaBZAg0tsxKoyqBs0kUuErEk0T14NM5WJIk5iXaIA%2BwsBmXDCHFR0pGbFAeeS1HKZBEXefFAou24xVgVZuYphB4lY617MjZ%2BBT14c3yLtetY5xQy0%2FRsMonoWKEec1UWmnKtYdQGRVXOU8oTXaYC0mXTFCT66byGOVFFgh9gMlYrRPMMFTmqFkek9i447dofxjbGPlVk8FaO6wxKqzpAGbTcb35fyzGYfDwPofx1ONS0%2FrM%2FkGiDCH5KcOUsDh34Pfhno%2BHu9voyk1btyWGQWZbykk2K7CsmiV671qKcL%2FK9of7dPVmvpmk5F%2B8v%2BN%2FT1YcDshZJmi2WeVGu2IXSWbaXNyN1t61da%2FTbVGunwtfKIhYzYhp6nEflYLEHbY4GmrGwtnUvVx5UgI%2BzsPV56%2Bf%2FW%2F8H&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=Nz1KrSzouh59YyHRxBXRCJVkbtsawDh6%2BeNVYhMi3xjLz%2F49BDSW7yiVP%2FLswnEq9LWVX5riooR49BQOe4e%2FnnV0dh7%2BGRlJBZgOoR7RbZRTf%2FJdnz6qWPw0ZupGSk4lgj4H1FFD3gDRfi3S6gLOxgvQWVzTLDtOhUlgBLkAKexqbggynyR43lsjNbDz%2BMgMvOkgdRfdUoPfXsni7les4p3Tb8Y08efBg0ePWDwNiMVA%2F2wZteT58pA2zb5bHs5g1%2FbmXkII1nYvoy4nYO51GIVIQUKGJa5IC1yXSADUee15%2B1WjTIHB%2FTnMUuYPgOeHR%2BkDTOld0fbTRt5yifbH9Q%3D%3D
+1632/6: 11/28/2019 3:19:26 PM: Redirecting to: https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8?SAMLRequest=fVJdb6MwEPwryO%2FGNpAAVoiUa3S6SL0eatI%2B9OXkmk1jCWzOa%2Frx7w9IK6UP7etoZ3ZmdleouraXmyGc7C38GwBDtNtW5C%2BkPOcFb2jGhaBZAg0tsxKoyqBs0kUuErEk0T14NM5WJIk5iXaIA%2BwsBmXDCHFR0pGbFAeeS1HKZBEXefFAou24xVgVZuYphB4lY617MjZ%2BBT14c3yLtetY5xQy0%2FRsMonoWKEec1UWmnKtYdQGRVXOU8oTXaYC0mXTFCT66byGOVFFgh9gMlYrRPMMFTmqFkek9i447dofxjbGPlVk8FaO6wxKqzpAGbTcb35fyzGYfDwPofx1ONS0%2FrM%2FkGiDCH5KcOUsDh34Pfhno%2BHu9voyk1btyWGQWZbykk2K7CsmiV671qKcL%2FK9of7dPVmvpmk5F%2B8v%2BN%2FT1YcDshZJmi2WeVGu2IXSWbaXNyN1t61da%2FTbVGunwtfKIhYzYhp6nEflYLEHbY4GmrGwtnUvVx5UgI%2BzsPV56%2Bf%2FW%2F8H&RelayState=%5BreturnURLs%2C+https%3A%2F%2Flocalhost%3A44313%5D%3B%5BreturnClass%2C+ActivantsSP%5D%3B%5BreturnFunction%2C+getAccessTokenFromSp%5D%3B%5BreturnError%2C+errorPage%5D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=Nz1KrSzouh59YyHRxBXRCJVkbtsawDh6%2BeNVYhMi3xjLz%2F49BDSW7yiVP%2FLswnEq9LWVX5riooR49BQOe4e%2FnnV0dh7%2BGRlJBZgOoR7RbZRTf%2FJdnz6qWPw0ZupGSk4lgj4H1FFD3gDRfi3S6gLOxgvQWVzTLDtOhUlgBLkAKexqbggynyR43lsjNbDz%2BMgMvOkgdRfdUoPfXsni7les4p3Tb8Y08efBg0ePWDwNiMVA%2F2wZteT58pA2zb5bHs5g1%2FbmXkII1nYvoy4nYO51GIVIQUKGJa5IC1yXSADUee15%2B1WjTIHB%2FTnMUuYPgOeHR%2BkDTOld0fbTRt5yifbH9Q%3D%3D
+1632/6: 11/28/2019 3:19:26 PM: Request sent over HTTP Redirect.
+1632/6: 11/28/2019 3:19:26 PM: SAML message sent: partner=https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8, message=<samlp:AuthnRequest ID="_e307080d-4011-42ed-949e-a4e9d3571216" Version="2.0" IssueInstant="2019-11-28T07:19:25.878Z" Destination="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8" ForceAuthn="true" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="https://localhost:44309/SAML/AssertionConsumerService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"><saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">123456789</saml:Issuer><samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" AllowCreate="true" /></samlp:AuthnRequest>, relay state=[returnURLs, https://localhost:44313];[returnClass, ActivantsSP];[returnFunction, getAccessTokenFromSp];[returnError, errorPage], destination URL=https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+1632/6: 11/28/2019 3:19:26 PM: Service provider session (14f1f2a6-a50c-426a-a9c8-54bb2ed53e06) state:
+Pending response state:
+Action: ReceiveSamlResponse
+Partner name: https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8
+Relay state: 
+In response to: _e307080d-4011-42ed-949e-a4e9d3571216
+
+1632/6: 11/28/2019 3:19:26 PM: Initiation of SSO to the partner identity provider https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8 has completed successfully.

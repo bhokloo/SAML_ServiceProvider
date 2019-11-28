@@ -778,7 +778,6 @@ D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.Owin.Security
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.Owin.Security.OAuth.xml
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\obj\Debug\ActivantsSP.csprojAssemblyReference.cache
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\obj\Debug\ActivantsSP.csproj.CopyComplete
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\obj\Debug\ActivantsSP.dll
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\obj\Debug\ActivantsSP.pdb
@@ -796,3 +795,4 @@ D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.Extensions.Co
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.Extensions.DependencyInjection.xml
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.Extensions.Identity.Core.xml
 D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\bin\Microsoft.Extensions.Logging.xml
+D:\SAML\SERVICE PROVIDER\Testing MVC\ActivantsSP_MVC\obj\Debug\ActivantsSP.csprojAssemblyReference.cache
