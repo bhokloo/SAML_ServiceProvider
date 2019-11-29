@@ -5,22 +5,13 @@ using Microsoft.AspNet.Identity.Owin;
 using ActivantsSP.Models;
 using System;
 using System.Collections.Generic;
-using System.Security.Claims;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Text;
-using System.Security.Cryptography;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
-using System.Linq;
-using Newtonsoft.Json;
-using System.Web.Script.Serialization;
-using System.Text.RegularExpressions;
-using Microsoft.AspNetCore.Identity;
-using System.Data.Entity;
-using System.Configuration;
-using ComponentSpace.SAML2.Configuration;
+
 
 namespace ActivantsSP.Controllers
 {
@@ -32,7 +23,6 @@ namespace ActivantsSP.Controllers
             {
                 var path = Server.MapPath("~/Certificates/sp.pfx");
                 new X509Certificate(path, "activants", X509KeyStorageFlags.MachineKeySet);
-                var partnerName = WebConfigurationManager.AppSettings["PartnerName"];
                 var serviceId = "";
                 if (Request.QueryString.ToString().Length > 0)
                 {
@@ -42,13 +32,21 @@ namespace ActivantsSP.Controllers
                     dictionary["returnFunction"] = Request.QueryString["returnFunction"];
                     dictionary["returnError"] = Request.QueryString["returnError"];
                     relayState = string.Join(";", dictionary);
-                    serviceId = Request.QueryString["serviceId"];
+                    serviceId = Request.QueryString["samlConfigurationId"];
                 }
-
-                var samlPath = Server.MapPath($"~/{serviceId}.config");
-                SAMLConfigurationFile.Validate(samlPath);
-
-                new SamlSpConfigurationController().ServiceProviderconfiguration(serviceId);
+                var samlPath = "";
+                var partnerName = "";
+                if (serviceId == "")
+                {
+                    partnerName = WebConfigurationManager.AppSettings["ActivantsSAMLSP1IDPName"];
+                    SAMLController.ConfigurationID = "ActivantsSAMLSP1";
+                }
+                else
+                {
+                    var partnerId = serviceId + "IDPName";
+                    partnerName = WebConfigurationManager.AppSettings[partnerId];
+                    SAMLController.ConfigurationID = serviceId;
+                }
                 SAMLServiceProvider.InitiateSSO(Response, relayState, partnerName, new SSOOptions() { ForceAuthn = true });
                 return new EmptyResult();
             }
@@ -116,8 +114,8 @@ namespace ActivantsSP.Controllers
                     applicationSignInManager.SignIn(applicationUser, false, false);
 
                     var accessToken = "";
-                    
-                    if(Request.Cookies["SAML_SessionId"] != null)
+                    Session["indrajit"] = "indrjait maurya";
+                    if (Request.Cookies["SAML_SessionId"] != null)
                     {
                         accessToken = Request.Cookies["SAML_SessionId"].Value;
                     }

@@ -20,8 +20,8 @@ namespace ClientApplication.Controllers
 
         public void ActivantsSP()
         {
-            var serviceId = ConfigurationManager.AppSettings["serviceId"];
-            Response.Redirect("https://localhost:44309/Saml/InitiateSingleSignOn?returnClass=ActivantsSP&returnFunction=getAccessTokenFromSp&returnError=errorPage&serviceId=" + serviceId);
+            var samlConfigurationId = ConfigurationManager.AppSettings["samlConfigurationId"];
+            Response.Redirect("https://localhost:44309/Saml/InitiateSingleSignOn?returnClass=ActivantsSP&returnFunction=getAccessTokenFromSp&returnError=errorPage&samlConfigurationId=" + samlConfigurationId);
         }
 
         public ActionResult getAccessTokenFromSp()
@@ -39,6 +39,7 @@ namespace ClientApplication.Controllers
         [Authorize]
         public ActionResult AuthenticateUserWithAccessToken()
         {
+            var ff = Session["indrajit"];
             return View();
         }
 

@@ -291,7 +291,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SamlController.cs" />
-    <Compile Include="Controllers\SamlSpConfigurationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -314,13 +313,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Certificates\idp.cer" />
+    <Content Include="Certificates\ActivantsSAMLSP1IDP.cer" />
     <Content Include="Certificates\sp.pfx" />
     <Content Include="Certificates\sp.cer" />
     <Content Include="ApplicationInsights.config" />
-    <Content Include="saml.config" />
+    <Content Include="Certificates\ActivantsSAMLSP2IDP.cer" />
     <None Include="Properties\PublishProfiles\ActivantsSP20191108120314 - Web Deploy.pubxml" />
-    <Content Include="DefaultActivantsSaml.config" />
+    <Content Include="saml.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
