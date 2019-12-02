@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 namespace ActivantsSamlServiceProvider.Utility
 {
@@ -9,7 +10,9 @@ namespace ActivantsSamlServiceProvider.Utility
     {
         public static bool IsAutorizedUrl(string url)
         {
-            if (url.Contains("http://118.201.3.45:302/") || url.Contains("https://localhost:44313"))
+            bool value = false;
+            value = bool.Parse(WebConfigurationManager.AppSettings[url]);
+            if(value)
                 return true;
             else
                 return false;

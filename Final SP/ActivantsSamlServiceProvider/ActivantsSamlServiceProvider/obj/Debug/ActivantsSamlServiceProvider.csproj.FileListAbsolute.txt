@@ -79,3 +79,15 @@ D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServ
 D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.dll
 D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.pdb
 D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csprojAssemblyReference.cache
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Cors.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.OAuth.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Owin.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Cors.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Cors.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.OAuth.xml

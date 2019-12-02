@@ -36,6 +36,7 @@ namespace ActivantsSamlServiceProvider.Controllers
                     {
                         accessToken = Request.Cookies["SAML_SessionId"].Value;
                     }
+
                     var clientAccessToken = accessToken + Guid.NewGuid().ToString();
 
                     if (!string.IsNullOrEmpty(relayState))

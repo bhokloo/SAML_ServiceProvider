@@ -20,6 +20,7 @@ namespace ActivantsSP.Controllers
                 var path = Server.MapPath("~/Certificates/sp.pfx");
                 new X509Certificate(path, "activants", X509KeyStorageFlags.MachineKeySet);
                 var serviceId = "";
+                var partnerName = "";
                 if (Request.QueryString.ToString().Length > 0)
                 {
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -30,19 +31,24 @@ namespace ActivantsSP.Controllers
                     relayState = string.Join(";", dictionary);
                     serviceId = Request.QueryString["samlConfigurationId"];
                 }
-                var partnerName = "";
                 if (serviceId == "")
                 {
                     partnerName = WebConfigurationManager.AppSettings["ActivantsSAMLSP1IDPName"];
                     SAMLController.ConfigurationID = "ActivantsSAMLSP1";
+                    bool value = SamlAuthorizedDomains.IsAutorizedUrl(Request.Url.GetLeftPart(UriPartial.Authority));
+                    if(value)
+                        SAMLServiceProvider.InitiateSSO(Response, relayState, partnerName, new SSOOptions() { ForceAuthn = true });
+                   
                 }
                 else
                 {
                     var partnerId = serviceId + "IDPName";
                     partnerName = WebConfigurationManager.AppSettings[partnerId];
                     SAMLController.ConfigurationID = serviceId;
+                    bool value = SamlAuthorizedDomains.IsAutorizedUrl(Request.UrlReferrer.GetLeftPart(UriPartial.Authority));
+                    if (value)
+                        SAMLServiceProvider.InitiateSSO(Response, relayState, partnerName, new SSOOptions() { ForceAuthn = true });
                 }
-                SAMLServiceProvider.InitiateSSO(Response, relayState, partnerName, new SSOOptions() { ForceAuthn = true });
                 return new EmptyResult();
             }
             catch (Exception e)
@@ -57,7 +63,7 @@ namespace ActivantsSP.Controllers
                 else
                 {
                     TempData["err"] = e;
-                    return RedirectToAction("About", "Home");
+                    return RedirectToAction("index", "Home");
                 }
 
             }
