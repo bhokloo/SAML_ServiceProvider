@@ -1,5 +1,5 @@
 ﻿using Microsoft.Owin.Security.OAuth;
-using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -9,10 +9,19 @@ namespace ActivantsSamlServiceProvider.Security
 {
     public class MyAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
+        IDictionary<string, string> samlData = new Dictionary<string, string>();
+
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
-            string id = context.Parameters.Where(f => f.Key == "id").Select(f => f.Value).SingleOrDefault()[0];
-            context.OwinContext.Set<string>("id", id);
+            if(context.Parameters != null)
+            {
+                foreach (var value in context.Parameters)
+                {
+                    string[] ssd= value.Value;
+                    if(!value.Key.Equals("grant_type"))
+                        samlData.Add(value.Key, ssd[0]);
+                }
+            }
             context.Validated();
         }
 
@@ -21,8 +30,11 @@ namespace ActivantsSamlServiceProvider.Security
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             if (context.UserName != null && context.UserName != "")
             {
-                identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
-                identity.AddClaim(new Claim(ClaimTypes.SerialNumber, context.OwinContext.Get<string>("id")));
+                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, context.UserName));
+                foreach(var value in samlData)
+                {
+                    identity.AddClaim(new Claim(value.Key, value.Value));
+                }
                 context.Validated(identity);
             }
             else
@@ -31,5 +43,6 @@ namespace ActivantsSamlServiceProvider.Security
                 return;
             }
         }
+
     }
 }

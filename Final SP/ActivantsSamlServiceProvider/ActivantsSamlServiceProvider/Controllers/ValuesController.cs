@@ -1,5 +1,9 @@
-﻿using System;
+﻿using ActivantsSamlServiceProvider.Security;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -7,6 +11,8 @@ using System.Security.Claims;
 using System.Text;
 using System.Web;
 using System.Web.Http;
+using System.Web.Script.Serialization;
+using System.Web.Security;
 
 namespace ActivantsSamlServiceProvider.Controllers
 {
@@ -16,9 +22,9 @@ namespace ActivantsSamlServiceProvider.Controllers
         public async System.Threading.Tasks.Task<string> Get(string username)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44309/");
+            client.BaseAddress = new Uri("https://localhost:44364/");
             HttpResponseMessage response = client.PostAsync("Token", new StringContent(
-                      string.Format("grant_type=password&username={0}", HttpUtility.UrlEncode(username), Encoding.UTF8,
+                      string.Format("grant_type=password&username={0}&id=123456789", HttpUtility.UrlEncode(username), Encoding.UTF8,
                       "application/x-www-form-urlencoded"))).Result;
             if (response.IsSuccessStatusCode)
             {
@@ -29,31 +35,45 @@ namespace ActivantsSamlServiceProvider.Controllers
             }
             else
             {
-                return "Fail";
+                return null;
             }
         }
 
-        public IHttpActionResult Get()
+        public IHttpActionResult GetSamlData()
         {
             var identity = (ClaimsIdentity)User.Identity;
-            return Ok("helo " + identity.Name +"  "+ identity.Claims.Where(f => f.Type == "id").Select(f => f.Value).SingleOrDefault()[0]);
+            IDictionary<string, string> SamlData = new Dictionary<string, string>();
+            foreach(var value in identity.Claims)
+            {
+                SamlData.Add(value.Type.Split('/').Where(x => !string.IsNullOrWhiteSpace(x)).LastOrDefault(), value.Value);
+            }
+
+            if (SamlData.Count <= 0)
+                return null;
+
+            try
+            {
+                string SPJsonSamlData = (new JavaScriptSerializer()).Serialize(SamlData);
+                var EncryptedSamlData = HttpUtility.UrlEncode(Cryptography.Encrypt(SPJsonSamlData));
+                return Ok(EncryptedSamlData);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
-        //// GET api/values/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        //client side
+        public IHttpActionResult GetMachineKey(string encryptedSamlData)
+        {
+            var DecryptedSamlData = new Cryptography().Decrypt(HttpUtility.UrlDecode(encryptedSamlData));
+            var ClientJsonSaml = JsonConvert.DeserializeObject(DecryptedSamlData);
 
+            JObject obj = JObject.Parse(ClientJsonSaml.ToString());
+            //{"nameidentifier":"indrajit","username":"indrajit","id":"123456789"}
+            string username = (string)obj["username"];
 
-        //// PUT api/values/5
-        //public void Put(int id, [FromBody]string value)
-        //{
-        //}
-
-        //// DELETE api/values/5
-        //public void Delete(int id)
-        //{
-        //}
+            return Ok(ClientJsonSaml);
+        }
     }
 }

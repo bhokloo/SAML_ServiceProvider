@@ -26,8 +26,8 @@ namespace ActivantsSP.Controllers
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
                     dictionary["returnURLs"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                     dictionary["returnClass"] = Request.QueryString["returnClass"];
-                    dictionary["returnFunction"] = Request.QueryString["returnFunction"];
-                    dictionary["returnError"] = Request.QueryString["returnError"];
+                    dictionary["Response"] = Request.QueryString["Response"];
+                    dictionary["errorPage"] = Request.QueryString["errorPage"];
                     relayState = string.Join(";", dictionary);
                     serviceId = Request.QueryString["samlConfigurationId"];
                 }
@@ -55,10 +55,13 @@ namespace ActivantsSP.Controllers
             {
                 if (Request.QueryString.ToString().Length > 0)
                 {
-                    var ReturnUrl = Request.UrlReferrer.AbsoluteUri;
+                    var ReturnUrl = Request.UrlReferrer.GetLeftPart(UriPartial.Authority); ;
                     var returnClass = Request.QueryString["returnClass"];
-                    var returnErrorFunction = Request.QueryString["returnError"];
-                    return Redirect(ReturnUrl + "/" +returnClass + "/" + returnErrorFunction);
+                    var returnErrorFunction = Request.QueryString["errorPage"];
+                    if(!(returnClass == null || returnClass == ""))
+                        return Redirect(ReturnUrl + "/" +returnClass + "/" + returnErrorFunction); //mvc
+                    else
+                        return Redirect(ReturnUrl + "/" + returnErrorFunction); //web forms
                 }
                 else
                 {
@@ -84,8 +87,8 @@ namespace ActivantsSP.Controllers
                         Dictionary<string, string> dict = new Dictionary<string, string>();
                         dict["returnURLs"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                         dict["returnClass"] = Request.QueryString["returnClass"];
-                        dict["returnFunction"] = Request.QueryString["returnFunction"];
-                        dict["returnError"] = Request.QueryString["returnError"];
+                        dict["Response"] = Request.QueryString["Response"];
+                        dict["errorPage"] = Request.QueryString["errorPage"];
 
                         relayState = string.Join(";", dict);
 
@@ -104,7 +107,7 @@ namespace ActivantsSP.Controllers
                 {
                     var ReturnUrl = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                     var returnClass = Request.QueryString["returnClass"];
-                    var returnErrorFunction = Request.QueryString["returnError"];
+                    var returnErrorFunction = Request.QueryString["errorPage"];
                     return Redirect(ReturnUrl + "/" +returnClass + "/" + returnErrorFunction);
                 }
                 else

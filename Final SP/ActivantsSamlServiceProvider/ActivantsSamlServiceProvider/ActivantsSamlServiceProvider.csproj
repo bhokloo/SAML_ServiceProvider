@@ -79,6 +79,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -153,6 +154,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Security\AuthorizeAttribute.cs" />
+    <Compile Include="Security\Cryptography.cs" />
     <Compile Include="Security\MyAuthorizationServerProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SamlController.cs" />
@@ -173,15 +175,16 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Image\a.gif" />
     <Content Include="Image\activants.png" />
     <Content Include="Image\bg1.png" />
     <Content Include="Image\loader.gif" />
-    <Content Include="Image\loaderrev.gif" />
     <Content Include="Image\network.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Image\giphy.webp" />
+    <Content Include="Certificates\ActivantsSAMLSP1IDP.cer" />
+    <Content Include="Certificates\ActivantsSAMLSP2IDP.cer" />
+    <Content Include="Certificates\sp.cer" />
+    <Content Include="Certificates\sp.pfx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="saml.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

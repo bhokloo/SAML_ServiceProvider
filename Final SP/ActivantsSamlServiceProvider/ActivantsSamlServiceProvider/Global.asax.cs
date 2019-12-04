@@ -19,5 +19,18 @@ namespace ActivantsSamlServiceProvider
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        void Application_BeginRequest(object sender, EventArgs e)
+        {
+            if (ReferenceEquals(null, HttpContext.Current.Request.Headers["Authorization"]))
+            {
+                var token = HttpContext.Current.Request.Params["access_token"];
+                if (!String.IsNullOrEmpty(token))
+                {
+                    HttpContext.Current.Request.Headers.Add("Authorization", "Bearer " + token);
+                }
+            }
+        }
+
     }
 }
