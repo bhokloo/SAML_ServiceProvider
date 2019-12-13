@@ -8,11 +8,14 @@ using System.Text;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using ActivantsSamlServiceProvider.Utility;
+using System.Windows;
+using System.Web.UI;
 
 namespace ActivantsSP.Controllers
 {
     public class SamlController : Controller
     {
+        [ValidateInput(false)]
         public ActionResult InitiateSingleSignOn(string relayState = null)
         {
             try
@@ -24,10 +27,8 @@ namespace ActivantsSP.Controllers
                 if (Request.QueryString.ToString().Length > 0)
                 {
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
-                    dictionary["returnURLs"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
-                    dictionary["returnClass"] = Request.QueryString["returnClass"];
-                    dictionary["Response"] = Request.QueryString["Response"];
-                    dictionary["errorPage"] = Request.QueryString["errorPage"];
+                    dictionary["AuthorityURL"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
+                    dictionary["returnURL"] = Request.QueryString["returnURL"];
                     relayState = string.Join(";", dictionary);
                     serviceId = Request.QueryString["samlConfigurationId"];
                 }
@@ -36,9 +37,9 @@ namespace ActivantsSP.Controllers
                     partnerName = WebConfigurationManager.AppSettings["ActivantsSAMLSP1IDPName"];
                     SAMLController.ConfigurationID = "ActivantsSAMLSP1";
                     bool value = SamlAuthorizedDomains.IsAutorizedUrl(Request.Url.GetLeftPart(UriPartial.Authority));
-                    if(value)
+                    if (value)
                         SAMLServiceProvider.InitiateSSO(Response, relayState, partnerName, new SSOOptions() { ForceAuthn = true });
-                   
+
                 }
                 else
                 {
@@ -55,13 +56,10 @@ namespace ActivantsSP.Controllers
             {
                 if (Request.QueryString.ToString().Length > 0)
                 {
-                    var ReturnUrl = Request.UrlReferrer.GetLeftPart(UriPartial.Authority); ;
-                    var returnClass = Request.QueryString["returnClass"];
-                    var returnErrorFunction = Request.QueryString["errorPage"];
-                    if(!(returnClass == null || returnClass == ""))
-                        return Redirect(ReturnUrl + "/" +returnClass + "/" + returnErrorFunction); //mvc
-                    else
-                        return Redirect(ReturnUrl + "/" + returnErrorFunction); //web forms
+                    var ReturnUrl = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
+                    TempData["error"] = e;
+                    TempData["ReturnURL"] = ReturnUrl;
+                    return RedirectToAction("error", "Home");
                 }
                 else
                 {
@@ -70,7 +68,6 @@ namespace ActivantsSP.Controllers
                 }
 
             }
-
         }
 
 
@@ -79,13 +76,13 @@ namespace ActivantsSP.Controllers
             try
             {
                 var partnerName = WebConfigurationManager.AppSettings["PartnerIdP"];
-               
+
                 if (Request.QueryString.ToString().Length > 0)
                 {
                     if (SamlAuthorizedDomains.IsAutorizedUrl(HttpContext.Request.UrlReferrer.ToString()))
                     {
                         Dictionary<string, string> dict = new Dictionary<string, string>();
-                        dict["returnURLs"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
+                        dict["AuthorityURL"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                         dict["returnClass"] = Request.QueryString["returnClass"];
                         dict["Response"] = Request.QueryString["Response"];
                         dict["errorPage"] = Request.QueryString["errorPage"];
@@ -108,14 +105,18 @@ namespace ActivantsSP.Controllers
                     var ReturnUrl = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                     var returnClass = Request.QueryString["returnClass"];
                     var returnErrorFunction = Request.QueryString["errorPage"];
-                    return Redirect(ReturnUrl + "/" +returnClass + "/" + returnErrorFunction);
+                    return Redirect(ReturnUrl + "/" + returnClass + "/" + returnErrorFunction);
                 }
                 else
                 {
                     TempData["err"] = e;
-                    return RedirectToAction("About", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
             }
         }
+
     }
+
 }
+
+

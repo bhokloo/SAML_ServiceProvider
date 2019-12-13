@@ -11,7 +11,7 @@ Public Class Saml
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim samlConfigurationId = WebConfigurationManager.AppSettings("samlConfigurationId")
-        Dim SP As String = "https://localhost:44364/Saml/InitiateSingleSignOn?Response=Response&errorPage=errorPage&samlConfigurationId=" + samlConfigurationId
+        Dim SP As String = "https://localhost:44364/Saml/InitiateSingleSignOn?returnURL=abc.com&samlConfigurationId=" + samlConfigurationId
         Response.Redirect(SP)
     End Sub
 

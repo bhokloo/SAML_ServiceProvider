@@ -10,10 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/ActivantsSamlServiceProvider.dll">
-      <publishTime>11/29/2019 14:57:43</publishTime>
+      <publishTime>12/05/2019 13:55:58</publishTime>
     </File>
     <File Include="bin/ActivantsSamlServiceProvider.pdb">
-      <publishTime>11/29/2019 14:57:43</publishTime>
+      <publishTime>12/05/2019 13:55:58</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/10/2013 16:29:20</publishTime>
@@ -21,14 +21,35 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/Antlr3.Runtime.pdb">
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
+    <File Include="bin/ComponentSpace.SAML2.dll">
+      <publishTime>06/11/2019 07:16:08</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Cors.dll">
+      <publishTime>11/12/2019 18:48:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>11/12/2019 18:46:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>11/12/2019 18:47:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>11/12/2019 18:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>11/12/2019 18:45:44</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>02/18/2018 09:44:54</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>11/13/2012 12:19:34</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>05/24/2018 13:38:22</publishTime>
@@ -171,6 +192,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>11/28/2018 13:00:36</publishTime>
     </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>10/01/2013 20:54:22</publishTime>
+    </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>11/28/2018 13:04:24</publishTime>
     </File>
@@ -200,6 +224,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
+    </File>
+    <File Include="Certificates/ActivantsSAMLSP1IDP.cer">
+      <publishTime>12/03/2019 10:47:01</publishTime>
+    </File>
+    <File Include="Certificates/ActivantsSAMLSP2IDP.cer">
+      <publishTime>12/03/2019 10:47:01</publishTime>
+    </File>
+    <File Include="Certificates/sp.cer">
+      <publishTime>12/03/2019 10:47:04</publishTime>
+    </File>
+    <File Include="Certificates/sp.pfx">
+      <publishTime>12/03/2019 10:47:04</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>11/29/2019 14:40:47</publishTime>
@@ -249,6 +285,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>11/29/2019 14:40:44</publishTime>
     </File>
+    <File Include="Image/activants.png">
+      <publishTime>12/02/2019 09:55:07</publishTime>
+    </File>
+    <File Include="Image/bg1.png">
+      <publishTime>12/02/2019 11:58:49</publishTime>
+    </File>
+    <File Include="Image/loader.gif">
+      <publishTime>12/02/2019 13:29:39</publishTime>
+    </File>
+    <File Include="Image/network.png">
+      <publishTime>12/02/2019 18:01:40</publishTime>
+    </File>
+    <File Include="saml.config">
+      <publishTime>12/05/2019 10:37:17</publishTime>
+    </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/29/2019 14:40:47</publishTime>
     </File>
@@ -277,13 +328,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/29/2019 14:40:57</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/29/2019 14:40:44</publishTime>
+      <publishTime>12/02/2019 14:45:53</publishTime>
+    </File>
+    <File Include="Views/Saml/Error.cshtml">
+      <publishTime>12/12/2019 17:44:52</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/29/2019 14:40:44</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/29/2019 14:54:46</publishTime>
+      <publishTime>12/02/2019 14:06:22</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/29/2019 14:40:44</publishTime>
@@ -292,7 +346,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/29/2019 14:40:44</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/29/2019 14:44:50</publishTime>
+      <publishTime>12/05/2019 13:55:59</publishTime>
     </File>
   </ItemGroup>
 </Project>

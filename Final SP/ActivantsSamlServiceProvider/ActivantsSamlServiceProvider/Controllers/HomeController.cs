@@ -26,5 +26,10 @@ namespace ActivantsSamlServiceProvider.Controllers
 
             return View();
         }
+
+        public ActionResult error()
+        {
+            return View();
+        }
     }
 }

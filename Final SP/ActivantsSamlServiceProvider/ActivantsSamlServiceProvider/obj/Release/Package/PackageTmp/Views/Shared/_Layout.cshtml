@@ -7,32 +7,25 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                </ul>
-            </div>
+<body style="padding:0px;background-color:#8A39B7;">
+    <div style="padding:20px;height:70px;background-color:#FDD100">
+        <center>
+            <img src="~/Image/activants.png" />
+        </center>
+    </div>
+    <div style="background-image:url(/Image/bg1.png); background-size: contain;background-repeat:no-repeat;">
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+        <div>
+            <hr />
+            <footer>
+                <center>
+                    <p style="color:whitesmoke;font-size:15px;">&copy; @DateTime.Now.Year - Activants Pte Ltd | Service Provider | All Rights Reserved </p>
+                </center>
+            </footer>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

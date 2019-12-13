@@ -73,13 +73,13 @@ namespace ActivantsSamlServiceProvider.Controllers
                     else
                     {
                         TempData["err"] = e;
-                        return RedirectToAction("About", "Home");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
             }
             else
             {
-                return RedirectToAction("About", "Home");
+                return RedirectToAction("Index", "Home");
             }
         }
 
@@ -115,7 +115,7 @@ namespace ActivantsSamlServiceProvider.Controllers
                         }
                     }
                 }
-                return RedirectToAction("About", "Home");
+                return RedirectToAction("Index", "Home");
             }
             catch (Exception e)
             {
@@ -131,7 +131,7 @@ namespace ActivantsSamlServiceProvider.Controllers
                 else
                 {
                     TempData["err"] = e;
-                    return RedirectToAction("About", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
             }
 
