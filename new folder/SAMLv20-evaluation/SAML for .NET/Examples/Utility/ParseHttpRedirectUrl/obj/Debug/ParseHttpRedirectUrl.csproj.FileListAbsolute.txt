@@ -1,0 +1,10 @@
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\bin\Debug\ParseHttpRedirectUrl.exe.config
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\bin\Debug\ParseHttpRedirectUrl.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\bin\Debug\ParseHttpRedirectUrl.pdb
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\bin\Debug\ComponentSpace.SAML2.dll
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\bin\Debug\ComponentSpace.SAML2.xml
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\obj\Debug\ParseHttpRedirectUrl.csprojAssemblyReference.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\obj\Debug\ParseHttpRedirectUrl.csproj.CoreCompileInputs.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\obj\Debug\ParseHttpRedirectUrl.csproj.CopyComplete
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\obj\Debug\ParseHttpRedirectUrl.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Utility\ParseHttpRedirectUrl\obj\Debug\ParseHttpRedirectUrl.pdb

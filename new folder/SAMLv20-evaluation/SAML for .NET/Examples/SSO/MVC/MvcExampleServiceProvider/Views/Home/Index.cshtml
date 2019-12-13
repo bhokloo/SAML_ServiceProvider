@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using Microsoft.AspNet.Identity
+
+<div class="jumbotron">
+    <h1>Example Service Provider</h1>
+    <p class="lead">
+        This example demonstrates using the ComponentSpace SAML v2.0 library to enable SAML single sign-on
+        as the service provider.
+    </p>
+    @if (!Request.IsAuthenticated)
+    {
+        <p>@Html.ActionLink("SSO to the Identity Provider", "InitiateSingleSignOn", "Saml", null, new { @class = "btn btn-primary btn-lg" })</p>
+    }
+</div>

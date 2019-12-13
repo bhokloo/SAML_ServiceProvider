@@ -1,0 +1,36 @@
+<!-- Template for identity provider SAML metadata -->
+<md:EntityDescriptor entityID="TODO: unique URL or URN identifying the organization" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata">
+    <!-- TODO - Set WantAuthnRequestsSigned to true if the authn request from the SP must be signed. -->
+    <md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <!-- If the SAML response or SAML assertion is signed then include the public key certificate. -->
+        <md:KeyDescriptor>
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        TODO: identity provider's base-64 encoded certificate
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <!-- The endpoint to receive logout messages. This is only required for SLO. -->
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="TODO: SLO service URL"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="TODO: SLO service URL"/>
+
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+
+        <!-- The endpoint to receive authn requests. This is only required for SP-initiated SSO. -->
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="TODO: SSO service URL"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="TODO: SSO service URL"/>
+    </md:IDPSSODescriptor>
+    <!-- Optional organization and contact information -->
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">TODO</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">TODO</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en">TODO</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>TODO</md:GivenName>
+        <md:SurName>TODO</md:SurName>
+        <md:EmailAddress>TODO</md:EmailAddress>
+    </md:ContactPerson>
+</md:EntityDescriptor>

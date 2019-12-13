@@ -1,0 +1,6 @@
+<saml:Assertion Version="2.0" ID="_9eb729a4-ee15-4175-9f30-a402c5aa1fca" IssueInstant="2007-09-15T01:13:50Z" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+  <saml:Subject>
+    <saml:NameID>test-user</saml:NameID>
+  </saml:Subject>
+  <saml:AuthnStatement AuthnInstant="2007-09-15T01:13:51Z" />
+</saml:Assertion>

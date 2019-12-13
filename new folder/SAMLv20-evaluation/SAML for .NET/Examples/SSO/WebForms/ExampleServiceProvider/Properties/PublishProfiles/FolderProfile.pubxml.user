@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_NewBackgroundProfile>True</_NewBackgroundProfile>
+    <_PublishTargetUrl>C:\ComponentSpace\Products\SAMLv20\Examples\SSO\HighLevelAPI\WebForms\ExampleServiceProvider\bin\Release\PublishOutput</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/readme.txt">
+      <publishTime>09/16/2015 16:42:52</publishTime>
+    </File>
+    <File Include="bin/ComponentSpace.SAML2.dll">
+      <publishTime>12/05/2017 13:03:56</publishTime>
+    </File>
+    <File Include="bin/ComponentSpace.SAML2.pdb">
+      <publishTime>12/05/2017 13:03:57</publishTime>
+    </File>
+    <File Include="bin/ExampleServiceProvider.dll">
+      <publishTime>12/05/2017 13:03:59</publishTime>
+    </File>
+    <File Include="bin/ExampleServiceProvider.pdb">
+      <publishTime>12/05/2017 13:03:59</publishTime>
+    </File>
+    <File Include="Certificates/adfs.cer">
+      <publishTime>11/03/2016 17:04:42</publishTime>
+    </File>
+    <File Include="Certificates/azure.cer">
+      <publishTime>06/23/2017 15:56:56</publishTime>
+    </File>
+    <File Include="Certificates/bitium.cer">
+      <publishTime>10/11/2016 13:24:47</publishTime>
+    </File>
+    <File Include="Certificates/centrify.cer">
+      <publishTime>10/11/2016 13:24:47</publishTime>
+    </File>
+    <File Include="Certificates/google.cer">
+      <publishTime>12/30/2016 08:17:54</publishTime>
+    </File>
+    <File Include="Certificates/idp.cer">
+      <publishTime>11/03/2016 17:04:42</publishTime>
+    </File>
+    <File Include="Certificates/okta.cer">
+      <publishTime>10/11/2016 13:24:47</publishTime>
+    </File>
+    <File Include="Certificates/onelogin.cer">
+      <publishTime>10/11/2016 13:24:47</publishTime>
+    </File>
+    <File Include="Certificates/pingone.cer">
+      <publishTime>10/11/2016 13:24:47</publishTime>
+    </File>
+    <File Include="Certificates/salesforce.cer">
+      <publishTime>06/23/2017 15:56:56</publishTime>
+    </File>
+    <File Include="Certificates/shibboleth.cer">
+      <publishTime>06/23/2017 15:56:56</publishTime>
+    </File>
+    <File Include="Certificates/sp.cer">
+      <publishTime>11/03/2016 17:04:42</publishTime>
+    </File>
+    <File Include="Certificates/sp.pfx">
+      <publishTime>11/03/2016 17:04:42</publishTime>
+    </File>
+    <File Include="Certificates/wso2.cer">
+      <publishTime>08/26/2016 10:00:52</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>09/10/2016 12:27:14</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/29/2013 11:38:36</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>11/24/2017 07:34:59</publishTime>
+    </File>
+    <File Include="saml.config">
+      <publishTime>12/05/2017 12:54:57</publishTime>
+    </File>
+    <File Include="SAML/AssertionConsumerService.aspx">
+      <publishTime>03/29/2013 11:45:28</publishTime>
+    </File>
+    <File Include="SAML/ExportMetadata.aspx">
+      <publishTime>09/08/2017 10:27:26</publishTime>
+    </File>
+    <File Include="SAML/ImportMetadata.aspx">
+      <publishTime>09/08/2017 10:27:26</publishTime>
+    </File>
+    <File Include="SAML/SLOService.aspx">
+      <publishTime>02/05/2013 19:30:30</publishTime>
+    </File>
+    <File Include="SAML/Web.config">
+      <publishTime>12/04/2013 14:27:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.3.min.js">
+      <publishTime>04/09/2015 17:48:12</publishTime>
+    </File>
+    <File Include="Site.css">
+      <publishTime>03/20/2013 14:18:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/24/2017 07:55:17</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

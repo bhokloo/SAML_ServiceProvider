@@ -1,0 +1,35 @@
+<!-- Template for service provider SAML metadata -->
+<md:EntityDescriptor entityID="TODO: unique URL or URN identifying the organization" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata">
+    <!-- TODO - Set WantAssertionsSigned to true if the SAML assertion from the IdP must be signed. -->
+    <md:SPSSODescriptor WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <!-- If the authn request is signed then include the public key certificate. -->
+        <md:KeyDescriptor>
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        TODO: service provider's base-64 encoded certificate
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <!-- The endpoint to receive logout messages. This is only required for SLO. -->
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="TODO: SLO service URL"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="TODO: SLO service URL"/>
+
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+
+        <!-- The endpoint to receive SAML responses. -->
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="TODO: ACS service URL" index="0" isDefault="true"/>
+    </md:SPSSODescriptor>
+    <!-- Optional organization and contact information -->
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">TODO</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">TODO</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en">TODO</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>TODO</md:GivenName>
+        <md:SurName>TODO</md:SurName>
+        <md:EmailAddress>TODO</md:EmailAddress>
+    </md:ContactPerson>
+</md:EntityDescriptor>

@@ -1,0 +1,9 @@
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\bin\Debug\CreateMetadata.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\bin\Debug\CreateMetadata.pdb
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\bin\Debug\ComponentSpace.SAML2.dll
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\bin\Debug\ComponentSpace.SAML2.xml
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\obj\Debug\CreateMetadata.csprojAssemblyReference.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\obj\Debug\CreateMetadata.csproj.CoreCompileInputs.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\obj\Debug\CreateMetadata.csproj.CopyComplete
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\obj\Debug\CreateMetadata.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\CreateMetadata\obj\Debug\CreateMetadata.pdb

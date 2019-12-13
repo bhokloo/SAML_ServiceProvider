@@ -1,0 +1,2 @@
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\MVC\MvcExampleServiceProvider\obj\Debug\MvcExampleServiceProvider.csprojAssemblyReference.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\MVC\MvcExampleServiceProvider\obj\Debug\MvcExampleServiceProvider.csproj.CoreCompileInputs.cache
