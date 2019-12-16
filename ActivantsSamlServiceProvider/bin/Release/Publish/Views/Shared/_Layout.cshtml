@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="padding:0px;background-color:#8A39B7;">
+    <div style="padding:20px;height:70px;background-color:#FDD100">
+        <center>
+            <img src="~/Image/activants.png" />
+        </center>
+    </div>
+    <div style="background-image:url(/Image/bg1.png); background-size: contain;background-repeat:no-repeat;">
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+        <div>
+            <hr />
+            <footer>
+                <center>
+                    <p style="color:whitesmoke;font-size:15px;">&copy; @DateTime.Now.Year - Activants Pte Ltd | Service Provider | All Rights Reserved </p>
+                </center>
+            </footer>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

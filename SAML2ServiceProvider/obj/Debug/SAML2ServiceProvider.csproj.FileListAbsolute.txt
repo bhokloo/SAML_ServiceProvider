@@ -1,0 +1,1 @@
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2ServiceProvider\obj\Debug\SAML2ServiceProvider.csprojAssemblyReference.cache
