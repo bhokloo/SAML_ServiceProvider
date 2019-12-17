@@ -1,5 +1,6 @@
 ﻿using ActivantsSamlServiceProvider.Utility;
 using ComponentSpace.SAML2;
+using ComponentSpace.SAML2.Bindings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,10 @@ namespace ActivantsSamlServiceProvider.Controllers
                    out var userName,
                    out IDictionary<string, string> attributes,
                    out relayState);
+
+                    var ClientAuthorityUrl = RelayStateCache.Get("ClientAuthorityUrl");
+                    var ClientReturnUrl = RelayStateCache.Get("ClientReturnUrl");
+
 
                     var accessToken = "";
                     if (Request.Cookies["SAML_SessionId"] != null)

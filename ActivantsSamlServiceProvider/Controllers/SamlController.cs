@@ -11,6 +11,8 @@ using ActivantsSamlServiceProvider.Utility;
 using System.Windows;
 using System.Web.UI;
 using ComponentSpace.SAML2.Profiles.SSOBrowser;
+using ComponentSpace.SAML2.Bindings;
+using System.Xml;
 
 namespace ActivantsSP.Controllers
 {
@@ -30,12 +32,20 @@ namespace ActivantsSP.Controllers
                     dictionary["AuthorityURL"] = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
                     dictionary["returnURL"] = Request.QueryString["returnURL"];
                     relayState = string.Join(";", dictionary);
+                    var ClientAuthorityUrl = Request.UrlReferrer.GetLeftPart(UriPartial.Authority);
+                    var ClientReturnUrl = Request.QueryString["returnURL"];
+
+                    relayState = RelayStateCache.Add(new RelayState(ClientAuthorityUrl, null));
+                    relayState = RelayStateCache.Add(new RelayState(ClientReturnUrl, null));
+
                     serviceId = Request.QueryString["samlConfigurationId"];
                 }
                 if (serviceId == "")
                 {
                     partnerName = WebConfigurationManager.AppSettings["ActivantsSAMLSP1IDPName"];
                     SAMLController.ConfigurationID = "ActivantsSAMLSP1";
+                    XmlElement authnRequestXml = SAMLController.ConfigurationID;
+                    HTTPArtifactState httpArtifactState = new HTTPArtifactState(SAMLController.ConfigurationID, null);
                     bool value = SamlAuthorizedDomains.IsAutorizedUrl(Request.Url.GetLeftPart(UriPartial.Authority));
                     if (value)
                         //string idpURL = CreateSSOServiceURL();
