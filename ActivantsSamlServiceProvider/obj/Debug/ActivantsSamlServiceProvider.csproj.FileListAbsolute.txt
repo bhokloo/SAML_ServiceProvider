@@ -180,7 +180,7 @@ C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlSe
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Razor.xml
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Antlr3.Runtime.pdb
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csprojAssemblyReference.cache
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csproj.CopyComplete
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.dll
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csprojAssemblyReference.cache

@@ -13,6 +13,9 @@ using System.Web.UI;
 using ComponentSpace.SAML2.Profiles.SSOBrowser;
 using ComponentSpace.SAML2.Bindings;
 using System.Xml;
+using ComponentSpace.SAML2.Protocols;
+using ComponentSpace.SAML2.Assertions;
+using System.Web.Security;
 
 namespace ActivantsSP.Controllers
 {
@@ -22,6 +25,8 @@ namespace ActivantsSP.Controllers
         {
             try
             {
+                RequestLoginAtIdentityProvider();
+
                 var path = Server.MapPath("~/Certificates/sp.pfx");
                 new X509Certificate(path, "activants", X509KeyStorageFlags.MachineKeySet);
                 var serviceId = "";
@@ -44,8 +49,8 @@ namespace ActivantsSP.Controllers
                 {
                     partnerName = WebConfigurationManager.AppSettings["ActivantsSAMLSP1IDPName"];
                     SAMLController.ConfigurationID = "ActivantsSAMLSP1";
-                    XmlElement authnRequestXml = SAMLController.ConfigurationID;
-                    HTTPArtifactState httpArtifactState = new HTTPArtifactState(SAMLController.ConfigurationID, null);
+                   // XmlElement authnRequestXml = SAMLController.ConfigurationID;
+                    //HTTPArtifactState httpArtifactState = new HTTPArtifactState(SAMLController.ConfigurationID, null);
                     bool value = SamlAuthorizedDomains.IsAutorizedUrl(Request.Url.GetLeftPart(UriPartial.Authority));
                     if (value)
                         //string idpURL = CreateSSOServiceURL();
@@ -81,6 +86,81 @@ namespace ActivantsSP.Controllers
             }
         }
 
+        private string CreateAbsoluteURL(string relativeURL)
+        {
+            return new Uri(Request.Url.AbsoluteUri, ResolveUrl(relativeURL));
+        }
+
+        private void RequestLoginAtIdentityProvider()
+        {
+            XmlElement authnRequestXml = CreateAuthnRequest();
+            string spResourceURL = CreateAbsoluteURL(FormsAuthentication.GetRedirectUrl("", false));
+            string relayState = RelayStateCache.Add(new RelayState(spResourceURL, null));
+
+            // Send the authentication request to the identity provider over the selected binding.
+            string idpURL = CreateSSOServiceURL();
+
+            switch (spToIdPBindingRadioButtonList.SelectedValue)
+            {
+                case SAMLIdentifiers.BindingURIs.HTTPRedirect:
+                    X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.SPX509Certificate];
+
+                    ServiceProvider.SendAuthnRequestByHTTPRedirect(Response, idpURL, authnRequestXml, relayState, x509Certificate.PrivateKey);
+
+                    break;
+                case SAMLIdentifiers.BindingURIs.HTTPPost:
+                    ServiceProvider.SendAuthnRequestByHTTPPost(Response, idpURL, authnRequestXml, relayState);
+
+                    // Don't send this form.
+                    Response.End();
+
+                    break;
+                case SAMLIdentifiers.BindingURIs.HTTPArtifact:
+                    // Create the artifact.
+                    string identificationURL = CreateAbsoluteURL("~/");
+                    HTTPArtifactType4 httpArtifact = new HTTPArtifactType4(HTTPArtifactType4.CreateSourceId(identificationURL), HTTPArtifactType4.CreateMessageHandle());
+
+                    // Cache the authentication request for subsequent sending using the artifact resolution protocol.
+                    HTTPArtifactState httpArtifactState = new HTTPArtifactState(authnRequestXml, null);
+                    HTTPArtifactStateCache.Add(httpArtifact, httpArtifactState);
+
+                    // Send the artifact.
+                    ServiceProvider.SendArtifactByHTTPArtifact(Response, idpURL, httpArtifact, relayState, false);
+                    break;
+            }
+        }
+
+        private XmlElement CreateAuthnRequest()
+        {
+            // Create some URLs to identify the service provider to the identity provider.
+            // As we're using the same endpoint for the different bindings, add a query string parameter
+            // to identify the binding.
+            string issuerURL = CreateAbsoluteURL("~/");
+            string assertionConsumerServiceURL = CreateAssertionConsumerServiceURL();
+
+            // Create the authentication request.
+            AuthnRequest authnRequest = new AuthnRequest();
+            authnRequest.Destination = WebConfigurationManager.AppSettings["idpssoURL"];
+            authnRequest.Issuer = new Issuer(issuerURL);
+            authnRequest.ForceAuthn = true;
+            authnRequest.NameIDPolicy = new NameIDPolicy(null, null, true);
+            authnRequest.ProtocolBinding = idpToSPBindingRadioButtonList.SelectedValue;
+            authnRequest.AssertionConsumerServiceURL = assertionConsumerServiceURL;
+
+            // Serialize the authentication request to XML for transmission.
+            XmlElement authnRequestXml = authnRequest.ToXml();
+
+            // Don't sign if using HTTP redirect as the generated query string is too long for most browsers.
+            if (spToIdPBindingRadioButtonList.SelectedValue != SAMLIdentifiers.BindingURIs.HTTPRedirect)
+            {
+                // Sign the authentication request.
+                X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.SPX509Certificate];
+
+                SAMLMessageSignature.Generate(authnRequestXml, x509Certificate.PrivateKey, x509Certificate);
+            }
+
+            return authnRequestXml;
+        }
 
         public ActionResult InitiateSingleLogout(string relayState = null)
         {
@@ -129,9 +209,9 @@ namespace ActivantsSP.Controllers
             }
         }
 
-        private string CreateSSOServiceURL()
-        {
-            return string.Format("{0}?{1}={2}", WebConfigurationManager.AppSettings["idpssoURL"], bindingQueryParameter, HttpUtility.UrlEncode(spToIdPBindingRadioButtonList.SelectedValue));
-        }
+        //private string CreateSSOServiceURL()
+        //{
+        //    return string.Format("{0}?{1}={2}", WebConfigurationManager.AppSettings["idpssoURL"], bindingQueryParameter, HttpUtility.UrlEncode(spToIdPBindingRadioButtonList.SelectedValue));
+        //}
     }
 }

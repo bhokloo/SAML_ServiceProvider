@@ -181,11 +181,9 @@
     <Content Include="Image\network.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Certificates\ActivantsSAMLSP1IDP.cer" />
-    <Content Include="Certificates\ActivantsSAMLSP2IDP.cer" />
-    <Content Include="Certificates\sp.cer" />
-    <Content Include="Certificates\sp.pfx" />
     <Content Include="saml.config" />
+    <Content Include="Certificates\idp.cer" />
+    <Content Include="Certificates\sp.pfx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
