@@ -9,6 +9,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAML2IdentityProvider", "SA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAML2ServiceProvider", "SAML2ServiceProvider\SAML2ServiceProvider.csproj", "{5F52EEF2-486C-4746-B3A0-DC67EA62554F}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SingPassAuth", "SingPassAuth\", "{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53398"
+		Debug.AspNetCompiler.PhysicalPath = "SingPassAuth\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53398\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53398"
+		Release.AspNetCompiler.PhysicalPath = "SingPassAuth\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53398\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53398"
+		SlnRelativePath = "SingPassAuth\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +48,10 @@ Global
 		{5F52EEF2-486C-4746-B3A0-DC67EA62554F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F52EEF2-486C-4746-B3A0-DC67EA62554F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F52EEF2-486C-4746-B3A0-DC67EA62554F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
