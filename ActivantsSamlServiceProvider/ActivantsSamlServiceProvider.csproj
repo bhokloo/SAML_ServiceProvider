@@ -47,7 +47,7 @@
   <ItemGroup>
     <Reference Include="ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\ComponentSpace.SAML2.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\new-master\SAML_ServiceProvider-master\SAML2ServiceProvider\bin\ComponentSpace.SAML2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

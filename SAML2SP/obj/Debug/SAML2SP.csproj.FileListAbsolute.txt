@@ -1,0 +1,9 @@
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\bin\SAML2SP.dll.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\bin\SAML2SP.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\bin\SAML2SP.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\bin\ComponentSpace.SAML2.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\bin\ComponentSpace.SAML2.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\obj\Debug\SAML2SP.csproj.CopyComplete
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\obj\Debug\SAML2SP.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\obj\Debug\SAML2SP.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\obj\Debug\SAML2SP.csprojAssemblyReference.cache
