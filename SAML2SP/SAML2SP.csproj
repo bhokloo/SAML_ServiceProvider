@@ -78,6 +78,7 @@
     <Content Include="Image\loader.gif" />
     <Content Include="Image\network.png" />
     <Content Include="logout.aspx" />
+    <Content Include="SAML\ArtifactResponder.aspx" />
     <Content Include="SAML\SLOService.aspx" />
     <Content Include="Site.css" />
     <Content Include="Web.config" />
@@ -108,6 +109,13 @@
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAML\ArtifactResponder.aspx.cs">
+      <DependentUpon>ArtifactResponder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAML\ArtifactResponder.aspx.designer.cs">
+      <DependentUpon>ArtifactResponder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SAML\AssertionConsumerService.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>AssertionConsumerService.aspx</DependentUpon>
@@ -144,8 +152,9 @@
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\localhost.pubxml" />
     <Content Include="sp.pfx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="saml.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

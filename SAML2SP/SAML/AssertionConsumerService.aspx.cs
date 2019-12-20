@@ -33,15 +33,26 @@ namespace SAML2SP.SAML
         private void ReceiveSAMLResponse(ref SAMLResponse samlResponse, ref string relayState)
         {
             Trace.Write("SP", "Receiving SAML response");
+
             XmlElement samlResponseXml = null;
             HTTPArtifact httpArtifact = null;
             ServiceProvider.ReceiveArtifactByHTTPArtifact(Request, false, out httpArtifact, out relayState);
             ArtifactResolve artifactResolve = new ArtifactResolve();
+
             artifactResolve.Issuer = new Issuer(CreateAbsoluteURL("~/"));
+
             artifactResolve.Artifact = new Artifact(httpArtifact.ToString());
             XmlElement artifactResolveXml = artifactResolve.ToXml();
             string idpArtifactResponderURL = WebConfigurationManager.AppSettings["idpArtifactResponderURL"];
+
+            //signing the Artifact resolve as per SP/CP specs
+
+            X509Certificate2 x509Certificate_sp = (X509Certificate2)Application[Global.SPX509Certificate];
+            SAMLMessageSignature.Generate(artifactResolveXml, x509Certificate_sp.PrivateKey, x509Certificate_sp);
+
+            //calling to SP/CP with artifact resolve.
             XmlElement artifactResponseXml = ArtifactResolver.SendRequestReceiveResponse(idpArtifactResponderURL, artifactResolveXml);
+
             ArtifactResponse artifactResponse = new ArtifactResponse(artifactResponseXml);
             samlResponseXml = artifactResponse.SAMLMessage;
 
@@ -50,6 +61,9 @@ namespace SAML2SP.SAML
             {
                 throw new ArgumentException("The SAML response signature failed to verify.");
             }
+
+           
+
             samlResponse = new SAMLResponse(samlResponseXml);
         }
 

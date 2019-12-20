@@ -15,6 +15,7 @@ using ComponentSpace.SAML2.Assertions;
 using ComponentSpace.SAML2.Protocols;
 using ComponentSpace.SAML2.Bindings;
 using ComponentSpace.SAML2.Profiles.ArtifactResolution;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SAML2IdP.SAML
 {
@@ -29,7 +30,15 @@ namespace SAML2IdP.SAML
         {
             Trace.Write("IdP", "Processing artifact resolve request");
 
+            X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.SPX509Certificate];
+            
+
             XmlElement artifactResolveXml = ArtifactResolver.ReceiveArtifactResolve(Request);
+
+            if (!SAMLMessageSignature.Verify(artifactResolveXml, x509Certificate))
+            {
+                throw new ArgumentException("The SAML response signature failed to verify.");
+            }
 
             ArtifactResolve artifactResolve = new ArtifactResolve(artifactResolveXml);
 
