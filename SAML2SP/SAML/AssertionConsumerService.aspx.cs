@@ -17,105 +17,88 @@ using ComponentSpace.SAML2.Protocols;
 using ComponentSpace.SAML2.Bindings;
 using ComponentSpace.SAML2.Profiles.ArtifactResolution;
 using ComponentSpace.SAML2.Profiles.SSOBrowser;
+using System.Web.Configuration;
 
 namespace SAML2SP.SAML
 {
     public partial class AssertionConsumerService : System.Web.UI.Page
     {
-        // Receive the SAML response from the identity provider.
-        private void ReceiveSAMLResponse(out SAMLResponse samlResponse, out string relayState)
+        private const string errorQueryParameter = "error";
+
+        private string CreateAbsoluteURL(string relativeURL)
         {
-            Trace.Write("SP", "Receiving SAML response");
-
-            // Receive the SAML response.
-            XmlElement samlResponseXml = null;
-
-            ServiceProvider.ReceiveSAMLResponseByHTTPPost(Request, out samlResponseXml, out relayState);
-
-            // Verify the response's signature.
-            if (SAMLMessageSignature.IsSigned(samlResponseXml))
-            {
-                Trace.Write("SP", "Verifying response signature");
-                X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.IdPX509Certificate];
-
-                if (!SAMLMessageSignature.Verify(samlResponseXml, x509Certificate))
-                {
-                    throw new ArgumentException("The SAML response signature failed to verify.");
-                }
-            }
-
-            // Deserialize the XML.
-            samlResponse = new SAMLResponse(samlResponseXml);
-
-            Trace.Write("SP", "Received SAML response");
+            return new Uri(Request.Url, ResolveUrl(relativeURL)).ToString();
         }
 
-        // Process the SAML response.
-        private void ProcessSAMLResponse(SAMLResponse samlResponse, string relayState)
+        private void ReceiveSAMLResponse(ref SAMLResponse samlResponse, ref string relayState)
         {
-            Trace.Write("SP", "Processing SAML response");
+            Trace.Write("SP", "Receiving SAML response");
+            XmlElement samlResponseXml = null;
+            HTTPArtifact httpArtifact = null;
+            ServiceProvider.ReceiveArtifactByHTTPArtifact(Request, false, out httpArtifact, out relayState);
+            ArtifactResolve artifactResolve = new ArtifactResolve();
+            artifactResolve.Issuer = new Issuer(CreateAbsoluteURL("~/"));
+            artifactResolve.Artifact = new Artifact(httpArtifact.ToString());
+            XmlElement artifactResolveXml = artifactResolve.ToXml();
+            string idpArtifactResponderURL = WebConfigurationManager.AppSettings["idpArtifactResponderURL"];
+            XmlElement artifactResponseXml = ArtifactResolver.SendRequestReceiveResponse(idpArtifactResponderURL, artifactResolveXml);
+            ArtifactResponse artifactResponse = new ArtifactResponse(artifactResponseXml);
+            samlResponseXml = artifactResponse.SAMLMessage;
 
-            // Check whether the SAML response indicates success.
-            if (!samlResponse.IsSuccess())
+            X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.IdPX509Certificate];
+            if (!SAMLMessageSignature.Verify(samlResponseXml, x509Certificate))
             {
-                throw new ArgumentException("Received error response");
+                throw new ArgumentException("The SAML response signature failed to verify.");
             }
+            samlResponse = new SAMLResponse(samlResponseXml);
+        }
 
-            // Extract the asserted identity from the SAML response.
-            SAMLAssertion samlAssertion = null;
-
-            if (samlResponse.GetUnsignedAssertions().Count > 0)
-            {
-                samlAssertion = samlResponse.GetUnsignedAssertions()[0];
-            }
-            else
-            {
-                throw new ArgumentException("No assertions in response");
-            }
-
-            // Enforce single use of the SAML assertion.
-            if (!AssertionIDCache.Add(samlAssertion))
-            {
-                throw new ArgumentException("The SAML assertion has already been used");
-            }
-
-            // Get the subject name identifier.
-            string userName = null;
-
-            if (samlAssertion.Subject.NameID != null)
-            {
-                userName = samlAssertion.Subject.NameID.NameIdentifier;
-            }
-            else
-            {
-                throw new ArgumentException("No name in subject");
-            }
-
-            // Create a login context for the asserted identity.
+        private void ProcessSuccessSAMLResponse(SAMLResponse samlResponse, string relayState)
+        {
+            SAMLAssertion samlAssertion = (SAMLAssertion)samlResponse.Assertions[0];
+            string userName = samlAssertion.Subject.NameID.NameIdentifier;
+            var targetUrl = relayState;
+            RelayState cachedRelayState = RelayStateCache.Remove(relayState);
             FormsAuthentication.SetAuthCookie(userName, false);
+            Response.Redirect(targetUrl, false);
+        }
 
-            // Redirect to the requested URL.
-            Response.Redirect(relayState, false);
+        // Process an error SAML response.
+        private void ProcessErrorSAMLResponse(SAMLResponse samlResponse)
+        {
+            string errorMessage = null;
+            if ((samlResponse.Status.StatusMessage != null))
+            {
+                errorMessage = samlResponse.Status.StatusMessage.Message;
+            }
+            string redirectURL = string.Format("~/Login.aspx?{0}={1}", errorQueryParameter, HttpUtility.UrlEncode(errorMessage));
+            Response.Redirect(redirectURL, false);
+        }
 
-            Trace.Write("SP", "Processed successful SAML response");
+        private void ProcessSAMLResponse()
+        {
+            SAMLResponse samlResponse = null;
+            string relayState = null;
+            ReceiveSAMLResponse(ref samlResponse, ref relayState);
+            if (samlResponse == null)
+                return;
+
+            if (samlResponse.IsSuccess())
+            {
+                ProcessSuccessSAMLResponse(samlResponse, relayState);
+            }
+            else
+            {
+                ProcessErrorSAMLResponse(samlResponse);
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                Trace.Write("SP", "Assertion consumer service");
-
-                // Receive the SAML response.
-                SAMLResponse samlResponse = null;
-                string relayState = null;
-
-                ReceiveSAMLResponse(out samlResponse, out relayState);
-
-                // Process the SAML response.
-                ProcessSAMLResponse(samlResponse, relayState);
+                ProcessSAMLResponse();
             }
-
             catch (Exception exception)
             {
                 Trace.Write("SP", "Error in assertion consumer service", exception);

@@ -20,7 +20,7 @@
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
     <UseGlobalApplicationHostFile />
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>true</Use64BitIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="SAML\ArtifactResponder.aspx" />
     <Content Include="SAML\SLOService.aspx" />
     <Content Include="Site.css" />
     <Content Include="Web.config" />
@@ -87,6 +88,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAML\ArtifactResponder.aspx.cs">
+      <DependentUpon>ArtifactResponder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAML\ArtifactResponder.aspx.designer.cs">
+      <DependentUpon>ArtifactResponder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SAML\SLOService.aspx.cs">
       <DependentUpon>SLOService.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

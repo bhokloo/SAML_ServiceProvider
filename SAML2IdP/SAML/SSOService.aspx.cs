@@ -44,7 +44,7 @@ namespace SAML2IdP.SAML
             SAMLAssertion samlAssertion = new SAMLAssertion();
             samlAssertion.Issuer = issuer;
 
-            Subject subject = new Subject(new NameID(User.Identity.Name));
+            Subject subject = new Subject(new NameID(Context.User.Identity.Name));
             SubjectConfirmation subjectConfirmation = new SubjectConfirmation(SAMLIdentifiers.SubjectConfirmationMethods.Bearer);
             SubjectConfirmationData subjectConfirmationData = new SubjectConfirmationData();
             subjectConfirmationData.Recipient = Configuration.AssertionConsumerServiceURL;
@@ -76,7 +76,15 @@ namespace SAML2IdP.SAML
             X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.IdPX509Certificate];
             SAMLMessageSignature.Generate(samlResponseXml, x509Certificate.PrivateKey, x509Certificate);
 
-            IdentityProvider.SendSAMLResponseByHTTPPost(Response, Configuration.AssertionConsumerServiceURL, samlResponseXml, relayState);
+            string identificationURL = CreateAbsoluteURL("~/");
+            HTTPArtifactType4 httpArtifact = new HTTPArtifactType4(HTTPArtifactType4.CreateSourceId(identificationURL), HTTPArtifactType4.CreateMessageHandle());
+            // Cache the authentication request for subsequent sending using the artifact resolution protocol.
+            HTTPArtifactState httpArtifactState = new HTTPArtifactState(samlResponseXml, null);
+            HTTPArtifactStateCache.Add(httpArtifact, httpArtifactState);
+            // Send the artifact.
+            IdentityProvider.SendArtifactByHTTPArtifact(Response, Configuration.AssertionConsumerServiceURL, httpArtifact, relayState, false);
+
+            //IdentityProvider.SendSAMLResponseByHTTPPost(Response, Configuration.AssertionConsumerServiceURL, samlResponseXml, relayState);
 
             Trace.Write("IdP", "Sent SAML response");
         }
@@ -85,9 +93,8 @@ namespace SAML2IdP.SAML
         {
             try
             {
-                Trace.Write("IdP", "SSO service");
-
                 string targetURL = Request.QueryString["target"];
+               
 
                 if (string.IsNullOrEmpty(targetURL))
                 {
@@ -98,8 +105,6 @@ namespace SAML2IdP.SAML
 
                 // Create a SAML response with the user's local identity.
                 SAMLResponse samlResponse = CreateSAMLResponse();
-
-                
 
 
                 // Send the SAML response to the service provider.

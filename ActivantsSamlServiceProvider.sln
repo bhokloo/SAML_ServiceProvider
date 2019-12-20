@@ -5,30 +5,11 @@ VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivantsSamlServiceProvider", "ActivantsSamlServiceProvider\ActivantsSamlServiceProvider.csproj", "{A757E0C7-24C4-4B62-A7F4-E947DD218616}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SingPassAuth", "SingPassAuth\", "{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_53398"
-		Debug.AspNetCompiler.PhysicalPath = "SingPassAuth\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53398\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_53398"
-		Release.AspNetCompiler.PhysicalPath = "SingPassAuth\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53398\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "53398"
-		SlnRelativePath = "SingPassAuth\"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAML2IdP", "SAML2IdP\SAML2IdP.csproj", "{D4AE6A1D-E749-411C-BC18-6468A7EA5FCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAML2SP", "SAML2SP\SAML2SP.csproj", "{8545981B-6FA6-47F3-B59C-D712BD3AC1B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.csproj", "{A072A861-EE05-46C1-95A8-5CA1E40463E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +21,6 @@ Global
 		{A757E0C7-24C4-4B62-A7F4-E947DD218616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A757E0C7-24C4-4B62-A7F4-E947DD218616}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A757E0C7-24C4-4B62-A7F4-E947DD218616}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B4D682E-9FF3-46FD-9FA6-663F674B77F6}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{D4AE6A1D-E749-411C-BC18-6468A7EA5FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4AE6A1D-E749-411C-BC18-6468A7EA5FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4AE6A1D-E749-411C-BC18-6468A7EA5FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,6 +29,10 @@ Global
 		{8545981B-6FA6-47F3-B59C-D712BD3AC1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8545981B-6FA6-47F3-B59C-D712BD3AC1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8545981B-6FA6-47F3-B59C-D712BD3AC1B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A072A861-EE05-46C1-95A8-5CA1E40463E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A072A861-EE05-46C1-95A8-5CA1E40463E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A072A861-EE05-46C1-95A8-5CA1E40463E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A072A861-EE05-46C1-95A8-5CA1E40463E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

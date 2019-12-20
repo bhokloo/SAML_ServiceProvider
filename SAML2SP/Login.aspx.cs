@@ -39,16 +39,13 @@ namespace SAML2SP
 
         protected void continueButton_Click(object sender, EventArgs e)
         {
-            var username = "indrajit";
-            var password = "password";
-
-            if (FormsAuthentication.Authenticate(username, password))
+            try
             {
-                FormsAuthentication.RedirectFromLoginPage(username, false);
+                Response.Redirect("http://localhost:64614/login.aspx?target=http://localhost:64712");
             }
-            else
+            catch(Exception ex)
             {
-                errorMessageLabel.Text = "Invalid credentials. The user name and password should be \"sp-user\" and \"password\".";
+                errorMessageLabel.Text = ex.GetType().ToString();
             }
         }
     }

@@ -46,6 +46,13 @@ namespace SAML2SP
             Application[IdPX509Certificate] = LoadCertificate(fileName, null);
         }
 
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                Response.Cache.SetExpires(DateTime.UtcNow.AddHours(-1));
+                Response.Cache.SetNoStore(); 
+        }
+
         protected void Application_End(object sender, EventArgs e)
         {
         }

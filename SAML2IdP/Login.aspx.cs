@@ -22,7 +22,9 @@ namespace SAML2IdP
         {
             if (FormsAuthentication.Authenticate(usernameTextBox.Text, passwordTextBox.Text))
             {
-                FormsAuthentication.RedirectFromLoginPage(usernameTextBox.Text, false);
+                FormsAuthentication.SetAuthCookie(usernameTextBox.Text, false);
+                var target = Request.QueryString["target"];
+                Response.Redirect("~/SAML/SSOService.aspx?target=" + target);
             }
             else
             {
