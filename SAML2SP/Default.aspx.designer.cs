@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SAML2SP
+namespace ClientApp
 {
 
 
@@ -15,21 +15,30 @@ namespace SAML2SP
     {
 
         /// <summary>
-        /// defaultForm control.
+        /// loginChoiceForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm defaultForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm loginChoiceForm;
 
         /// <summary>
-        /// logoutButton control.
+        /// continueButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutButton;
+        protected global::System.Web.UI.WebControls.Button continueButton;
+
+        /// <summary>
+        /// errorMessageLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorMessageLabel;
     }
 }

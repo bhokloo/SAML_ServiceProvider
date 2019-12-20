@@ -22,19 +22,19 @@ namespace SAML2Idp.SAML
 {
     public partial class SLOService : System.Web.UI.Page
     {
-        // Create an absolute URL from an application relative URL.
         private string CreateAbsoluteURL(string relativeURL)
         {
             return new Uri(Request.Url, ResolveUrl(relativeURL)).ToString();
         }
 
-        // Create a logout response.
         private LogoutResponse CreateLogoutResponse()
         {
             Trace.Write("IdP", "Creating logout response.");
 
             LogoutResponse logoutResponse = new LogoutResponse();
+
             logoutResponse.Status = new Status(SAMLIdentifiers.PrimaryStatusCodes.Success, null);
+
             logoutResponse.Issuer = new Issuer(CreateAbsoluteURL("~/"));
 
             Trace.Write("IdP", "Created logout response.");
@@ -42,17 +42,15 @@ namespace SAML2Idp.SAML
             return logoutResponse;
         }
 
-        // Send the logout response.
         private void SendLogoutResponse(LogoutResponse logoutResponse, string relayState)
         {
             Trace.Write("IdP", "Sending logout response.");
 
-            // Serialize the logout response for transmission.
             XmlElement logoutResponseXml = logoutResponse.ToXml();
 
-            // Send the logout response over HTTP redirect.
             X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.IdPX509Certificate];
-            SingleLogoutService.SendLogoutResponseByHTTPRedirect(Response, WebConfigurationManager.AppSettings["spLogoutURL"], logoutResponseXml, null, x509Certificate.PrivateKey, null);
+
+            SingleLogoutService.SendLogoutResponseByHTTPRedirect(Response, WebConfigurationManager.AppSettings["spLogoutURL"], logoutResponseXml, relayState, x509Certificate.PrivateKey, null);
 
             Trace.Write("IdP", "Sent logout response.");
         }
@@ -61,22 +59,18 @@ namespace SAML2Idp.SAML
         {
             Trace.Write("IdP", "Processing logout request");
 
-            // Logout locally.
             FormsAuthentication.SignOut();
             Session.Abandon();
 
-            // Create a logout response.
             LogoutResponse logoutResponse = CreateLogoutResponse();
 
-            // Send the logout response.
-            SendLogoutResponse(logoutResponse, null);
+            SendLogoutResponse(logoutResponse, relayState);
         }
 
         private void ProcessLogoutResponse(LogoutResponse logoutResponse, string relayState)
         {
             Trace.Write("IdP", "Processing logout response");
 
-            // Redirect to the default page.
             Response.Redirect("~/", false);
         }
 
@@ -86,11 +80,14 @@ namespace SAML2Idp.SAML
             {
                 Trace.Write("IdP", "Single Logout Service");
 
-                // Receive the logout request or response.
                 XmlElement logoutMessage = null;
+
                 string relayState = null;
+
                 bool isRequest = false;
+
                 bool signed = false;
+
                 X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.SPX509Certificate];
 
                 SingleLogoutService.ReceiveLogoutMessageByHTTPRedirect(Request, out logoutMessage, out relayState, out isRequest, out signed, x509Certificate.PublicKey.Key);

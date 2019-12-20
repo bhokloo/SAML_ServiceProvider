@@ -37,8 +37,9 @@ namespace SAML2SP
                 logoutRequest.NameID = new NameID(Context.User.Identity.Name);
                 XmlElement logoutRequestXml = logoutRequest.ToXml();
                 string logoutURL = WebConfigurationManager.AppSettings["idpLogoutURL"];
+                string relayState = CreateAbsoluteURL("~/");
                 X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.SPX509Certificate];
-                SingleLogoutService.SendLogoutRequestByHTTPRedirect(Response, logoutURL, logoutRequestXml, null, x509Certificate.PrivateKey, null);
+                SingleLogoutService.SendLogoutRequestByHTTPRedirect(Response, logoutURL, logoutRequestXml, relayState, x509Certificate.PrivateKey, null);
                 FormsAuthentication.SignOut();
                 Session.Abandon();
             }

@@ -46,7 +46,7 @@ namespace SAML2SP.SAML
 
         private void ProcessLogoutResponse(LogoutResponse logoutResponse, string relayState)
         {
-            Response.Redirect("~/", false);
+            Response.Redirect(relayState, false);
         }
 
         protected void Page_Load(object sender, EventArgs e)

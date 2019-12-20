@@ -1,0 +1,6 @@
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\FinalClient\bin\SAML2SP.dll.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\FinalClient\bin\SAML2SP.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\FinalClient\bin\SAML2SP.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\FinalClient\obj\Debug\SAML2SP.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\FinalClient\obj\Debug\SAML2SP.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\FinalClient\obj\Debug\FinalClient.csprojAssemblyReference.cache
