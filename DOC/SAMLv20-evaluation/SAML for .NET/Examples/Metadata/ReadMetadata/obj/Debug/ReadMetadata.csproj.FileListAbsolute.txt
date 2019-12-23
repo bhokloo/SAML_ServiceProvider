@@ -1,0 +1,12 @@
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\bin\Debug\idp-metadata.xml
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\bin\Debug\sp-metadata.xml
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\bin\Debug\ReadMetadata.exe.config
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\bin\Debug\ReadMetadata.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\bin\Debug\ReadMetadata.pdb
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\bin\Debug\ComponentSpace.SAML2.dll
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\bin\Debug\ComponentSpace.SAML2.xml
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\obj\Debug\ReadMetadata.csprojAssemblyReference.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\obj\Debug\ReadMetadata.csproj.CoreCompileInputs.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\obj\Debug\ReadMetadata.csproj.CopyComplete
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\obj\Debug\ReadMetadata.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Metadata\ReadMetadata\obj\Debug\ReadMetadata.pdb

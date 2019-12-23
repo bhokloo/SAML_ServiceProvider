@@ -16,6 +16,8 @@ using ComponentSpace.SAML2.Protocols;
 using ComponentSpace.SAML2.Bindings;
 using ComponentSpace.SAML2.Profiles.ArtifactResolution;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.Xml;
+using System.Security.Cryptography;
 
 namespace SAML2IdP.SAML
 {
@@ -60,6 +62,9 @@ namespace SAML2IdP.SAML
 
             XmlElement artifactResponseXml = artifactResponse.ToXml();
 
+
+            //X509Certificate2 x509Certificate_idp = (X509Certificate2)Application[Global.IdPX509Certificate];
+           
             ArtifactResolver.SendArtifactResponse(Response, artifactResponseXml);
 
             Trace.Write("IdP", "Processed artifact resolve request");
@@ -79,5 +84,6 @@ namespace SAML2IdP.SAML
                 Trace.Write("IdP", "Error in artifact responder", exception);
             }
         }
+
     }
 }

@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using ComponentSpace.SAML2.Utility;
+using System.Web.Configuration;
 
 namespace SAML2SP
 {
@@ -41,7 +42,11 @@ namespace SAML2SP
         {
             try
             {
-                Response.Redirect("http://localhost:64614/login.aspx?target=http://localhost:64712");
+                string idpURL = WebConfigurationManager.AppSettings["idpURL"];
+                string ClientURL = WebConfigurationManager.AppSettings["targetURL"];
+                
+                //Response.Redirect("http://localhost:64614/login.aspx?target=http://localhost:64712");
+                Response.Redirect(idpURL + "?target="+ ClientURL);
             }
             catch(Exception ex)
             {

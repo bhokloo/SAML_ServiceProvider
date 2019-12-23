@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/18/2019 15:59:36</publishTime>
     </File>
     <File Include="bin/SAML2SP.dll">
-      <publishTime>12/20/2019 17:11:42</publishTime>
+      <publishTime>12/23/2019 15:21:20</publishTime>
     </File>
     <File Include="bin/SAML2SP.pdb">
-      <publishTime>12/20/2019 17:11:42</publishTime>
+      <publishTime>12/23/2019 15:21:20</publishTime>
     </File>
     <File Include="bootstrap/css/bootstrap-grid.css">
       <publishTime>12/20/2019 10:21:22</publishTime>
@@ -105,6 +105,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="logout.aspx">
       <publishTime>12/20/2019 14:41:05</publishTime>
     </File>
+    <File Include="saml.config">
+      <publishTime>12/23/2019 13:59:50</publishTime>
+    </File>
     <File Include="SAML/ArtifactResponder.aspx">
       <publishTime>12/20/2019 17:10:51</publishTime>
     </File>
@@ -124,7 +127,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/20/2019 09:48:33</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/20/2019 12:11:27</publishTime>
+      <publishTime>12/23/2019 15:16:29</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\bin\Release\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ComponentSpace.SAML2.dll">
+      <publishTime>12/18/2019 15:59:36</publishTime>
+    </File>
+    <File Include="bin/SAML2IdP.dll">
+      <publishTime>12/23/2019 15:04:33</publishTime>
+    </File>
+    <File Include="bin/SAML2IdP.pdb">
+      <publishTime>12/23/2019 15:04:33</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="idp.pfx">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>12/20/2019 13:42:22</publishTime>
+    </File>
+    <File Include="SAML/ArtifactResponder.aspx">
+      <publishTime>12/20/2019 11:59:47</publishTime>
+    </File>
+    <File Include="SAML/SLOService.aspx">
+      <publishTime>12/20/2019 09:58:52</publishTime>
+    </File>
+    <File Include="SAML/SSOService.aspx">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="SAML/Web.config">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="Site.css">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="sp.cer">
+      <publishTime>12/20/2019 09:54:47</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/23/2019 10:12:57</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

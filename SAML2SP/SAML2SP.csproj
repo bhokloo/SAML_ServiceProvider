@@ -153,8 +153,8 @@
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <Content Include="sp.pfx" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="saml.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

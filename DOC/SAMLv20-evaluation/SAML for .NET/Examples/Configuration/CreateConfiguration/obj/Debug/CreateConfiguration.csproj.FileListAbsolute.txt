@@ -1,0 +1,9 @@
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\bin\Debug\CreateConfiguration.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\bin\Debug\CreateConfiguration.pdb
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\bin\Debug\ComponentSpace.SAML2.dll
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\bin\Debug\ComponentSpace.SAML2.xml
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\obj\Debug\CreateConfiguration.csprojAssemblyReference.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\obj\Debug\CreateConfiguration.csproj.CoreCompileInputs.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\obj\Debug\CreateConfiguration.csproj.CopyComplete
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\obj\Debug\CreateConfiguration.exe
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\Configuration\CreateConfiguration\obj\Debug\CreateConfiguration.pdb

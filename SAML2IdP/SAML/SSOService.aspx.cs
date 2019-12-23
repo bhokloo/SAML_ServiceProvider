@@ -16,6 +16,7 @@ using ComponentSpace.SAML2.Assertions;
 using ComponentSpace.SAML2.Protocols;
 using ComponentSpace.SAML2.Bindings;
 using ComponentSpace.SAML2.Profiles.SSOBrowser;
+using System.Security.Cryptography.Xml;
 
 namespace SAML2IdP.SAML
 {
@@ -68,7 +69,14 @@ namespace SAML2IdP.SAML
 
             samlAssertion.Statements.Add(authnStatement);
 
-            samlResponse.Assertions.Add(samlAssertion);
+            //samlResponse.Assertions.Add(samlAssertion);
+
+            var KeyEncryptionMethod = EncryptedXml.XmlEncRSA15Url;
+            var DataEncryptionMethod = EncryptedXml.XmlEncAES256Url;
+
+            X509Certificate2 x509Certificate_sp = (X509Certificate2)Application[Global.SPX509Certificate];
+            EncryptedAssertion encryptedAssertion = new EncryptedAssertion(samlAssertion, x509Certificate_sp, new System.Security.Cryptography.Xml.EncryptionMethod(KeyEncryptionMethod), new System.Security.Cryptography.Xml.EncryptionMethod(DataEncryptionMethod));
+            samlResponse.Assertions.Add(encryptedAssertion);
 
             Trace.Write("IdP", "Created SAML response");
 
@@ -82,6 +90,7 @@ namespace SAML2IdP.SAML
             XmlElement samlResponseXml = samlResponse.ToXml();
 
             X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.IdPX509Certificate];
+            //X509Certificate2 x509Certificate_sp = (X509Certificate2)Application[Global.SPX509Certificate];
             SAMLMessageSignature.Generate(samlResponseXml, x509Certificate.PrivateKey, x509Certificate);
 
             string identificationURL = CreateAbsoluteURL("~/");

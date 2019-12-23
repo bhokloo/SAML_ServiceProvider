@@ -1,0 +1,12 @@
+<samlp:Response ID="_11bc65a7-2bec-4775-b12c-db77842590a9" Version="2.0" IssueInstant="2007-09-15T01:13:50Z" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol">
+  <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">http://www.idp.com</saml:Issuer><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI="#_11bc65a7-2bec-4775-b12c-db77842590a9"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"><InclusiveNamespaces PrefixList="#default code ds kind rw saml samlp typens" xmlns="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>o1AxgM6BneLvw6Zvmym30mhwM+w=</DigestValue></Reference></SignedInfo><SignatureValue>NDTpxdCK6iNSUo0bOvsXTEFzaGY8iTQQHxSQt2YsxNYGpoRIqDa1z9BO2C/AdkvcHhyWFFYPhiNq40bf/hnVxCQ6mvR9f0qAjNqKR7USr2HXa9Lcy0J0yst6rXQ4vw8BkUH3C89R5VE4QrQBCF/BqI3N2ADfWt4+2dTuRXVC+6s=</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIBnjCCAQcCBEbTmdAwDQYJKoZIhvcNAQEEBQAwFjEUMBIGA1UEAxMLd3d3LmlkcC5jb20wHhcNMDcwODI4MDM0MzEyWhcNMTcwODI1MDM0MzEyWjAWMRQwEgYDVQQDEwt3d3cuaWRwLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAo31q3mJZayXfZkLDuLcnanc/KG+RDFW+OlYDP+RubvWnt8X5jtiUTcp8IQ46TNEUFskmsonUb5AnG+zOCcawb2dJr8kBtCNhfi/TufZGBQNjuAxNMi34yIgRdGinaznHgclrAIIZTyKerQqYjPL1xRDsFGpzqGGi/2opzN8nV5kCAwEAATANBgkqhkiG9w0BAQQFAAOBgQBmNwFN+98aybuQKFJFr69s9BvBVYtk+Hsx3gx0g4e5sLTlkcSU03XZ8AOet0my4RvUspaDRzDrv+gEgg7gDP/rsVCSs3dkuYuUvuWbiiTq/Hj4EKuKZa8nIerZ3Oz4Xa1/bK88eT7RVsv5bMOxgJbSEvTidTvOpV0G13duIqyrCw==</X509Certificate></X509Data></KeyInfo></Signature>
+  <samlp:Status>
+    <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success" />
+  </samlp:Status>
+  <saml:Assertion Version="2.0" ID="_9eb729a4-ee15-4175-9f30-a402c5aa1fca" IssueInstant="2007-09-15T01:13:50Z" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+    <saml:Subject>
+      <saml:NameID>test-user</saml:NameID>
+    </saml:Subject>
+    <saml:AuthnStatement AuthnInstant="2007-09-15T01:13:51Z" />
+  </saml:Assertion>
+</samlp:Response>

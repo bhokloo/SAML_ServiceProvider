@@ -43,38 +43,54 @@ namespace SAML2SP.SAML
 
             artifactResolve.Artifact = new Artifact(httpArtifact.ToString());
             XmlElement artifactResolveXml = artifactResolve.ToXml();
+
             string idpArtifactResponderURL = WebConfigurationManager.AppSettings["idpArtifactResponderURL"];
 
             //signing the Artifact resolve as per SP/CP specs
 
             X509Certificate2 x509Certificate_sp = (X509Certificate2)Application[Global.SPX509Certificate];
+            
             SAMLMessageSignature.Generate(artifactResolveXml, x509Certificate_sp.PrivateKey, x509Certificate_sp);
 
             //calling to SP/CP with artifact resolve.
+
             XmlElement artifactResponseXml = ArtifactResolver.SendRequestReceiveResponse(idpArtifactResponderURL, artifactResolveXml);
 
             ArtifactResponse artifactResponse = new ArtifactResponse(artifactResponseXml);
             samlResponseXml = artifactResponse.SAMLMessage;
 
-            X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.IdPX509Certificate];
-            if (!SAMLMessageSignature.Verify(samlResponseXml, x509Certificate))
+            // Verify the response's signature.
+            if (SAMLMessageSignature.IsSigned(samlResponseXml))
             {
-                throw new ArgumentException("The SAML response signature failed to verify.");
-            }
+                X509Certificate2 x509Certificate = (X509Certificate2)Application[Global.IdPX509Certificate];
 
-           
+                if (!SAMLMessageSignature.Verify(samlResponseXml, x509Certificate))
+                {
+                    throw new ArgumentException("The SAML response signature failed to verify.");
+                }
+            }
 
             samlResponse = new SAMLResponse(samlResponseXml);
         }
 
         private void ProcessSuccessSAMLResponse(SAMLResponse samlResponse, string relayState)
         {
-            SAMLAssertion samlAssertion = (SAMLAssertion)samlResponse.Assertions[0];
-            string userName = samlAssertion.Subject.NameID.NameIdentifier;
-            var targetUrl = relayState;
-            RelayState cachedRelayState = RelayStateCache.Remove(relayState);
-            FormsAuthentication.SetAuthCookie(userName, false);
-            Response.Redirect(targetUrl, false);
+            if (samlResponse.GetEncryptedAssertions().Count > 0)
+            {
+                EncryptedAssertion encryptedAssertion = samlResponse.GetEncryptedAssertions()[0];
+                X509Certificate2 x509Certificate_sp = (X509Certificate2)Application[Global.SPX509Certificate];
+
+                // Decrypt the encrypted assertion.
+                SAMLAssertion samlAssertion = encryptedAssertion.Decrypt(x509Certificate_sp.PrivateKey, null);
+                string userName = samlAssertion.Subject.NameID.NameIdentifier;
+                var targetUrl = relayState;
+                FormsAuthentication.SetAuthCookie(userName, false);
+                Response.Redirect(targetUrl, false);
+            }
+            else
+            {
+                throw new ApplicationException("No encrypted assertions found in the SAML response");
+            }
         }
 
         // Process an error SAML response.

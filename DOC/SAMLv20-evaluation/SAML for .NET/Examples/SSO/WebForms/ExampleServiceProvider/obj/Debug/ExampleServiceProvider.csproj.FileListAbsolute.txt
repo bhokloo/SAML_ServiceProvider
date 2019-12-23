@@ -1,0 +1,10 @@
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\bin\ExampleServiceProvider.dll.config
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\bin\ExampleServiceProvider.dll
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\bin\ExampleServiceProvider.pdb
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\bin\ComponentSpace.SAML2.dll
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\bin\ComponentSpace.SAML2.xml
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\obj\Debug\ExampleServiceProvider.csprojAssemblyReference.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\obj\Debug\ExampleServiceProvider.csproj.CoreCompileInputs.cache
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\obj\Debug\ExampleServiceProvider.csproj.CopyComplete
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\obj\Debug\ExampleServiceProvider.dll
+D:\SAML\SAMLv20-evaluation\SAML for .NET\Examples\SSO\WebForms\ExampleServiceProvider\obj\Debug\ExampleServiceProvider.pdb

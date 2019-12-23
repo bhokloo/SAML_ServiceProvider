@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_NewBackgroundProfile>True</_NewBackgroundProfile>
+    <_PublishTargetUrl>C:\ComponentSpace\Products\SAMLv20\Examples\SSO\HighLevelAPI\WebForms\ExampleIdentityProvider\bin\Release\PublishOutput</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/readme.txt">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/ComponentSpace.SAML2.dll">
+      <publishTime>04/09/2019 04:08:48</publishTime>
+    </File>
+    <File Include="bin/ComponentSpace.SAML2.pdb">
+      <publishTime>10/28/2017 09:51:43</publishTime>
+    </File>
+    <File Include="bin/ExampleIdentityProvider.dll">
+      <publishTime>04/17/2019 11:34:18</publishTime>
+    </File>
+    <File Include="bin/ExampleIdentityProvider.pdb">
+      <publishTime>04/17/2019 11:34:18</publishTime>
+    </File>
+    <File Include="Certificates/idp.cer">
+      <publishTime>03/11/2016 17:04:42</publishTime>
+    </File>
+    <File Include="Certificates/idp.pfx">
+      <publishTime>03/11/2016 17:04:42</publishTime>
+    </File>
+    <File Include="Certificates/sp.cer">
+      <publishTime>03/11/2016 17:04:42</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>09/28/2013 11:11:08</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/29/2013 11:15:28</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>10/19/2018 08:54:07</publishTime>
+    </File>
+    <File Include="saml.config">
+      <publishTime>04/17/2019 11:34:05</publishTime>
+    </File>
+    <File Include="SAML/ECP.aspx">
+      <publishTime>06/13/2013 14:56:22</publishTime>
+    </File>
+    <File Include="SAML/ExportMetadata.aspx">
+      <publishTime>09/08/2017 10:27:25</publishTime>
+    </File>
+    <File Include="SAML/ImportMetadata.aspx">
+      <publishTime>09/08/2017 10:27:25</publishTime>
+    </File>
+    <File Include="SAML/SLOService.aspx">
+      <publishTime>05/02/2013 09:28:12</publishTime>
+    </File>
+    <File Include="SAML/SSOService.aspx">
+      <publishTime>03/29/2013 11:26:26</publishTime>
+    </File>
+    <File Include="SAML/Web.config">
+      <publishTime>04/12/2013 14:27:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.3.min.js">
+      <publishTime>09/04/2015 17:48:12</publishTime>
+    </File>
+    <File Include="Site.css">
+      <publishTime>03/20/2013 14:18:32</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/17/2019 11:10:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
