@@ -111,6 +111,7 @@ namespace SAML2IdP.SAML
             try
             {
                 string targetURL = Request.QueryString["target"];
+                string partnerId = Request.QueryString["partnerId"];
                
 
                 if (string.IsNullOrEmpty(targetURL))

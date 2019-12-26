@@ -22,7 +22,9 @@ namespace FinalClient
         {
             try
             {
-                Response.Redirect("http://localhost:64614/login.aspx?target=http://localhost:64723/default.aspx");
+                //partnerid = "sp/asser";
+                //target = "client"; ;
+                Response.Redirect("http://localhost:64614/login.aspx?target=http://localhost:64723/default.aspx?partnerId=http://localhost:64712/SAML/AssertionConsumerService.aspx");
             }
             catch(Exception ex)
             {

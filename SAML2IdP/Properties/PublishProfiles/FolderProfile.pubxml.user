@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/18/2019 15:59:36</publishTime>
     </File>
     <File Include="bin/SAML2IdP.dll">
-      <publishTime>12/23/2019 15:04:33</publishTime>
+      <publishTime>12/26/2019 11:36:10</publishTime>
     </File>
     <File Include="bin/SAML2IdP.pdb">
-      <publishTime>12/23/2019 15:04:33</publishTime>
+      <publishTime>12/26/2019 11:36:10</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>12/13/2019 11:30:23</publishTime>
