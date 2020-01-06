@@ -6,3 +6,4 @@ C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\bin\Co
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.csproj.CopyComplete
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.dll
 C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.csprojAssemblyReference.cache
