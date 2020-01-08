@@ -1,0 +1,9 @@
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\bin\SAML2IdP.dll.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\bin\SAML2IdP.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\bin\SAML2IdP.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\bin\ComponentSpace.SAML2.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\bin\ComponentSpace.SAML2.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.csproj.CopyComplete
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2IdP\obj\Debug\SAML2IdP.csprojAssemblyReference.cache

@@ -1,0 +1,45 @@
+﻿<div class="jumbotron" style="background-color:transparent;">
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <h1 style="color:white;text-shadow: 1px 1px 0px #FDD100;">Activants Pte Ltd</h1>
+            </center>
+
+            @*<h1 style="font-family:Bahnschrift;color:#282640;background-color:#FDD100;border-radius:20px;padding:20px;"><img src="~/Image/activants.png" style="width:17%;" /></h1>*@
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <img src="~/Image/network.png" ; width="100%" style="padding:0xp;margin:0px;" />
+                <img src="~/Image/loader.gif" width="14%" />
+                <img src="~/Image/loader.gif" width="14%" />
+                <img src="~/Image/loader.gif" width="14%" />
+                <img src="~/Image/loader.gif" width="14%" />
+            </center>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <div style="width:50%;border-radius:10px;border:2px solid white;padding:2px;">
+                    <span>
+                        <button type="button" class="btn btn-block"
+                                style="background-color:#FDD100;color:#8A39B7;padding:9px;font-size:20px;text-shadow: 1px 1px 1px black;"
+                                onclick="location.href='@Url.Action("InitiateSingleSignOn", "saml")'">
+                            INITIATE SAML LOGIN
+                        </button>
+                    </span>
+                    @if (TempData["err"] != null)
+                    {
+                            <div style="background-color:red;color:white;padding:5px;">
+                                @TempData["err"].GetType()
+                            </div>
+                    }
+                </div>
+            </center>
+        </div>
+    </div>

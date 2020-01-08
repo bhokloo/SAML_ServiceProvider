@@ -1,0 +1,188 @@
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ActivantsSamlServiceProvider.dll.config
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ActivantsSamlServiceProvider.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ActivantsSamlServiceProvider.pdb
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csc.exe
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csc.exe.config
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csc.rsp
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csi.exe
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csi.exe.config
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csi.rsp
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.Managed.Core.targets
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.AppContext.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Collections.Immutable.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Console.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.Compression.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.FileSystem.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.Pipes.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Reflection.Metadata.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.AccessControl.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Claims.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Principal.Windows.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.ValueTuple.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.XmlDocument.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.XPath.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\vbc.exe
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\vbc.exe.config
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\vbc.rsp
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\VBCSCompiler.exe
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\VBCSCompiler.exe.config
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Antlr3.Runtime.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Cors.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.OAuth.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Web.Infrastructure.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Newtonsoft.Json.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Owin.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Net.Http.Formatting.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Cors.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Helpers.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.WebHost.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Mvc.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Optimization.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Razor.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Deployment.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Razor.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\WebGrease.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Cors.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.OAuth.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Newtonsoft.Json.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Net.Http.Formatting.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Helpers.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.WebHost.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Mvc.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Optimization.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Razor.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Deployment.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Razor.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Antlr3.Runtime.pdb
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csproj.CopyComplete
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.dll
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.pdb
+D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csprojAssemblyReference.cache
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ActivantsSamlServiceProvider.dll.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ActivantsSamlServiceProvider.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ActivantsSamlServiceProvider.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csc.exe
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csc.exe.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csc.rsp
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csi.exe
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csi.exe.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\csi.rsp
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.AppContext.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Console.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.Compression.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Claims.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.ValueTuple.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\vbc.exe
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\vbc.exe.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\vbc.rsp
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\VBCSCompiler.exe
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Antlr3.Runtime.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Cors.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Newtonsoft.Json.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Owin.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Net.Http.Formatting.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Cors.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Helpers.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.WebHost.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Mvc.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Optimization.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Razor.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\WebGrease.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Cors.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Newtonsoft.Json.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Net.Http.Formatting.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Helpers.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Http.WebHost.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Mvc.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Optimization.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.Razor.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Antlr3.Runtime.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csproj.CopyComplete
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.pdb
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\obj\Debug\ActivantsSamlServiceProvider.csprojAssemblyReference.cache
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ComponentSpace.SAML2.dll
+C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\ComponentSpace.SAML2.xml

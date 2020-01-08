@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+    @if (TempData["ReturnURL"] != null)
+    {
+        @Scripts.Render("~/bundles/jquery")
+
+        <script type='text/javascript'>
+
+            $(document).ready(function () {
+
+                alert('Something went wrong!! \n[Error Message: @(TempData["error"])] ,\nClick OK to redirect back to your page' );
+
+                window.location.href('@(TempData["ReturnURL"])');
+
+            });
+
+        </script>
+    }
+</body>
+
+</html>

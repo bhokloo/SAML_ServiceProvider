@@ -1,0 +1,321 @@
+21936/10: 12/5/2019 2:10:59 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+21936/10: 12/5/2019 2:10:59 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: IIS APPPOOL\DefaultAppPool, Culture: English (United States)
+21936/10: 12/5/2019 2:10:59 PM: The SAML_SessionId cookie with value d490fb42-0af7-40bf-8364-f6f6e7b482ee has been set.
+21936/10: 12/5/2019 2:10:59 PM: The configuration ID for the session (d490fb42-0af7-40bf-8364-f6f6e7b482ee) is ActivantsSAMLSP1.
+22720/23: 12/5/2019 2:12:43 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+22720/23: 12/5/2019 2:12:43 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: IIS APPPOOL\API SP, Culture: English (United States)
+22720/23: 12/5/2019 2:12:43 PM: The configuration ID for the session (d490fb42-0af7-40bf-8364-f6f6e7b482ee) is ActivantsSAMLSP1.
+22720/25: 12/5/2019 2:13:45 PM: Initializing the SAML environment.
+22720/25: 12/5/2019 2:13:45 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Release\Publish\saml.config.
+22720/25: 12/5/2019 2:13:45 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfigurations xmlns="urn:componentspace:SAML:2.0:configuration">
+  
+  <!--1st service ID : ActivantsSAMLSP1-->
+    <SAMLConfiguration ID="ActivantsSAMLSP1">
+        <ServiceProvider Name="123456789"
+                         Description="Activants Service Provider"
+                         AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                         LocalCertificateFile="Certificates\sp.pfx"
+                         LocalCertificatePassword="********"/>
+
+        <PartnerIdentityProviders>
+          <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                                   Description="Activants IDP"
+                                   SignAuthnRequest="true"
+                                   SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   WantSAMLResponseSigned="true"
+                                   WantAssertionSigned ="true"
+                                   SignLogoutRequest="true"
+                                   WantLogoutResponseSigned="false"
+                                   SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                                   SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                                   SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                                   PartnerCertificateFile="Certificates\ActivantsSAMLSP1IDP.cer"/>
+        </PartnerIdentityProviders>
+      </SAMLConfiguration>
+
+  <!--2nd service ID : ActivantsSAMLSP2-->
+      <SAMLConfiguration ID="ActivantsSAMLSP2">
+        <ServiceProvider Name="987654321"
+                         Description="Activants Service Provider"
+                         AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                         LocalCertificateFile="Certificates\sp.pfx"
+                         LocalCertificatePassword="********"/>
+
+        <PartnerIdentityProviders>
+          <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/4a937c12-eb3e-11e9-a210-167b3d02eeb8"
+                                   Description="Activants IDP"
+                                   SignAuthnRequest="true"
+                                   SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   WantSAMLResponseSigned="true"
+                                   WantAssertionSigned ="true"
+                                   SignLogoutRequest="true"
+                                   WantLogoutResponseSigned="false"
+                                   SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                                   SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/4a937c12-eb3e-11e9-a210-167b3d02eeb8"
+                                   SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/4a937c12-eb3e-11e9-a210-167b3d02eeb8?cid=198052"
+                                   PartnerCertificateFile="Certificates\ActivantsSAMLSP2IDP.cer"/>
+        </PartnerIdentityProviders>
+      </SAMLConfiguration>
+  
+  
+</SAMLConfigurations>
+22720/25: 12/5/2019 2:13:45 PM: The SAML configuration file has been successfully loaded.
+22720/25: 12/5/2019 2:13:45 PM: SAML configuration changes in the directory D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Release\Publish are being monitored.
+22720/25: 12/5/2019 2:13:45 PM: The SAML environment has been successfuly initialized.
+22720/25: 12/5/2019 2:13:45 PM: Receiving an SSO response from a partner identity provider.
+22720/25: 12/5/2019 2:13:45 PM: Service provider session (d490fb42-0af7-40bf-8364-f6f6e7b482ee) state:
+22720/25: 12/5/2019 2:13:45 PM: Receiving response over HTTP POST.
+22720/25: 12/5/2019 2:13:45 PM: HTTP request:
+GET /samlservices/AssertionConsumerService HTTP/1.1
+Connection: Keep-Alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: SAML_SessionId=d490fb42-0af7-40bf-8364-f6f6e7b482ee; ASP.NET_SessionId=3pyyfdhak3gquz1nc21lq4fw
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763
+Upgrade-Insecure-Requests: 1
+
+22720/25: 12/5/2019 2:13:45 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLBindingException: The message is not an HTTP POST.
+22720/25: 12/5/2019 2:13:45 PM:    at ComponentSpace.SAML2.Bindings.HTTPPostBinding.ReceiveResponse(HttpRequestBase httpRequest, XmlElement& samlMessage, String& relayState)
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider.ReceiveSAMLResponse(HttpRequestBase httpRequest, XmlElement& samlResponseElement, String& relayState)
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider.ReceiveSSO(HttpRequestBase httpRequest, Boolean& isInResponseTo, String& partnerIdP, String& authnContext, String& userName, SAMLAttribute[]& attributes, String& relayState)
+   at ActivantsSamlServiceProvider.Controllers.SamlServicesController.AssertionConsumerService() in D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\Controllers\SamlServicesController.cs:line 20
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+22720/23: 12/5/2019 2:14:18 PM: Receiving an SSO response from a partner identity provider.
+22720/23: 12/5/2019 2:14:18 PM: Service provider session (d490fb42-0af7-40bf-8364-f6f6e7b482ee) state:
+22720/23: 12/5/2019 2:14:18 PM: Receiving response over HTTP POST.
+22720/23: 12/5/2019 2:14:18 PM: HTTP request:
+GET /samlservices/AssertionConsumerService HTTP/1.1
+Connection: Keep-Alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: SAML_SessionId=d490fb42-0af7-40bf-8364-f6f6e7b482ee; ASP.NET_SessionId=3pyyfdhak3gquz1nc21lq4fw
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763
+Upgrade-Insecure-Requests: 1
+
+22720/23: 12/5/2019 2:14:18 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLBindingException: The message is not an HTTP POST.
+22720/23: 12/5/2019 2:14:18 PM:    at ComponentSpace.SAML2.Bindings.HTTPPostBinding.ReceiveResponse(HttpRequestBase httpRequest, XmlElement& samlMessage, String& relayState)
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider.ReceiveSAMLResponse(HttpRequestBase httpRequest, XmlElement& samlResponseElement, String& relayState)
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider.ReceiveSSO(HttpRequestBase httpRequest, Boolean& isInResponseTo, String& partnerIdP, String& authnContext, String& userName, SAMLAttribute[]& attributes, String& relayState)
+   at ActivantsSamlServiceProvider.Controllers.SamlServicesController.AssertionConsumerService() in D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\Controllers\SamlServicesController.cs:line 20
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+22720/22: 12/5/2019 2:14:32 PM: Receiving an SSO response from a partner identity provider.
+22720/22: 12/5/2019 2:14:32 PM: Service provider session (d490fb42-0af7-40bf-8364-f6f6e7b482ee) state:
+22720/22: 12/5/2019 2:14:32 PM: Receiving response over HTTP POST.
+22720/22: 12/5/2019 2:14:32 PM: HTTP request:
+GET /samlservices/AssertionConsumerService HTTP/1.1
+Connection: Keep-Alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: SAML_SessionId=d490fb42-0af7-40bf-8364-f6f6e7b482ee; ASP.NET_SessionId=3pyyfdhak3gquz1nc21lq4fw
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763
+Upgrade-Insecure-Requests: 1
+
+22720/22: 12/5/2019 2:14:32 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLBindingException: The message is not an HTTP POST.
+22720/22: 12/5/2019 2:14:32 PM:    at ComponentSpace.SAML2.Bindings.HTTPPostBinding.ReceiveResponse(HttpRequestBase httpRequest, XmlElement& samlMessage, String& relayState)
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider.ReceiveSAMLResponse(HttpRequestBase httpRequest, XmlElement& samlResponseElement, String& relayState)
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider.ReceiveSSO(HttpRequestBase httpRequest, Boolean& isInResponseTo, String& partnerIdP, String& authnContext, String& userName, SAMLAttribute[]& attributes, String& relayState)
+   at ActivantsSamlServiceProvider.Controllers.SamlServicesController.AssertionConsumerService() in D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\Controllers\SamlServicesController.cs:line 20
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+
+21936/23: 12/5/2019 2:14:58 PM: ComponentSpace.SAML2, Version=3.4.0.0, Culture=neutral, PublicKeyToken=16647a1283418145, .NET v4.6.2 build, Evaluation.
+21936/23: 12/5/2019 2:14:58 PM: CLR: 4.0.30319.42000, OS: Microsoft Windows NT 10.0.17763.0, Account: IIS APPPOOL\DefaultAppPool, Culture: English (United States)
+21936/23: 12/5/2019 2:14:58 PM: Initializing the SAML environment.
+21936/23: 12/5/2019 2:14:58 PM: Loading the SAML configuration file D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Release\Publish\saml.config.
+21936/23: 12/5/2019 2:14:58 PM: SAML configuration:
+<?xml version="1.0"?>
+<SAMLConfigurations xmlns="urn:componentspace:SAML:2.0:configuration">
+  
+  <!--1st service ID : ActivantsSAMLSP1-->
+    <SAMLConfiguration ID="ActivantsSAMLSP1">
+        <ServiceProvider Name="123456789"
+                         Description="Activants Service Provider"
+                         AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                         LocalCertificateFile="Certificates\sp.pfx"
+                         LocalCertificatePassword="********"/>
+
+        <PartnerIdentityProviders>
+          <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                                   Description="Activants IDP"
+                                   SignAuthnRequest="true"
+                                   SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   WantSAMLResponseSigned="true"
+                                   WantAssertionSigned ="true"
+                                   SignLogoutRequest="true"
+                                   WantLogoutResponseSigned="false"
+                                   SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                                   SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/8ab7a98c-0cce-11ea-a703-02c931e36dd8"
+                                   SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/8ab7a98c-0cce-11ea-a703-02c931e36dd8?cid=198052"
+                                   PartnerCertificateFile="Certificates\ActivantsSAMLSP1IDP.cer"/>
+        </PartnerIdentityProviders>
+      </SAMLConfiguration>
+
+  <!--2nd service ID : ActivantsSAMLSP2-->
+      <SAMLConfiguration ID="ActivantsSAMLSP2">
+        <ServiceProvider Name="987654321"
+                         Description="Activants Service Provider"
+                         AssertionConsumerServiceUrl="https://localhost:44309/SAML/AssertionConsumerService"
+                         LocalCertificateFile="Certificates\sp.pfx"
+                         LocalCertificatePassword="********"/>
+
+        <PartnerIdentityProviders>
+          <PartnerIdentityProvider Name="https://login.xecurify.com/moas/198052/4a937c12-eb3e-11e9-a210-167b3d02eeb8"
+                                   Description="Activants IDP"
+                                   SignAuthnRequest="true"
+                                   SingleSignOnServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   SingleLogoutServiceBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                   WantSAMLResponseSigned="true"
+                                   WantAssertionSigned ="true"
+                                   SignLogoutRequest="true"
+                                   WantLogoutResponseSigned="false"
+                                   SignatureMethod="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+                                   SingleSignOnServiceUrl="https://login.xecurify.com/moas/idp/samlsso/4a937c12-eb3e-11e9-a210-167b3d02eeb8"
+                                   SingleLogoutServiceUrl="https://login.xecurify.com/moas/idp/samllogout/4a937c12-eb3e-11e9-a210-167b3d02eeb8?cid=198052"
+                                   PartnerCertificateFile="Certificates\ActivantsSAMLSP2IDP.cer"/>
+        </PartnerIdentityProviders>
+      </SAMLConfiguration>
+  
+  
+</SAMLConfigurations>
+21936/23: 12/5/2019 2:14:58 PM: The SAML configuration file has been successfully loaded.
+21936/23: 12/5/2019 2:14:58 PM: SAML configuration changes in the directory D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\bin\Release\Publish are being monitored.
+21936/23: 12/5/2019 2:14:58 PM: The SAML environment has been successfuly initialized.
+21936/23: 12/5/2019 2:14:58 PM: Exception: ComponentSpace.SAML2.Exceptions.SAMLConfigurationException: Multiple SAML configurations exist but a configuration ID hasn't been specified.
+21936/23: 12/5/2019 2:14:58 PM:    at ComponentSpace.SAML2.Configuration.SAMLConfigurations.GetConfiguration(String configurationID)
+   at ComponentSpace.SAML2.Configuration.Resolver.SAMLConfigurationResolver.GetLocalServiceProviderConfiguration(String configurationID)
+   at ComponentSpace.SAML2.InternalSAMLServiceProvider..ctor()
+   at ActivantsSamlServiceProvider.Controllers.SamlServicesController.AssertionConsumerService() in D:\SAML\SERVICE PROVIDER\Final SP\ActivantsSamlServiceProvider\ActivantsSamlServiceProvider\Controllers\SamlServicesController.cs:line 20
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at System.Web.HttpApplication.PipelineStepManager.ResumeSteps(Exception error)
+   at System.Web.HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)
+   at System.Web.HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+   at System.Web.Hosting.PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)
+

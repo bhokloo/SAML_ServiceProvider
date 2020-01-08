@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\ACTIVANTS64\Documents\SAML\ActivantsSamlServiceProvider\SAML2SP\bin\Release\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ComponentSpace.SAML2.dll">
+      <publishTime>12/18/2019 15:59:36</publishTime>
+    </File>
+    <File Include="bin/SAML2SP.dll">
+      <publishTime>12/23/2019 15:21:20</publishTime>
+    </File>
+    <File Include="bin/SAML2SP.pdb">
+      <publishTime>12/23/2019 15:21:20</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-grid.css">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-grid.css.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-grid.min.css.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-reboot.css">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-reboot.css.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-reboot.min.css.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.css">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.css.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.min.css">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.min.css.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.bundle.js">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.bundle.js.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.bundle.min.js.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.js">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.js.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.min.js">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.min.js.map">
+      <publishTime>12/20/2019 10:21:22</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>12/20/2019 09:37:11</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="idp.cer">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="Image/activants.png">
+      <publishTime>12/20/2019 10:20:33</publishTime>
+    </File>
+    <File Include="Image/bg1.png">
+      <publishTime>12/20/2019 10:20:33</publishTime>
+    </File>
+    <File Include="Image/loader.gif">
+      <publishTime>12/20/2019 10:20:33</publishTime>
+    </File>
+    <File Include="Image/network.png">
+      <publishTime>12/20/2019 10:20:33</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>12/20/2019 13:53:30</publishTime>
+    </File>
+    <File Include="logout.aspx">
+      <publishTime>12/20/2019 14:41:05</publishTime>
+    </File>
+    <File Include="saml.config">
+      <publishTime>12/23/2019 13:59:50</publishTime>
+    </File>
+    <File Include="SAML/ArtifactResponder.aspx">
+      <publishTime>12/20/2019 17:10:51</publishTime>
+    </File>
+    <File Include="SAML/AssertionConsumerService.aspx">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="SAML/SLOService.aspx">
+      <publishTime>12/20/2019 09:42:44</publishTime>
+    </File>
+    <File Include="SAML/Web.config">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="Site.css">
+      <publishTime>12/13/2019 11:30:23</publishTime>
+    </File>
+    <File Include="sp.pfx">
+      <publishTime>12/20/2019 09:48:33</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/23/2019 15:16:29</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
